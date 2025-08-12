@@ -1,0 +1,66 @@
+{{ $section := .section }}
+{{ $background := $section.background }}
+{{ $background_color := $background.background_color | default "white" }}
+{{ $background_opacity_pct := $background.background_image_opacity | default 100 }}
+{{ $background_opacity := mul $background_opacity_pct 0.01 }}
+{{ $background_size := $background.background_image_size | default "cover" }}
+{{ $background_repeat := $background.background_image_repeat | default "no-repeat" }}
+
+  {{ if and $section.has_background $background.background_image }}
+  {{ partial "responsive/section-bg.html" (dict 
+    "src" $background.background_image
+    "class" (printf "section hero section--padding%s%s"
+      (cond (and $section.has_background (eq $background.background_color "blue")) " bg-blue" "")
+      (cond (and $section.has_background (eq $background.background_color "blue")) " inverse" "")
+    )
+    "containerWidth" 100
+    "opacity" 0.75
+    "bgSize" "cover"
+    "bgRepeat" "no-repeat"
+    "bgPosition" "center"
+  ) }}
+
+  {{ end }}
+
+  <div class="container container--wide ">
+    <div class="grid grid-hero grid-gap-4{{ if eq $section.align "center" }} align-items-center{{ end }}{{ if eq $section.align "right" }} text-right{{ end }}">
+
+      {{ if $section.image }}
+      <div class="hero-media {{ if eq $section.image_position "right" }}media-right{{ end }}">
+        
+        {{ partial "responsive/pictures-cw.html" 
+        (dict 
+         "src" $section.image
+         "alt" $section.image_alt
+         "loading" "eager"
+         "class" "responsive-img"
+             "containerWidth" (dict 
+             "desktop" 50
+             "tablet" 50
+              )
+        ) 
+      }}
+      </div>
+      {{ end }}
+
+      <div class="hero-content">
+        {{ if $section.title }}
+        <h1 class="section-title h2-bold">{{ $section.title }}</h1>
+        {{ end }}
+        {{ if $section.subtitle }}
+        <div class="section-subtitle">
+          <p class="text-base leading-relaxed">{{ $section.subtitle }}</p>
+        </div>
+        {{ end }}
+        {{ if $section.actions }}
+        <div class="banner-actions btn-group">
+          {{ $include_dict := dict "actions" $section.actions }}
+          {{ partial "section_actions.html" $include_dict }}
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+
+</section>

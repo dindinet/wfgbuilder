@@ -1,0 +1,727 @@
+/* ==========================================================================
+   BANNER/HERO COMPONENTS
+   Modern CSS banner utilities for Hugo development
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE BANNER STYLES
+   ========================================================================== */
+
+.banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-inner {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-component-padding);
+}
+
+/* ==========================================================================
+   BANNER SIZING VARIANTS
+   Using clamp() for responsive sizing without media queries
+   ========================================================================== */
+
+.banner-xs {
+  min-height: clamp(200px, 20vh, 300px);
+}
+
+.banner-sm {
+  min-height: clamp(250px, 25vh, 400px);
+}
+
+.banner-md {
+  min-height: clamp(300px, 30vh, 500px);
+}
+
+.banner-lg {
+  min-height: clamp(400px, 40vh, 600px);
+}
+
+.banner-xl {
+  min-height: clamp(500px, 50vh, 700px);
+}
+
+.banner-2xl {
+  min-height: clamp(600px, 60vh, 800px);
+}
+
+.banner-full {
+  min-height: 100vh;
+}
+
+.banner-auto {
+  min-height: auto;
+}
+
+/* ==========================================================================
+   BANNER BACKGROUND UTILITIES
+   ========================================================================== */
+
+/* Solid background colors */
+.banner-bg-primary {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.banner-bg-secondary {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.banner-bg-muted {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-primary);
+}
+
+.banner-bg-inverse {
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+}
+
+/* Brand color backgrounds */
+.banner-bg-brand-primary {
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-brand-secondary {
+  background-color: var(--color-secondary-600);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-brand-accent {
+  background-color: var(--color-accent-600);
+  color: var(--color-neutral-0);
+}
+
+/* Semantic color backgrounds */
+.banner-bg-success {
+  background-color: var(--color-success-600);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-warning {
+  background-color: var(--color-warning-600);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-error {
+  background-color: var(--color-error-600);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-info {
+  background-color: var(--color-info-600);
+  color: var(--color-neutral-0);
+}
+
+/* Gradient backgrounds */
+.banner-bg-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-800) 100%);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-secondary-500) 0%, var(--color-secondary-700) 100%);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-700) 100%);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-gradient-warm {
+  background: linear-gradient(135deg, var(--color-warning-400) 0%, var(--color-error-500) 100%);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-gradient-cool {
+  background: linear-gradient(135deg, var(--color-info-400) 0%, var(--color-primary-600) 100%);
+  color: var(--color-neutral-0);
+}
+
+.banner-bg-gradient-neutral {
+  background: linear-gradient(135deg, var(--color-neutral-600) 0%, var(--color-neutral-800) 100%);
+  color: var(--color-neutral-0);
+}
+
+/* ==========================================================================
+   BANNER IMAGE BACKGROUNDS
+   ========================================================================== */
+
+.banner-bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.banner-bg-image-top {
+  background-position: center top;
+}
+
+.banner-bg-image-bottom {
+  background-position: center bottom;
+}
+
+.banner-bg-image-left {
+  background-position: left center;
+}
+
+.banner-bg-image-right {
+  background-position: right center;
+}
+
+.banner-bg-image-contain {
+  background-size: contain;
+}
+
+.banner-bg-image-fixed {
+  background-attachment: fixed;
+}
+
+/* Image overlay utilities */
+.banner-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.banner-overlay .banner-inner {
+  z-index: 2;
+}
+
+.banner-overlay-dark::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-overlay-darker::before {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner-overlay-light::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.banner-overlay-lighter::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-overlay-primary::before {
+  background-color: rgba(59, 130, 246, 0.6); /* primary-500 with opacity */
+}
+
+.banner-overlay-secondary::before {
+  background-color: rgba(14, 165, 233, 0.6); /* secondary-500 with opacity */
+}
+
+.banner-overlay-gradient::before {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.banner-overlay-gradient-reverse::before {
+  background: linear-gradient(315deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* ==========================================================================
+   BANNER CONTENT ALIGNMENT
+   ========================================================================== */
+
+/* Vertical alignment */
+.banner-content-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.banner-content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Horizontal alignment */
+.banner-content-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.banner-content-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Combined alignment shortcuts */
+.banner-content-top-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.banner-content-top-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.banner-content-top-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.banner-content-bottom-left {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.banner-content-bottom-center {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.banner-content-bottom-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   BANNER CONTENT CONTAINERS
+   ========================================================================== */
+
+.banner-content {
+  width: 100%;
+  max-width: var(--container-lg);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.banner-content-sm {
+  max-width: var(--container-sm);
+}
+
+.banner-content-md {
+  max-width: var(--container-md);
+}
+
+.banner-content-lg {
+  max-width: var(--container-lg);
+}
+
+.banner-content-xl {
+  max-width: var(--container-xl);
+}
+
+.banner-content-2xl {
+  max-width: var(--container-2xl);
+}
+
+.banner-content-full {
+  max-width: none;
+}
+
+/* Banner content without horizontal padding (for full-bleed content) */
+.banner-content-flush {
+  padding-inline: 0;
+}
+
+/* ==========================================================================
+   BANNER TEXT STYLING
+   ========================================================================== */
+
+.banner-title {
+  font-size: var(--font-size-heading-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-block-end: var(--space-md);
+}
+
+.banner-title-sm {
+  font-size: var(--font-size-heading-xl);
+}
+
+.banner-title-md {
+  font-size: var(--font-size-heading-2xl);
+}
+
+.banner-title-lg {
+  font-size: var(--font-size-heading-3xl);
+}
+
+.banner-title-xl {
+  font-size: var(--font-size-heading-4xl);
+}
+
+.banner-title-2xl {
+  font-size: var(--font-size-heading-5xl);
+}
+
+.banner-subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  margin-block-end: var(--space-lg);
+  opacity: 0.9;
+}
+
+.banner-subtitle-sm {
+  font-size: var(--font-size-lg);
+}
+
+.banner-subtitle-lg {
+  font-size: var(--font-size-2xl);
+}
+
+.banner-description {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-block-end: var(--space-xl);
+  opacity: 0.85;
+  max-width: 65ch;
+}
+
+.banner-description-sm {
+  font-size: var(--font-size-base);
+}
+
+.banner-description-lg {
+  font-size: var(--font-size-xl);
+}
+
+/* Text alignment utilities for banner content */
+.banner-text-left {
+  text-align: left;
+}
+
+.banner-text-center {
+  text-align: center;
+}
+
+.banner-text-right {
+  text-align: right;
+}
+
+/* ==========================================================================
+   BANNER ACTIONS/CTA UTILITIES
+   ========================================================================== */
+
+.banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-block-start: var(--space-lg);
+}
+
+.banner-actions-center {
+  justify-content: center;
+}
+
+.banner-actions-start {
+  justify-content: flex-start;
+}
+
+.banner-actions-end {
+  justify-content: flex-end;
+}
+
+.banner-actions-stretch {
+  justify-content: stretch;
+}
+
+.banner-actions > * {
+  flex: 0 0 auto;
+}
+
+.banner-actions-stack {
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-actions-stack-start {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner-actions-stack-end {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ==========================================================================
+   BANNER GRID INTEGRATION
+   Works with your existing grid system
+   ========================================================================== */
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  width: 100%;
+}
+
+.banner-grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.banner-grid-sidebar {
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+/* Use CSS container queries when available for better responsive behavior */
+@container (min-width: 768px) {
+  .banner-grid-sidebar {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+/* Fallback for browsers without container query support */
+@media (min-width: 768px) {
+  .banner-grid-sidebar {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+.banner-grid-reverse {
+  grid-template-columns: 1fr;
+}
+
+@container (min-width: 768px) {
+  .banner-grid-reverse {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-grid-reverse {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+/* ==========================================================================
+   BANNER BORDER UTILITIES
+   ========================================================================== */
+
+.banner-border-top {
+  border-top: 1px solid var(--color-border-primary);
+}
+
+.banner-border-bottom {
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.banner-border-top-thick {
+  border-top: 4px solid var(--color-primary-500);
+}
+
+.banner-border-bottom-thick {
+  border-bottom: 4px solid var(--color-primary-500);
+}
+
+.banner-border-left-accent {
+  border-left: 4px solid var(--color-accent-500);
+}
+
+.banner-border-right-accent {
+  border-right: 4px solid var(--color-accent-500);
+}
+
+/* ==========================================================================
+   BANNER SHADOW UTILITIES
+   ========================================================================== */
+
+.banner-shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.banner-shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.banner-shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.banner-shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+.banner-shadow-inner {
+  box-shadow: var(--shadow-inner);
+}
+
+/* ==========================================================================
+   BANNER SPACING UTILITIES
+   ========================================================================== */
+
+/* Padding utilities specific to banners */
+.banner-padding-xs {
+  padding: var(--space-xs);
+}
+
+.banner-padding-sm {
+  padding: var(--space-sm);
+}
+
+.banner-padding-md {
+  padding: var(--space-md);
+}
+
+.banner-padding-lg {
+  padding: var(--space-lg);
+}
+
+.banner-padding-xl {
+  padding: var(--space-xl);
+}
+
+.banner-padding-2xl {
+  padding: var(--space-2xl);
+}
+
+/* Specific padding directions */
+.banner-padding-x-lg {
+  padding-inline: var(--space-lg);
+}
+
+.banner-padding-y-lg {
+  padding-block: var(--space-lg);
+}
+
+.banner-padding-x-xl {
+  padding-inline: var(--space-xl);
+}
+
+.banner-padding-y-xl {
+  padding-block: var(--space-xl);
+}
+
+/* ==========================================================================
+   BANNER ANIMATION UTILITIES
+   Subtle animations for enhanced UX
+   ========================================================================== */
+
+.banner-fade-in {
+  opacity: 0;
+  animation: bannerFadeIn var(--duration-700) var(--ease-out) forwards;
+}
+
+.banner-slide-up {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: bannerSlideUp var(--duration-700) var(--ease-out) forwards;
+}
+
+.banner-slide-down {
+  opacity: 0;
+  transform: translateY(-2rem);
+  animation: bannerSlideDown var(--duration-700) var(--ease-out) forwards;
+}
+
+/* Parallax effect for banner backgrounds */
+.banner-parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Keyframes for banner animations */
+@keyframes bannerFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bannerSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bannerSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   BANNER ACCESSIBILITY UTILITIES
+   ========================================================================== */
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .banner-fade-in,
+  .banner-slide-up,
+  .banner-slide-down {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .banner-parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .banner-overlay-dark::before,
+  .banner-overlay-light::before {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .banner {
+    border: 2px solid;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES FOR BANNERS
+   ========================================================================== */
+
+@media print {
+  .banner {
+    break-inside: avoid;
+    background-image: none !important;
+    background-color: transparent !important;
+    color: black !important;
+    min-height: auto !important;
+  }
+  
+  .banner-overlay::before {
+    display: none;
+  }
+  
+  .banner-title {
+    color: black !important;
+    font-size: 2rem !important;
+  }
+  
+  .banner-subtitle,
+  .banner-description {
+    color: black !important;
+  }
+}

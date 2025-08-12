@@ -1,0 +1,103 @@
+
+/* ==========================================================================
+   layouts/site.css
+   Main site container and overall layout structure
+   ========================================================================== */
+
+/* Site Container - Main wrapper for entire site */
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: var(--space-2);
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-base);
+  z-index: var(--z-tooltip);
+  transition: top var(--duration-150) var(--ease-out);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* Main Site Content Area */
+.site-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container System */
+.container {
+  width: 100%;
+  max-width: var(--container-lg);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.container--narrow {
+  max-width: var(--container-md);
+}
+
+.container--wide {
+  max-width: var(--container-xl);
+}
+
+.container--extra-wide {
+  max-width: var(--container-2xl);
+}
+
+.container--full {
+  max-width: none;
+  padding-inline: 0;
+}
+
+.container--flush {
+  padding-inline: 0;
+}
+
+/* Site Sections */
+.site-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-bleed utility for breaking out of containers */
+.full-bleed {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+/* Site-wide layout patterns */
+.site-section {
+  padding-block: var(--space-section-gap);
+}
+
+.site-section--compact {
+  padding-block: var(--space-section-gap-sm);
+}
+
+.site-section--spacious {
+  padding-block: var(--space-section-gap-lg);
+}
+
+/* Theme transitions for smooth theme switching */
+.site {
+  transition: 
+    background-color var(--duration-300) var(--ease-out),
+    color var(--duration-300) var(--ease-out);
+}
