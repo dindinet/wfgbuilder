@@ -7,14 +7,14 @@
 
   <div class="container container--lg">
 
-    <div class="section__body align-center{{ if and $section.has_background (eq $section.background_color "blue") }} inverse bg-blue{{ end }}{{ if and $section.has_background (eq $section.background_color "gray") }} bg-gray{{ end }}">
+    <div class="banner-lg banner-bg-secondary banner-content-center{{ if and $section.has_background (eq $section.background_color "blue") }} inverse bg-blue{{ end }}{{ if and $section.has_background (eq $section.background_color "gray") }} bg-gray{{ end }}">
       <div class="container container--md">
         {{ if $section.title }}
-        <h2 class="section__title">{{ $section.title }}</h2>
+        <h2 class="section_-title">{{ $section.title }}</h2>
         {{ end }}
         {{ if $section.subtitle }}
-        <div class="section__copy">
-          <p class="text-base leading-relaxed">{{ $section.subtitle }}</p>
+        <div class="text-info">
+          <p class="font-semibold text-base leading-relaxed">{{ $section.subtitle }}</p>
         </div>
         {{ end }}
         {{ if $section.actions }}
