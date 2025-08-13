@@ -2,13 +2,13 @@
 <section class="section section--posts">
 
   {{ if $section.title }}
-  <div class="container container--md align-center">
+  <div class="container container--wide align-center">
     <h2 class="section-title">{{ $section.title }}</h2>
   </div>
   {{ end }}
 
-  <div class="container container--lg">
-    <div class="grid grid-cols-3 grid-gap-lg">
+  <div class="container container--wide">
+    <div class="grid grid-cols-auto-fit-sm grid-gap-lg">
       {{ $section_author := false }}
       {{ if $section.author }}
         {{ $author_id_kebab := replace (replace $section.author "data/team/" "") ".json" "" }}

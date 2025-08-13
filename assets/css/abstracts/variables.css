@@ -258,6 +258,7 @@
   --grid-min-md: 300px;
   --grid-min-lg: 350px;
   --grid-min-xl: 400px;
+  --grid-min-2col: 32rem;
   
   /* Grid Gaps */
   --grid-gap-xs: var(--space-2);   /* 8px */
