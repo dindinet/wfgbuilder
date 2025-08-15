@@ -17,8 +17,8 @@
         {{ range $action := $.Site.Params.header.nav_links }}
           {{ $pageUrl := trim $.RelPermalink "/" }}
           {{ $actionUrl := trim $action.url "/" }}
-          <li class="menu-item{{ if eq $pageUrl $actionUrl }} active{{ end }}">
-            {{ $include_dict := dict "action" $action }}
+          <li class="menu-link{{ if eq $pageUrl $actionUrl }} active{{ end }}">
+            {{ $include_dict := dict "action" $action "type" "nav"}}
             {{ partial "action.html" $include_dict }}
           </li>
         {{ end }}
@@ -36,7 +36,7 @@
           {{ $pageUrl := trim $.RelPermalink "/" }}
           {{ $actionUrl := trim $action.url "/" }}
           <li class="menu-item{{ if eq $pageUrl $actionUrl }} active{{ end }}">
-            {{ $include_dict := dict "action" $action }}
+            {{ $include_dict := dict "action" $action "type" "nav"}}
             {{ partial "action.html" $include_dict }}
           </li>
         {{ end }}

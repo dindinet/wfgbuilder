@@ -50,7 +50,7 @@
   text-decoration: none;
   color: var(--color-text-primary);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-3xl);
 }
 
 .site-logo:hover {

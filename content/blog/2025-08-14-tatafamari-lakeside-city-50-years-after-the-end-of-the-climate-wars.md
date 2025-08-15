@@ -4,8 +4,8 @@ layout: post
 date: 2025-08-14T09:18:00.000+01:00
 author: DKL
 categories:
-  - "1"
-image: /images/lake-city.png
+  - "news"
+image: images/lake-city.png
 image_alt: Autumn Lake City
 excerpt: A beautiful place to live. Especially good is an early morning lakeside
   walk. My favourite time to walk is on a crispy blue skied autumn morning with
