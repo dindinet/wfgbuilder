@@ -34,16 +34,14 @@ params:
         style: link
     has_social: true
     social_links:
-      - label: Twitter
-        url: 'https://twitter.com/'
-        style: link
-        new_window: true
-      - label: GitHub
+      - label: github
         url: 'https://github.com/'
+        size: large
         style: link
         new_window: true
-      - label: LinkedIn
+      - label: linkedin
         url: 'https://www.linkedin.com/'
+        size: large  
         style: link
         new_window: true
     content: >-
@@ -64,3 +62,6 @@ markup:
       unsafe: true
 permalinks:
   pages: "/:slug/"
+
+build:
+  writeStats: true

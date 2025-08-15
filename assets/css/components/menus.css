@@ -21,7 +21,7 @@
   color: var(--color-text-primary);
   display: block;
   font-weight: var(--font-weight-medium);
-  padding-block: var(--space-2);
+  padding-block: var(--space-3);
   padding-inline: var(--space-3);
   text-decoration: none;
   transition: all var(--duration-150) var(--ease-in-out);
@@ -693,7 +693,7 @@
 /* Main site navigation */
 .site-nav {
   background-color: var(--color-bg-primary);
-  border-block-end: 1px solid var(--color-border-primary);
+  /*border-block-end: 1px solid var(--color-border-primary);*/
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);

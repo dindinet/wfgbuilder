@@ -47,6 +47,19 @@
   --color-accent-800: #86198f;
   --color-accent-900: #701a75;
   --color-accent-950: #4a044e;
+
+/* Accent Colors */
+  --color-accent-50: #fdfcf2;
+  --color-accent-100: #faf8e0;
+  --color-accent-200: #fdf7ba;
+  --color-accent-300: #fbf288;
+  --color-accent-400: #f9ec52;
+  --color-accent-500: #f8e725;
+  --color-accent-600: #caba06;
+  --color-accent-700: #998d05;
+  --color-accent-800: #675f03;
+  --color-accent-900: #383300;
+  --color-accent-950: #1a1700;
   
   /* Neutral Colors - Light Theme */
   --color-neutral-0: #ffffff;

@@ -2,12 +2,12 @@
   {{ partial "responsive/section-bg" (dict 
     "class" "section-container--xl"
     "containerWidth" 100
-     "linearGradient" (dict "angle" "45deg" "from" "#f0eee6" "to" "#faf9f5")
+     "bgColor" "#f9fafb"
   ) }}
 
   {{ if $section.title }}
   <div class="container container--wide text-center">
-    <h2 class="section__title">{{ $section.title }}</h2>
+    <h2 class="section-title">{{ $section.title }}</h2>
   </div>
   {{ end }}
 

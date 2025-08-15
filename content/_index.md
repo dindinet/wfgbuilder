@@ -1,14 +1,12 @@
 ---
 title: Home
 sections:
-  - type: hero_section    
-    title: This Is A Hero Headline
-    image_alt: The Multi Papo
+  - image_alt: The Multi Papo
     align: center
     image_position: right
     background:
-      background_color: blue
       background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.jpg
+      background_color: blue
       background_image_opacity: 60
       background_image_size: cover
       background_image_repeat: no-repeat
@@ -26,23 +24,15 @@ sections:
         style: secondary
   - type: features_section
     title: Features
-    background:
-      background_color: white
-      background_image: 
-      background_image_opacity: 60
-      background_image_size: cover
-      background_image_repeat: no-repeat
-    has_background: true
     features:
       - title: Feature 1
         content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
           ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh
           fringilla, fringilla.
-        align: left
-        trueimage: https://res.cloudinary.com/dklongley/image/upload/w_558/honeydew.jpg
-        image: images/honeydew.jpg
+        image: /images/honeydew.jpg
         image_alt: Feature 1 placeholder image
         image_position: right
+        align: left
         actions:
           - label: Learn More
             url: /features
@@ -51,10 +41,10 @@ sections:
         content: Ac felis donec et odio pellentesque. Sagittis vitae et leo duis ut diam
           quam nulla. Ullamcorper a lacus vestibulum sed arcu non odio euismod
           lacinia.
-        align: left
         image: /images/armeniana.png
         image_alt: Feature 2 placeholder image
         image_position: left
+        align: left
         actions:
           - label: Learn More
             url: /features
@@ -63,18 +53,19 @@ sections:
         content: Id nibh tortor id aliquet lectus proin. Amet venenatis urna cursus eget
           nunc.[^1] Lacus sed turpis tincidunt id aliquet risus feugiat in ante.
         align: left
-        image: https://res.cloudinary.com/dklongley/image/upload/w_558/lemons.jpg
-        image_alt: Feature 3 placeholder image
         image_position: right
+        image_alt: Feature 3 placeholder image
+        image: https://res.cloudinary.com/dklongley/image/upload/w_558/lemons.jpg
         actions:
           - label: Learn More
             url: /features
             style: secondary
   - type: blog_feed_section
-    title: What's New
     show_recent: true
+    title: What's New
     recent_count: 3
   - type: cta_section
+    has_background: true
     title: This Is A CTA
     subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
       metus quis lorem malesuada luctus.
@@ -82,20 +73,19 @@ sections:
       - label: Learn More
         url: /features
         style: primary
-    has_background: true
-    background_color: gray
+    background_color: cornsilk
   - type: features_section
     title: Wow! Even 'More' features
     features:
       - title: Turbo
         content: All account types get Turbo as standard.
         image: https://res.cloudinary.com/dklongley/image/upload/w_558/lemons.jpg
-        image_alt: Turbo
+        image_alt: Turbo Lemons
         image_position: left
         align: center
         actions:
-          - label: Turbo now
-            url: turbo.html
+          - label: Turbo Now
+            url: /turbo
             style: primary
 seo:
   title: Stackbit Starter Theme
@@ -123,5 +113,5 @@ seo:
     - name: twitter:image
       value: images/starter-preview.png
       relativeUrl: true
-layout: advanced
+layout: advanced            
 ---
