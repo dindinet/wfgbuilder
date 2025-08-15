@@ -5,7 +5,7 @@
 
 /* Post Container */
 .post-container {
-  max-width: var(--container-md);
+  max-width: var(--container-wide);
   margin-inline: auto;
   padding-inline: var(--space-md);
 }
@@ -19,11 +19,11 @@
 }
 
 .post-title {
-  font-size: var(--font-size-heading-4xl);
+  font-size: var(--font-size-heading-2xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
-  margin-block-end: var(--space-6);
+  margin-block-end: var(--space-0);
   max-width: 20ch;
   margin-inline: auto;
 }
@@ -77,13 +77,25 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: 
+    "content";
+  gap: var(--space-2xl);
+}
+
+.post-layout-sidebar{
+  grid-template-areas: 
     "content"
     "sidebar";
-  gap: var(--space-2xl);
 }
 
 @media (min-width: 1024px) {
   .post-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content";
+    max-width: var(--container-xl);
+    padding-inline: var(--space-lg);
+  }
+
+   .post-layout-sidebar {
     grid-template-columns: 1fr 300px;
     grid-template-areas: "content sidebar";
     max-width: var(--container-xl);
@@ -164,7 +176,16 @@
 
 /* Post Sidebar */
 .post-sidebar {
-  grid-area: sidebar;
+  display: none;
+}
+
+/*
+  When the parent container has the `.has-sidebar` class, we display the sidebar.
+  - On small screens, it will stack below the content because the grid has only one column.
+  - On screens >= 1024px, it will move into the second column defined in the media query.
+*/
+.post-layout.has-sidebar .post-sidebar {
+  display: block;
 }
 
 .post-toc {

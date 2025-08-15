@@ -10,7 +10,7 @@
     <div class="card-body">
       <header class="xcard-header">
         {{ if $post.Params.categories }}
-          {{ $include_dict := dict "categories" $post.Params.categories "container_class" "card__meta" }}
+          {{ $include_dict := dict "categories" $post.Params.categories "container_class" "card-meta" }}
           {{ partial "blog_post_categories.html" $include_dict }}
         {{ end }}
         {{ if $blog_feed_section.title }}
@@ -25,7 +25,7 @@
         </div>
       {{ end }}
       <footer class="card-footer">
-        <span>On <time datetime="{{ $post.Date | dateFormat "2006-01-02 15:04" }}">{{ $post.Date | dateFormat "January 02, 2006" }}</time></span>
+        <span><time datetime="{{ $post.Date | dateFormat "2006-01-02 15:04" }}">{{ $post.Date | dateFormat "Jan 02, 2006" }}</time></span>
         {{ if $post.Params.author }}
           {{ $author := index site.Data.team $post.Params.author }}
           {{ if $author }}

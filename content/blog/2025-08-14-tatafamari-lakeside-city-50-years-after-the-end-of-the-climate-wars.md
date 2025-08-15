@@ -1,5 +1,6 @@
 ---
-title: Tatafamari. Lakeside City 50 years after the end of the Climate Wars
+title: Lakeside City
+subtitle:  50 years after the end of the Climate Wars
 layout: post
 date: 2025-08-14T09:18:00.000+01:00
 author: DKL

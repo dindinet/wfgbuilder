@@ -1,41 +1,43 @@
 {{ define "content" }}
 
 <article class="post">
-  <div class="container container--md">
+  <div class="container container--full">
 
     {{ if .Params.image }}
-    <div class="post__image">
+    <div class="post-featured-image">
       <img src="{{ $.Params.image | relURL }}" alt="{{ $.Params.image_alt }}" />
     </div>
     {{ end }}
-
-    <header class="post__header">
+  </div>
+  <div class="container container--narrow">
+    <header class="post-header">
       {{ if .Params.categories }}
-        {{ $include_dict := dict "categories" $.Params.categories "container_class" "post__meta" }}
+        {{ $include_dict := dict "categories" $.Params.categories "container_class" "post-meta" }}
         {{ partial "blog_post_categories.html" $include_dict }}
       {{ end }}
-      <h1 class="post__title">{{ .Params.title }}</h1>
-      <div class="post__meta">
+      <h1 class="post-title mb-0">{{ .Params.title }}</h1>
+      <h2 class="post-subtitle mt-0">{{ .Params.subtitle }}</h2>
+      <div class="post-meta">
         <span>On <time datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">{{ .Date | dateFormat "January 02, 2006" }}</time></span>
         {{ if .Params.author }}
           {{ $author := index site.Data.team .Params.author }}
           {{ if $author }}
             {{ if $author.link }}
-              <span> by <a href="{{ $author.link | relURL }}">{{ $author.first_name }} {{ $author.last_name }}</a></span>
+              <span class="post-author"> by <a href="{{ $author.link | relURL }}">{{ $author.first_name }} {{ $author.last_name }}</a></span>
             {{ else }}
-              <span> by {{ $author.first_name }} {{ $author.last_name }}</span>
+              <span  class="post-author"> by {{ $author.first_name }} {{ $author.last_name }}</span>
             {{ end }}
           {{ end }}
         {{ end }}
       </div>
     </header>
-
-    <div class="post__copy">
+    
+    <div class="post-layout">
       {{ .Content }}
     </div>
 
     {{ if .Params.tags }}
-    <footer class="post__footer">
+    <footer class="post-tags">
       {{ $include_dict := dict "tags" $.Params.tags }}
       {{ partial "blog_post_tags.html" $include_dict }}
     </footer>
