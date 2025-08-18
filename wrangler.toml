@@ -1,6 +1,7 @@
 # Configure Cloudflare Worker
 
-name = 'hosting-cloudflare-worker'
+name = 'wfgbuilder'
+
 compatibility_date = '2025-07-31'
 
 [build]
