@@ -1,0 +1,27 @@
+{
+  "name": "wfgbuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dindinet/wfgbuilder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dindinet/wfgbuilder/issues"
+  },
+  "homepage": "https://github.com/dindinet/wfgbuilder#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "autoprefixer": "^10.4.21",
+    "postcss-cli": "^11.0.1",
+    "purgecss": "^7.0.2"
+  }
+}
