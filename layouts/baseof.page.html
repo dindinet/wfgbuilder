@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>    
+        <title>{{ if .Params.seo.title }}{{ $.Params.seo.title }}{{ else }}{{ print print $.Title " | " $.Site.Title }}{{ end }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google" content="notranslate" />
+        <meta name="description" content="{{ .Params.seo.description | default "" }}" />
+        {{ if .Params.seo.robots }}
+        <meta name="robots" content="{{ delimit $.Params.seo.robots "," }}">
+        {{ end }}
+        {{ range $meta := .Params.seo.extra }}
+          {{ $key_name := $meta.keyName | default "name" }}
+          {{ if $meta.relativeUrl }}
+            {{ if $.Site.Params.domain }}
+              {{ $domain := trim $.Site.Params.domain "/" }}
+              {{ $rel_url := $meta.value | relURL }}
+              {{ $full_url := print $domain $rel_url }}
+              <meta {{ $key_name }}="{{ $meta.name }}" content="{{ $full_url }}">
+            {{ end }}
+          {{ else }}
+            <meta {{ $key_name }}="{{ $meta.name }}" content="{{ $meta.value }}">
+          {{ end }}
+        {{ end }}
+        {{ $css := slice }}
+        {{ $css = $css | append (resources.Get "css/abstracts/variables.css") }}
+        {{ $css = $css | append (resources.Get "css/base/reset.css") }}
+        {{ $css = $css | append (resources.Get "css/base/base.css") }}
+        {{ $css = $css | append (resources.Get "css/base/helpers.css") }}
+        {{ $css = $css | append (resources.Get "css/components/forms.css") }}
+        {{ $css = $css | append (resources.Get "css/components/buttons.css") }}
+        {{ $css = $css | append (resources.Get "css/components/icons.css") }}
+        {{ $css = $css | append (resources.Get "css/components/tables.css") }}
+        {{ $css = $css | append (resources.Get "css/components/menus.css") }}
+        {{ $css = $css | append (resources.Get "css/components/grid.css") }}
+        {{ $css = $css | append (resources.Get "css/components/cards.css") }}
+        {{ $css = $css | append (resources.Get "css/components/inverse.css") }}
+        {{ $css = $css | append (resources.Get "css/components/banner.css") }}
+        {{ $css = $css | append (resources.Get "css/layouts/site.css") }}
+        {{ $css = $css | append (resources.Get "css/layouts/header.css") }}
+        {{ $css = $css | append (resources.Get "css/layouts/footer.css") }}
+        {{ $css = $css | append (resources.Get "css/layouts/post-page.css") }}
+        {{ $css = $css | append (resources.Get "css/layouts/section.css") }}
+
+        <link rel="stylesheet" href="{{ ($css | resources.Concat "css/bundle.css" | resources.Minify | css.PostCSS | resources.Fingerprint).RelPermalink }}">
+        {{ if .Site.Params.favicon }}
+        <link rel="icon" href="{{ $.Site.Params.favicon | relURL }}">
+        {{ end }}
+        
+    </head>
+    <body>
+        
+        <div id="thesite-wrap" class="site">
+          
+        
+          {{ partial "header.html" . }}
+        <h1 style="font-size:8rem;color: rgb(190, 135, 52);margin-inline: auto;-webkit-text-stroke: 2px rgb(102, 50, 35); -webkit-text-fill-color: rgb(190, 135, 52); /* This sets the text color */;">Base of Rage</h1>
+          <main id="content" class="site-content">
+            {{ block "content" . }}{{ end }}
+          </main>
+        
+          {{ partial "footer.html" . }}
+        
+        </div>
+    </body> 
+</html>
