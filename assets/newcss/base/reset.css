@@ -33,14 +33,14 @@ html {
 /* Set core body defaults */
 body {
   /* Use system font stack by default */
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-normal);
+  font-family: var(--ff-sans);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-normal);
   
   /* Set theme colors */
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
+  color: var(--c-txt-p);
+  background-color: var(--c-bg-p);
   
   /* Improve text rendering */
   -webkit-font-smoothing: antialiased;
@@ -69,9 +69,9 @@ nav ol {
 
 /* Set consistent heading styles */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  color: var(--color-text-primary);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--c-txt-p);
   text-wrap: balance; /* Prevent orphaned words in headings */
 }
 
@@ -89,7 +89,7 @@ a {
 
 a:not([class]) {
   /* Default link styles for content links without classes */
-  color: var(--color-primary-600);
+  color: var(--c-p-600);
   text-decoration: underline;
   text-decoration-skip-ink: auto;
 }
@@ -97,13 +97,13 @@ a:not([class]) {
 /* Dark theme link color adjustment */
 @media (prefers-color-scheme: dark) {
   a:not([class]) {
-    color: var(--color-primary-400);
+    color: var(--c-p-400);
   }
 }
 
 :root[data-theme="dark"] a:not([class]),
 .dark a:not([class]) {
-  color: var(--color-primary-400);
+  color: var(--c-p-400);
 }
 
 /* Make images easier to work with */
@@ -156,7 +156,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--color-border-focus);
+  outline: 2px solid var(--c-bdr-f);
   outline-offset: 2px;
 }
 
@@ -236,7 +236,7 @@ dd {
 /* Improve focus visibility for keyboard users */
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {
-    transition: outline-offset var(--duration-150) var(--ease-out);
+    transition: outline-offset var(--d-150) var(--e-out);
   }
 }
 

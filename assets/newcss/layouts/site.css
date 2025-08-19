@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    layouts/site.css
    Main site container and overall layout structure
@@ -9,32 +8,32 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  background-color: var(--c-bg-p);
+  color: var(--c-txt-p);
 }
 
 /* Skip Link for Accessibility */
 .skip-link {
   position: absolute;
   top: -40px;
-  left: var(--space-2);
-  background-color: var(--color-primary-600);
-  color: var(--color-neutral-0);
-  padding-block: var(--space-2);
-  padding-inline: var(--space-3);
+  left: var(--s-2);
+  background-color: var(--c-p-600);
+  color: var(--c-n-0);
+  padding-block: var(--s-2);
+  padding-inline: var(--s-3);
   text-decoration: none;
-  font-weight: var(--font-weight-semibold);
-  border-radius: var(--radius-base);
-  z-index: var(--z-tooltip);
-  transition: top var(--duration-150) var(--ease-out);
+  font-weight: var(--fw-semibold);
+  border-radius: var(--r-base);
+  z-index: var(--z-tip);
+  transition: top var(--d-150) var(--e-out);
 }
 
 .skip-link:focus {
-  top: var(--space-2);
+  top: var(--s-2);
 }
 
 /* Main Site Content Area */
-.site-content {
+.site__content {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -43,21 +42,21 @@
 /* Container System */
 .container {
   width: 100%;
-  max-width: var(--container-lg);
+  max-width: var(--ct-lg);
   margin-inline: auto;
-  padding-inline: var(--space-md);
+  padding-inline: var(--s-md);
 }
 
 .container--narrow {
-  max-width: var(--container-md);
+  max-width: var(--ct-md);
 }
 
 .container--wide {
-  max-width: var(--container-xl);
+  max-width: var(--ct-xl);
 }
 
-.container--extra-wide {
-  max-width: var(--container-2xl);
+.container--xw {
+  max-width: var(--ct-2xl);
 }
 
 .container--full {
@@ -70,7 +69,7 @@
 }
 
 /* Site Sections */
-.site-main {
+.site__main {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -83,21 +82,21 @@
 }
 
 /* Site-wide layout patterns */
-.site-section {
-  padding-block: var(--space-section-gap);
+.section {
+  padding-block: var(--s-sec-gap);
 }
 
-.site-section--compact {
-  padding-block: var(--space-section-gap-sm);
+.section--sm {
+  padding-block: var(--s-sec-gap-sm);
 }
 
-.site-section--spacious {
-  padding-block: var(--space-section-gap-lg);
+.section--lg {
+  padding-block: var(--s-sec-gap-lg);
 }
 
 /* Theme transitions for smooth theme switching */
 .site {
   transition: 
-    background-color var(--duration-300) var(--ease-out),
-    color var(--duration-300) var(--ease-out);
+    background-color var(--d-300) var(--e-out),
+    color var(--d-300) var(--e-out);
 }

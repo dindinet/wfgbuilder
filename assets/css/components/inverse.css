@@ -8,28 +8,28 @@
    ========================================================================== */
 
 .inverse {
-  background-color: var(--c-bg-inv);
-  color: var(--c-txt-inv);
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
 }
 
 .inverse-soft {
-  background-color: var(--c-n-800);
-  color: var(--c-n-100);
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
 }
 
 .inverse-primary {
-  background-color: var(--c-p-900);
-  color: var(--c-p-50);
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-50);
 }
 
 .inverse-secondary {
-  background-color: var(--c-s-900);
-  color: var(--c-s-50);
+  background-color: var(--color-secondary-900);
+  color: var(--color-secondary-50);
 }
 
 .inverse-accent {
-  background-color: var(--c-a-900);
-  color: var(--c-a-50);
+  background-color: var(--color-accent-900);
+  color: var(--color-accent-50);
 }
 
 /* ==========================================================================
@@ -37,27 +37,27 @@
    ========================================================================== */
 
 .text-inverse {
-  color: var(--c-txt-inv);
+  color: var(--color-text-inverse);
 }
 
 .text-inverse-soft {
-  color: var(--c-n-100);
+  color: var(--color-neutral-100);
 }
 
 .text-inverse-muted {
-  color: var(--c-n-300);
+  color: var(--color-neutral-300);
 }
 
 .text-inverse-primary {
-  color: var(--c-p-100);
+  color: var(--color-primary-100);
 }
 
 .text-inverse-secondary {
-  color: var(--c-s-100);
+  color: var(--color-secondary-100);
 }
 
 .text-inverse-accent {
-  color: var(--c-a-100);
+  color: var(--color-accent-100);
 }
 
 /* ==========================================================================
@@ -65,23 +65,23 @@
    ========================================================================== */
 
 .bg-inverse {
-  background-color: var(--c-bg-inv);
+  background-color: var(--color-bg-inverse);
 }
 
 .bg-inverse-soft {
-  background-color: var(--c-n-800);
+  background-color: var(--color-neutral-800);
 }
 
 .bg-inverse-primary {
-  background-color: var(--c-p-900);
+  background-color: var(--color-primary-900);
 }
 
 .bg-inverse-secondary {
-  background-color: var(--c-s-900);
+  background-color: var(--color-secondary-900);
 }
 
 .bg-inverse-accent {
-  background-color: var(--c-a-900);
+  background-color: var(--color-accent-900);
 }
 
 /* ==========================================================================
@@ -89,23 +89,23 @@
    ========================================================================== */
 
 .border-inverse {
-  border-color: var(--c-n-600);
+  border-color: var(--color-neutral-600);
 }
 
 .border-inverse-light {
-  border-color: var(--c-n-400);
+  border-color: var(--color-neutral-400);
 }
 
 .border-inverse-primary {
-  border-color: var(--c-p-600);
+  border-color: var(--color-primary-600);
 }
 
 .border-inverse-secondary {
-  border-color: var(--c-s-600);
+  border-color: var(--color-secondary-600);
 }
 
 .border-inverse-accent {
-  border-color: var(--c-a-600);
+  border-color: var(--color-accent-600);
 }
 
 /* ==========================================================================
@@ -119,9 +119,9 @@
 .inverse-primary .btn,
 .inverse-secondary .btn,
 .inverse-accent .btn {
-  --btn-bg: var(--c-n-0);
-  --btn-color: var(--c-n-900);
-  --btn-border: var(--c-n-0);
+  --btn-bg: var(--color-neutral-0);
+  --btn-color: var(--color-neutral-900);
+  --btn-border: var(--color-neutral-0);
 }
 
 .inverse .btn:hover,
@@ -129,27 +129,27 @@
 .inverse-primary .btn:hover,
 .inverse-secondary .btn:hover,
 .inverse-accent .btn:hover {
-  --btn-bg: var(--c-n-100);
-  --btn-color: var(--c-n-900);
+  --btn-bg: var(--color-neutral-100);
+  --btn-color: var(--color-neutral-900);
 }
 
-.inverse .btn--outline,
-.inverse-soft .btn--outline,
-.inverse-primary .btn--outline,
-.inverse-secondary .btn--outline,
-.inverse-accent .btn--outline {
+.inverse .btn-outline,
+.inverse-soft .btn-outline,
+.inverse-primary .btn-outline,
+.inverse-secondary .btn-outline,
+.inverse-accent .btn-outline {
   --btn-bg: transparent;
-  --btn-color: var(--c-n-0);
-  --btn-border: var(--c-n-0);
+  --btn-color: var(--color-neutral-0);
+  --btn-border: var(--color-neutral-0);
 }
 
-.inverse .btn--outline:hover,
-.inverse-soft .btn--outline:hover,
-.inverse-primary .btn--outline:hover,
-.inverse-secondary .btn--outline:hover,
-.inverse-accent .btn--outline:hover {
-  --btn-bg: var(--c-n-0);
-  --btn-color: var(--c-n-900);
+.inverse .btn-outline:hover,
+.inverse-soft .btn-outline:hover,
+.inverse-primary .btn-outline:hover,
+.inverse-secondary .btn-outline:hover,
+.inverse-accent .btn-outline:hover {
+  --btn-bg: var(--color-neutral-0);
+  --btn-color: var(--color-neutral-900);
 }
 
 /* Links in inverse contexts */
@@ -158,8 +158,8 @@
 .inverse-primary a,
 .inverse-secondary a,
 .inverse-accent a {
-  color: var(--c-n-100);
-  text-decoration-color: var(--c-n-400);
+  color: var(--color-neutral-100);
+  text-decoration-color: var(--color-neutral-400);
 }
 
 .inverse a:hover,
@@ -167,8 +167,8 @@
 .inverse-primary a:hover,
 .inverse-secondary a:hover,
 .inverse-accent a:hover {
-  color: var(--c-n-0);
-  text-decoration-color: var(--c-n-0);
+  color: var(--color-neutral-0);
+  text-decoration-color: var(--color-neutral-0);
 }
 
 /* Forms in inverse contexts */
@@ -178,16 +178,16 @@
 .inverse-soft .form-input,
 .inverse-soft .form-textarea,
 .inverse-soft .form-select {
-  background-color: var(--c-n-700);
-  border-color: var(--c-n-600);
-  color: var(--c-n-100);
+  background-color: var(--color-neutral-700);
+  border-color: var(--color-neutral-600);
+  color: var(--color-neutral-100);
 }
 
 .inverse .form-input::placeholder,
 .inverse .form-textarea::placeholder,
 .inverse-soft .form-input::placeholder,
 .inverse-soft .form-textarea::placeholder {
-  color: var(--c-n-400);
+  color: var(--color-neutral-400);
 }
 
 .inverse .form-input:focus,
@@ -196,64 +196,64 @@
 .inverse-soft .form-input:focus,
 .inverse-soft .form-textarea:focus,
 .inverse-soft .form-select:focus {
-  border-color: var(--c-n-300);
+  border-color: var(--color-neutral-300);
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 .inverse .form-label,
 .inverse-soft .form-label {
-  color: var(--c-n-200);
+  color: var(--color-neutral-200);
 }
 
 .inverse .form-help,
 .inverse-soft .form-help {
-  color: var(--c-n-400);
+  color: var(--color-neutral-400);
 }
 
 /* Cards in inverse contexts */
 .inverse .card,
 .inverse-soft .card {
-  background-color: var(--c-n-700);
-  border-color: var(--c-n-600);
-  color: var(--c-n-100);
+  background-color: var(--color-neutral-700);
+  border-color: var(--color-neutral-600);
+  color: var(--color-neutral-100);
 }
 
-.inverse .card__hdr,
-.inverse-soft .card__hdr {
-  border-bottom-color: var(--c-n-600);
+.inverse .card-header,
+.inverse-soft .card-header {
+  border-bottom-color: var(--color-neutral-600);
 }
 
-.inverse .card__ftr,
-.inverse-soft .card__ftr {
-  border-top-color: var(--c-n-600);
+.inverse .card-footer,
+.inverse-soft .card-footer {
+  border-top-color: var(--color-neutral-600);
 }
 
 /* Tables in inverse contexts */
 .inverse .table,
 .inverse-soft .table {
-  color: var(--c-n-100);
+  color: var(--color-neutral-100);
 }
 
 .inverse .table th,
 .inverse-soft .table th {
-  background-color: var(--c-n-700);
-  color: var(--c-n-200);
-  border-bottom-color: var(--c-n-600);
+  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-200);
+  border-bottom-color: var(--color-neutral-600);
 }
 
 .inverse .table td,
 .inverse-soft .table td {
-  border-bottom-color: var(--c-n-600);
+  border-bottom-color: var(--color-neutral-600);
 }
 
 .inverse .table-striped tbody tr:nth-child(even),
 .inverse-soft .table-striped tbody tr:nth-child(even) {
-  background-color: var(--c-n-750);
+  background-color: var(--color-neutral-750);
 }
 
 .inverse .table-hoverable tbody tr:hover,
 .inverse-soft .table-hoverable tbody tr:hover {
-  background-color: var(--c-n-700);
+  background-color: var(--color-neutral-700);
 }
 
 /* ==========================================================================
@@ -262,33 +262,33 @@
    ========================================================================== */
 
 .section-inverse {
-  background-color: var(--c-bg-inv);
-  color: var(--c-txt-inv);
-  padding-block: var(--s-sec-gap);
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  padding-block: var(--space-section-gap);
 }
 
 .section-inverse-soft {
-  background-color: var(--c-n-800);
-  color: var(--c-n-100);
-  padding-block: var(--s-sec-gap);
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+  padding-block: var(--space-section-gap);
 }
 
 .section-inverse-primary {
-  background-color: var(--c-p-900);
-  color: var(--c-p-50);
-  padding-block: var(--s-sec-gap);
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-50);
+  padding-block: var(--space-section-gap);
 }
 
 .section-inverse-secondary {
-  background-color: var(--c-s-900);
-  color: var(--c-s-50);
-  padding-block: var(--s-sec-gap);
+  background-color: var(--color-secondary-900);
+  color: var(--color-secondary-50);
+  padding-block: var(--space-section-gap);
 }
 
 .section-inverse-accent {
-  background-color: var(--c-a-900);
-  color: var(--c-a-50);
-  padding-block: var(--s-sec-gap);
+  background-color: var(--color-accent-900);
+  color: var(--color-accent-50);
+  padding-block: var(--space-section-gap);
 }
 
 /* Section padding variants */
@@ -297,7 +297,7 @@
 .section-inverse-primary-sm,
 .section-inverse-secondary-sm,
 .section-inverse-accent-sm {
-  padding-block: var(--s-sec-gap-sm);
+  padding-block: var(--space-section-gap-sm);
 }
 
 .section-inverse-lg,
@@ -305,7 +305,7 @@
 .section-inverse-primary-lg,
 .section-inverse-secondary-lg,
 .section-inverse-accent-lg {
-  padding-block: var(--s-sec-gap-lg);
+  padding-block: var(--space-section-gap-lg);
 }
 
 /* ==========================================================================
@@ -313,44 +313,44 @@
    ========================================================================== */
 
 .inverse-gradient-primary {
-  background: linear-gradient(135deg, var(--c-p-900) 0%, var(--c-p-950) 100%);
-  color: var(--c-p-50);
+  background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-950) 100%);
+  color: var(--color-primary-50);
 }
 
 .inverse-gradient-secondary {
-  background: linear-gradient(135deg, var(--c-s-900) 0%, var(--c-s-950) 100%);
-  color: var(--c-s-50);
+  background: linear-gradient(135deg, var(--color-secondary-900) 0%, var(--color-secondary-950) 100%);
+  color: var(--color-secondary-50);
 }
 
 .inverse-gradient-accent {
-  background: linear-gradient(135deg, var(--c-a-900) 0%, var(--c-a-950) 100%);
-  color: var(--c-a-50);
+  background: linear-gradient(135deg, var(--color-accent-900) 0%, var(--color-accent-950) 100%);
+  color: var(--color-accent-50);
 }
 
 .inverse-gradient-neutral {
-  background: linear-gradient(135deg, var(--c-n-800) 0%, var(--c-n-950) 100%);
-  color: var(--c-n-100);
+  background: linear-gradient(135deg, var(--color-neutral-800) 0%, var(--color-neutral-950) 100%);
+  color: var(--color-neutral-100);
 }
 
 .inverse-gradient-warm {
-  background: linear-gradient(135deg, var(--c-err-800) 0%, var(--c-warn-900) 100%);
-  color: var(--c-n-0);
+  background: linear-gradient(135deg, var(--color-error-800) 0%, var(--color-warning-900) 100%);
+  color: var(--color-neutral-0);
 }
 
 .inverse-gradient-cool {
-  background: linear-gradient(135deg, var(--c-info-800) 0%, var(--c-p-900) 100%);
-  color: var(--c-n-0);
+  background: linear-gradient(135deg, var(--color-info-800) 0%, var(--color-primary-900) 100%);
+  color: var(--color-neutral-0);
 }
 
 /* Radial gradients for special effects */
 .inverse-gradient-radial {
-  background: radial-gradient(ellipse at center, var(--c-n-700) 0%, var(--c-n-950) 100%);
-  color: var(--c-n-100);
+  background: radial-gradient(ellipse at center, var(--color-neutral-700) 0%, var(--color-neutral-950) 100%);
+  color: var(--color-neutral-100);
 }
 
 .inverse-gradient-radial-primary {
-  background: radial-gradient(ellipse at center, var(--c-p-800) 0%, var(--c-p-950) 100%);
-  color: var(--c-p-50);
+  background: radial-gradient(ellipse at center, var(--color-primary-800) 0%, var(--color-primary-950) 100%);
+  color: var(--color-primary-50);
 }
 
 /* ==========================================================================
@@ -359,39 +359,39 @@
    ========================================================================== */
 
 .high-contrast {
-  background-color: var(--c-n-0);
-  color: var(--c-n-950);
-  border: 2px solid var(--c-n-950);
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-950);
+  border: 2px solid var(--color-neutral-950);
 }
 
 .high-contrast-inverse {
-  background-color: var(--c-n-950);
-  color: var(--c-n-0);
-  border: 2px solid var(--c-n-0);
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-0);
+  border: 2px solid var(--color-neutral-0);
 }
 
 .high-contrast-primary {
-  background-color: var(--c-p-50);
-  color: var(--c-p-950);
-  border: 2px solid var(--c-p-600);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-950);
+  border: 2px solid var(--color-primary-600);
 }
 
 .high-contrast-warning {
-  background-color: var(--c-warn-50);
-  color: var(--c-warn-950);
-  border: 2px solid var(--c-warn-600);
+  background-color: var(--color-warning-50);
+  color: var(--color-warning-950);
+  border: 2px solid var(--color-warning-600);
 }
 
 .high-contrast-error {
-  background-color: var(--c-err-50);
-  color: var(--c-err-950);
-  border: 2px solid var(--c-err-600);
+  background-color: var(--color-error-50);
+  color: var(--color-error-950);
+  border: 2px solid var(--color-error-600);
 }
 
 .high-contrast-success {
-  background-color: var(--c-ok-50);
-  color: var(--c-ok-950);
-  border: 2px solid var(--c-ok-600);
+  background-color: var(--color-success-50);
+  color: var(--color-success-950);
+  border: 2px solid var(--color-success-600);
 }
 
 /* ==========================================================================
@@ -401,68 +401,68 @@
 
 /* Inverse hero sections */
 .hero-inverse {
-  background-color: var(--c-bg-inv);
-  color: var(--c-txt-inv);
-  padding-block: clamp(var(--s-2xl), 8vw, var(--s-4xl));
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  padding-block: clamp(var(--space-2xl), 8vw, var(--space-4xl));
 }
 
 .hero-inverse .hero-title {
-  color: var(--c-txt-inv);
+  color: var(--color-text-inverse);
 }
 
 .hero-inverse .hero-subtitle {
-  color: var(--c-n-300);
+  color: var(--color-neutral-300);
 }
 
 /* Inverse footer sections */
 .footer-inverse {
-  background-color: var(--c-n-900);
-  color: var(--c-n-100);
-  padding-block: var(--s-2xl);
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-100);
+  padding-block: var(--space-2xl);
 }
 
 .footer-inverse a {
-  color: var(--c-n-300);
+  color: var(--color-neutral-300);
 }
 
 .footer-inverse a:hover {
-  color: var(--c-n-0);
+  color: var(--color-neutral-0);
 }
 
 /* Inverse navigation */
 .nav-inverse {
-  background-color: var(--c-bg-inv);
-  color: var(--c-txt-inv);
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
 }
 
 .nav-inverse .nav-link {
-  color: var(--c-n-300);
+  color: var(--color-neutral-300);
 }
 
 .nav-inverse .nav-link:hover,
 .nav-inverse .nav-link.active {
-  color: var(--c-n-0);
+  color: var(--color-neutral-0);
 }
 
 /* Inverse callouts */
 .callout-inverse {
-  background-color: var(--c-n-800);
-  color: var(--c-n-100);
-  padding: var(--s-lg);
-  border-radius: var(--r-lg);
-  border-left: 4px solid var(--c-n-400);
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-neutral-400);
 }
 
 .callout-inverse-primary {
-  background-color: var(--c-p-900);
-  color: var(--c-p-100);
-  border-left-color: var(--c-p-400);
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-100);
+  border-left-color: var(--color-primary-400);
 }
 
 .callout-inverse-warning {
-  background-color: var(--c-warn-900);
-  color: var(--c-warn-100);
-  border-left-color: var(--c-warn-400);
+  background-color: var(--color-warning-900);
+  color: var(--color-warning-100);
+  border-left-color: var(--color-warning-400);
 }
 
 /* ==========================================================================
@@ -470,28 +470,28 @@
    ========================================================================== */
 
 .inverse-fade-in {
-  background-color: var(--c-bg-inv);
-  color: var(--c-txt-inv);
-  animation: inverseFadeIn var(--d-700) var(--e-out);
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  animation: inverseFadeIn var(--duration-700) var(--ease-out);
 }
 
 .inverse-slide-up {
-  background-color: var(--c-bg-inv);
-  color: var(--c-txt-inv);
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
   transform: translateY(2rem);
   opacity: 0;
-  animation: inverseSlideUp var(--d-700) var(--e-out) forwards;
+  animation: inverseSlideUp var(--duration-700) var(--ease-out) forwards;
 }
 
 /* Keyframes for inverse animations */
 @keyframes inverseFadeIn {
   from {
-    background-color: var(--c-bg-p);
-    color: var(--c-txt-p);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
   }
   to {
-    background-color: var(--c-bg-inv);
-    color: var(--c-txt-inv);
+    background-color: var(--color-bg-inverse);
+    color: var(--color-text-inverse);
   }
 }
 
@@ -517,12 +517,12 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--c-n-400);
-  transition: background-color var(--d-200) var(--e-out);
+  background-color: var(--color-neutral-400);
+  transition: background-color var(--duration-200) var(--ease-out);
 }
 
 .inverse-underline:hover::after {
-  background-color: var(--c-n-0);
+  background-color: var(--color-neutral-0);
 }
 
 .inverse-highlight {
@@ -536,9 +536,9 @@
   left: -4px;
   right: -4px;
   bottom: 0;
-  background-color: var(--c-n-700);
+  background-color: var(--color-neutral-700);
   z-index: -1;
-  border-radius: var(--r-base);
+  border-radius: var(--radius-base);
 }
 
 /* ==========================================================================
@@ -548,18 +548,18 @@
 /* Container queries for inverse sections */
 @container (min-width: 768px) {
   .inverse-responsive {
-    background-color: var(--c-bg-inv);
-    color: var(--c-txt-inv);
-    padding: var(--s-xl);
+    background-color: var(--color-bg-inverse);
+    color: var(--color-text-inverse);
+    padding: var(--space-xl);
   }
 }
 
 /* Fallback for browsers without container query support */
 @media (min-width: 768px) {
   .inverse-responsive {
-    background-color: var(--c-bg-inv);
-    color: var(--c-txt-inv);
-    padding: var(--s-xl);
+    background-color: var(--color-bg-inverse);
+    color: var(--color-text-inverse);
+    padding: var(--space-xl);
   }
 }
 
@@ -592,8 +592,8 @@
   .inverse-fade-in,
   .inverse-slide-up {
     animation: none;
-    background-color: var(--c-bg-inv);
-    color: var(--c-txt-inv);
+    background-color: var(--color-bg-inverse);
+    color: var(--color-text-inverse);
     transform: none;
     opacity: 1;
   }

@@ -5,30 +5,30 @@
 
 /* Base Section */
 .section {
-  padding-block: var(--s-sec-gap);
+  padding-block: var(--space-section-gap);
 }
 
 .section--compact {
-  padding-block: var(--s-sec-gap-sm);
+  padding-block: var(--space-section-gap-sm);
 }
 
 .section--spacious {
-  padding-block: var(--s-sec-gap-lg);
+  padding-block: var(--space-section-gap-lg);
 }
 
 /* Section Container */
 .section-container {
-  max-width: var(--ct-lg);
+  max-width: var(--container-lg);
   margin-inline: auto;
-  padding-inline: var(--s-md);
+  padding-inline: var(--space-md);
 }
 
 .section-container--narrow {
-  max-width: var(--ct-md);
+  max-width: var(--container-md);
 }
 
 .section-container--wide {
-  max-width: var(--ct-xl);
+  max-width: var(--container-xl);
 }
 
 .section-container--full {
@@ -39,7 +39,7 @@
 /* Section Header */
 .section-header {
   text-align: center;
-  margin-block-end: var(--s-sec-gap);
+  margin-block-end: var(--space-section-gap);
 }
 
 .section-header--left {
@@ -51,16 +51,16 @@
 }
 
 .section-title {
-  font-size: var(--fs-hd-2xl);
-  font-weight: var(--fw-bold);
-  line-height: var(--lh-tight);
-  color: var(--c-txt-p);
-  margin-block-end: var(--s-4);
+  font-size: var(--font-size-heading-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-4);
 }
 
 .section-subtitle {
-  font-size: var(--fs-xl);
-  color: var(--c-txt-s);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
   max-width: 60ch;
   margin-inline: auto;
 }
@@ -77,44 +77,44 @@
 .section-content {
   display: flex;
   flex-direction: column;
-  gap: var(--s-lg);
+  gap: var(--space-lg);
 }
 
 /* Hero Section */
 .section--hero {
-  padding-block: var(--s-4xl);
+  padding-block: var(--space-4xl);
   background: linear-gradient(
     135deg, 
-    var(--c-p-50) 0%, 
-    var(--c-s-50) 100%
+    var(--color-primary-50) 0%, 
+    var(--color-secondary-50) 100%
   );
   position: relative;
   overflow: hidden;
 }
 
 .section--hero .section-title {
-  font-size: var(--fs-hd-5xl);
+  font-size: var(--font-size-heading-5xl);
 }
 
 .section--hero .section-subtitle {
-  font-size: var(--fs-2xl);
-  margin-block-end: var(--s-xl);
+  font-size: var(--font-size-2xl);
+  margin-block-end: var(--space-xl);
 }
 
 /* Feature Sections */
 .section--features {
-  background-color: var(--c-bg-s);
+  background-color: var(--color-bg-secondary);
 }
 
 .section--testimonials {
-  background-color: var(--c-bg-m);
+  background-color: var(--color-bg-muted);
 }
 
 /* Two Column Section Layout */
 .section--two-column {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--s-xl);
+  gap: var(--space-xl);
   align-items: center;
 }
 
@@ -158,8 +158,8 @@
 
 /* CTA Section */
 .section--cta {
-  background-color: var(--c-p-600);
-  color: var(--c-txt-inv);
+  background-color: var(--color-primary-600);
+  color: var(--color-text-inverse);
   text-align: center;
 }
 
@@ -168,7 +168,7 @@
 }
 
 .section--cta .section-subtitle {
-  color: var(--c-p-100);
+  color: var(--color-primary-100);
 }
 
 /* Section with background image */
@@ -177,7 +177,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  color: var(--c-txt-inv);
+  color: var(--color-text-inverse);
 }
 
 .section--bg-image::before {
@@ -195,8 +195,8 @@
 /* Section Dividers */
 .section-divider {
   height: 1px;
-  background-color: var(--c-bdr-p);
-  margin-block: var(--s-sec-gap);
+  background-color: var(--color-border-primary);
+  margin-block: var(--space-section-gap);
 }
 
 .section-divider--thick {

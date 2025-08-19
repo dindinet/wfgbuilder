@@ -1,0 +1,425 @@
+/* ==========================================================================
+   BASE ELEMENT STYLING
+   Foundational styling for HTML elements using design tokens
+   ========================================================================== */
+
+/* ==========================================================================
+   TYPOGRAPHY ELEMENTS
+   ========================================================================== */
+
+/* Heading Hierarchy - Conservative Scale by Default */
+/* Combines semantic headings with utility classes for flexibility */
+h1, .h1 {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin-block-end: var(--s-lg);
+}
+
+h2, .h2 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin-block-start: var(--s-xl);
+  margin-block-end: var(--s-md);
+}
+
+h3, .h3 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  margin-block-start: var(--s-lg);
+  margin-block-end: var(--s-sm);
+}
+
+h4, .h4 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-snug);
+  margin-block-start: var(--s-md);
+  margin-block-end: var(--s-sm);
+}
+
+h5, .h5 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+  margin-block-start: var(--s-md);
+  margin-block-end: var(--s-xs);
+}
+
+h6, .h6 {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--c-txt-s);
+  margin-block-start: var(--s-md);
+  margin-block-end: var(--s-xs);
+}
+
+/* Utility heading classes remove margins for component flexibility */
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  margin-block-end: var(--s-md);
+  max-width: var(--content-reading-width);
+}
+
+/* Lead paragraph variant */
+p.lead {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-relaxed);
+  color: var(--c-txt-s);
+  margin-block-end: var(--s-lg);
+}
+
+/* Small text */
+small {
+  font-size: var(--fs-sm);
+  color: var(--c-txt-m);
+}
+
+/* Emphasis and Strong */
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: var(--fw-semibold);
+  color: var(--c-txt-p);
+}
+
+/* Links in Content */
+a:not([class]) {
+  color: var(--c-p-600);
+  text-decoration: underline;
+  text-underline-offset: 0.125em;
+  text-decoration-thickness: 0.0625em;
+  transition: all var(--d-150) var(--e-out);
+}
+
+a:not([class]):hover {
+  color: var(--c-p-700);
+  text-decoration-thickness: 0.125em;
+}
+
+a:not([class]):focus-visible {
+  outline: 2px solid var(--c-bdr-f);
+  outline-offset: 0.125em;
+  border-radius: var(--r-sm);
+}
+
+/* Dark theme link adjustments */
+@media (prefers-color-scheme: dark) {
+  a:not([class]) {
+    color: var(--c-p-400);
+  }
+  
+  a:not([class]):hover {
+    color: var(--c-p-300);
+  }
+}
+
+:root[data-theme="dark"] a:not([class]),
+.dark a:not([class]) {
+  color: var(--c-p-400);
+}
+
+:root[data-theme="dark"] a:not([class]):hover,
+.dark a:not([class]):hover {
+  color: var(--c-p-300);
+}
+
+/* ==========================================================================
+   LIST ELEMENTS
+   ========================================================================== */
+
+/* Ordered and Unordered Lists */
+ul:not([class]),
+ol:not([class]) {
+  margin-block-end: var(--s-md);
+  padding-inline-start: var(--s-lg);
+  max-width: var(--content-reading-width);
+}
+
+ul:not([class]) li,
+ol:not([class]) li {
+  margin-block-end: var(--s-xs);
+  line-height: var(--lh-relaxed);
+}
+
+/* Nested lists */
+ul:not([class]) ul,
+ul:not([class]) ol,
+ol:not([class]) ul,
+ol:not([class]) ol {
+  margin-block-start: var(--s-xs);
+  margin-block-end: var(--s-xs);
+}
+
+/* Description Lists */
+dl {
+  margin-block-end: var(--s-md);
+  max-width: var(--content-reading-width);
+}
+
+dt {
+  font-weight: var(--fw-semibold);
+  color: var(--c-txt-p);
+  margin-block-start: var(--s-sm);
+}
+
+dd {
+  margin-inline-start: var(--s-lg);
+  margin-block-end: var(--s-sm);
+  line-height: var(--lh-relaxed);
+  color: var(--c-txt-s);
+}
+
+/* ==========================================================================
+   QUOTATION ELEMENTS
+   ========================================================================== */
+
+blockquote {
+  margin-block: var(--s-lg);
+  margin-inline: 0;
+  padding-inline-start: var(--s-lg);
+  border-inline-start: 4px solid var(--c-bdr-s);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  line-height: var(--lh-relaxed);
+  color: var(--c-txt-s);
+  max-width: var(--content-reading-width);
+}
+
+blockquote p {
+  margin-block-end: var(--s-sm);
+}
+
+blockquote p:last-child {
+  margin-block-end: 0;
+}
+
+/* Blockquote citations */
+blockquote cite {
+  display: block;
+  font-size: var(--fs-sm);
+  font-style: normal;
+  font-weight: var(--fw-medium);
+  color: var(--c-txt-m);
+  margin-block-start: var(--s-sm);
+}
+
+blockquote cite::before {
+  content: "— ";
+}
+
+/* Inline quotes */
+q {
+  font-style: italic;
+}
+
+/* ==========================================================================
+   CODE AND PREFORMATTED TEXT
+   ========================================================================== */
+
+code {
+  font-family: var(--ff-mono);
+  font-size: 0.875em;
+  background-color: var(--c-bg-m);
+  color: var(--c-txt-p);
+  padding-inline: var(--s-1);
+  padding-block: var(--s-0-5);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-bdr-p);
+}
+
+pre {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  background-color: var(--c-bg-m);
+  color: var(--c-txt-p);
+  padding: var(--s-md);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-bdr-p);
+  overflow-x: auto;
+  margin-block: var(--s-lg);
+  max-width: 100%;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ==========================================================================
+   HORIZONTAL RULES
+   ========================================================================== */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--c-bdr-p);
+  margin-block: var(--s-xl);
+  max-width: var(--content-reading-width);
+}
+
+/* ==========================================================================
+   FORM ELEMENTS
+   ========================================================================== */
+
+label {
+  display: block;
+  font-weight: var(--fw-medium);
+  color: var(--c-txt-p);
+  margin-block-end: var(--s-xs);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: var(--s-3);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--c-txt-p);
+  background-color: var(--c-bg-p);
+  border: 1px solid var(--c-bdr-p);
+  border-radius: var(--r-md);
+  transition: border-color var(--d-150) var(--e-out);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus,
+select:focus {
+  border-color: var(--c-bdr-f);
+  outline: 2px solid var(--c-bdr-f);
+  outline-offset: 0;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  color: var(--c-txt-m);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   TABLE ELEMENTS
+   ========================================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: var(--s-lg);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+}
+
+th {
+  font-weight: var(--fw-semibold);
+  color: var(--c-txt-p);
+  background-color: var(--c-bg-m);
+  padding: var(--s-3);
+  text-align: left;
+  border-bottom: 2px solid var(--c-bdr-s);
+}
+
+td {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-bdr-p);
+  vertical-align: top;
+}
+
+tr:hover {
+  background-color: var(--c-bg-s);
+}
+
+/* ==========================================================================
+   FIGURE AND MEDIA ELEMENTS
+   ========================================================================== */
+
+figure {
+  margin-block: var(--s-lg);
+  margin-inline: 0;
+}
+
+figcaption {
+  font-size: var(--fs-sm);
+  color: var(--c-txt-m);
+  text-align: center;
+  margin-block-start: var(--s-sm);
+  font-style: italic;
+}
+
+img {
+  border-radius: var(--r-md);
+}
+
+/* ==========================================================================
+   UTILITY CLASSES FOR CONTENT
+   ========================================================================== */
+
+/* Typography utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-large {
+  font-size: var(--fs-lg);
+}
+
+.text-small {
+  font-size: var(--fs-sm);
+  color: var(--c-txt-m);
+}
+
+/* Content width variants */
+.content-narrow {
+  max-width: 55ch;
+}
+
+.content-wide {
+  max-width: 75ch;
+}
+
+.content-full {
+  max-width: none;
+}
+
+/* Bold heading scale override */
+.heading-bold h1, .h1-bold { font-size: var(--fs-hd-3xl); }
+.heading-bold h2, .h2-bold { font-size: var(--fs-hd-2xl); }
+.heading-bold h3, .h3-bold { font-size: var(--fs-hd-xl); }
+.heading-bold h4, .h4-bold { font-size: var(--fs-hd-lg); }
+.heading-bold h5, .h5-bold { font-size: var(--fs-hd-base); }
+.heading-bold h6, .h6-bold { font-size: var(--fs-hd-sm); }

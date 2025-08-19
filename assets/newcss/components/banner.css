@@ -17,7 +17,7 @@
 .banner-inner {
   position: relative;
   z-index: 2;
-  padding: var(--space-component-padding);
+  padding: var(--s-comp-p);
 }
 
 /* ==========================================================================
@@ -63,91 +63,91 @@
 
 /* Solid background colors */
 .banner-bg-primary {
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  background-color: var(--c-bg-p);
+  color: var(--c-txt-p);
 }
 
 .banner-bg-secondary {
-  background-color: var(--color-bg-secondary);
-  color: var(--color-text-primary);
+  background-color: var(--c-bg-s);
+  color: var(--c-txt-p);
 }
 
 .banner-bg-muted {
-  background-color: var(--color-bg-muted);
-  color: var(--color-text-primary);
+  background-color: var(--c-bg-m);
+  color: var(--c-txt-p);
 }
 
 .banner-bg-inverse {
-  background-color: var(--color-bg-inverse);
-  color: var(--color-text-inverse);
+  background-color: var(--c-bg-inv);
+  color: var(--c-txt-inv);
 }
 
 /* Brand color backgrounds */
 .banner-bg-brand-primary {
-  background-color: var(--color-primary-600);
-  color: var(--color-neutral-0);
+  background-color: var(--c-p-600);
+  color: var(--c-n-0);
 }
 
 .banner-bg-brand-secondary {
-  background-color: var(--color-secondary-600);
-  color: var(--color-neutral-0);
+  background-color: var(--c-s-600);
+  color: var(--c-n-0);
 }
 
 .banner-bg-brand-accent {
-  background-color: var(--color-accent-600);
-  color: var(--color-neutral-0);
+  background-color: var(--c-a-600);
+  color: var(--c-n-0);
 }
 
 /* Semantic color backgrounds */
 .banner-bg-success {
-  background-color: var(--color-success-600);
-  color: var(--color-neutral-0);
+  background-color: var(--c-ok-600);
+  color: var(--c-n-0);
 }
 
 .banner-bg-warning {
-  background-color: var(--color-warning-600);
-  color: var(--color-neutral-0);
+  background-color: var(--c-warn-600);
+  color: var(--c-n-0);
 }
 
 .banner-bg-error {
-  background-color: var(--color-error-600);
-  color: var(--color-neutral-0);
+  background-color: var(--c-err-600);
+  color: var(--c-n-0);
 }
 
 .banner-bg-info {
-  background-color: var(--color-info-600);
-  color: var(--color-neutral-0);
+  background-color: var(--c-info-600);
+  color: var(--c-n-0);
 }
 
 /* Gradient backgrounds */
 .banner-bg-gradient-primary {
-  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-800) 100%);
-  color: var(--color-neutral-0);
+  background: linear-gradient(135deg, var(--c-p-600) 0%, var(--c-p-800) 100%);
+  color: var(--c-n-0);
 }
 
 .banner-bg-gradient-secondary {
-  background: linear-gradient(135deg, var(--color-secondary-500) 0%, var(--color-secondary-700) 100%);
-  color: var(--color-neutral-0);
+  background: linear-gradient(135deg, var(--c-s-500) 0%, var(--c-s-700) 100%);
+  color: var(--c-n-0);
 }
 
 .banner-bg-gradient-accent {
-  background: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-700) 100%);
-  color: var(--color-neutral-0);
+  background: linear-gradient(135deg, var(--c-a-500) 0%, var(--c-a-700) 100%);
+  color: var(--c-n-0);
 }
 
 .banner-bg-gradient-warm {
-  background: linear-gradient(135deg, var(--color-warning-400) 0%, var(--color-error-500) 100%);
-  color: var(--color-neutral-0);
+  background: linear-gradient(135deg, var(--c-warn-400) 0%, var(--c-err-500) 100%);
+  color: var(--c-n-0);
 }
 
 .banner-bg-gradient-cool {
-  background: linear-gradient(135deg, var(--color-info-400) 0%, var(--color-primary-600) 100%);
-  color: var(--color-neutral-0);
+  background: linear-gradient(135deg, var(--c-info-400) 0%, var(--c-p-600) 100%);
+  color: var(--c-n-0);
 }
 
 .banner-bg-gradient-neutral {
-  background: linear-gradient(135deg, var(--color-neutral-600) 0%, var(--color-neutral-800) 100%);
-  color: var(--color-neutral-0);
+  background: linear-gradient(135deg, var(--c-n-600) 0%, var(--c-n-800) 100%);
+  color: var(--c-n-0);
 }
 
 /* ==========================================================================
@@ -217,11 +217,11 @@
 }
 
 .banner-overlay-primary::before {
-  background-color: rgba(59, 130, 246, 0.6); /* primary-500 with opacity */
+  background-color: rgba(59, 130, 246, 0.6); /* p-500 with opacity */
 }
 
 .banner-overlay-secondary::before {
-  background-color: rgba(14, 165, 233, 0.6); /* secondary-500 with opacity */
+  background-color: rgba(14, 165, 233, 0.6); /* s-500 with opacity */
 }
 
 .banner-overlay-gradient::before {
@@ -311,29 +311,29 @@
 
 .banner-content {
   width: 100%;
-  max-width: var(--container-lg);
+  max-width: var(--ct-lg);
   margin-inline: auto;
-  padding-inline: var(--space-md);
+  padding-inline: var(--s-md);
 }
 
 .banner-content-sm {
-  max-width: var(--container-sm);
+  max-width: var(--ct-sm);
 }
 
 .banner-content-md {
-  max-width: var(--container-md);
+  max-width: var(--ct-md);
 }
 
 .banner-content-lg {
-  max-width: var(--container-lg);
+  max-width: var(--ct-lg);
 }
 
 .banner-content-xl {
-  max-width: var(--container-xl);
+  max-width: var(--ct-xl);
 }
 
 .banner-content-2xl {
-  max-width: var(--container-2xl);
+  max-width: var(--ct-2xl);
 }
 
 .banner-content-full {
@@ -350,62 +350,62 @@
    ========================================================================== */
 
 .banner-title {
-  font-size: var(--font-size-heading-3xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  margin-block-end: var(--space-md);
+  font-size: var(--fs-hd-3xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  margin-block-end: var(--s-md);
 }
 
 .banner-title-sm {
-  font-size: var(--font-size-heading-xl);
+  font-size: var(--fs-hd-xl);
 }
 
 .banner-title-md {
-  font-size: var(--font-size-heading-2xl);
+  font-size: var(--fs-hd-2xl);
 }
 
 .banner-title-lg {
-  font-size: var(--font-size-heading-3xl);
+  font-size: var(--fs-hd-3xl);
 }
 
 .banner-title-xl {
-  font-size: var(--font-size-heading-4xl);
+  font-size: var(--fs-hd-4xl);
 }
 
 .banner-title-2xl {
-  font-size: var(--font-size-heading-5xl);
+  font-size: var(--fs-hd-5xl);
 }
 
 .banner-subtitle {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-relaxed);
-  margin-block-end: var(--space-lg);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-relaxed);
+  margin-block-end: var(--s-lg);
   opacity: 0.9;
 }
 
 .banner-subtitle-sm {
-  font-size: var(--font-size-lg);
+  font-size: var(--fs-lg);
 }
 
 .banner-subtitle-lg {
-  font-size: var(--font-size-2xl);
+  font-size: var(--fs-2xl);
 }
 
 .banner-description {
-  font-size: var(--font-size-lg);
-  line-height: var(--line-height-relaxed);
-  margin-block-end: var(--space-xl);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+  margin-block-end: var(--s-xl);
   opacity: 0.85;
   max-width: 65ch;
 }
 
 .banner-description-sm {
-  font-size: var(--font-size-base);
+  font-size: var(--fs-base);
 }
 
 .banner-description-lg {
-  font-size: var(--font-size-xl);
+  font-size: var(--fs-xl);
 }
 
 /* Text alignment utilities for banner content */
@@ -428,8 +428,8 @@
 .banner-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
-  margin-block-start: var(--space-lg);
+  gap: var(--s-md);
+  margin-block-start: var(--s-lg);
 }
 
 .banner-actions-center {
@@ -475,7 +475,7 @@
 .banner-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg);
+  gap: var(--s-lg);
   align-items: center;
   width: 100%;
 }
@@ -486,7 +486,7 @@
 
 .banner-grid-sidebar {
   grid-template-columns: 1fr;
-  gap: var(--space-xl);
+  gap: var(--s-xl);
 }
 
 /* Use CSS container queries when available for better responsive behavior */
@@ -524,51 +524,51 @@
    ========================================================================== */
 
 .banner-border-top {
-  border-top: 1px solid var(--color-border-primary);
+  border-top: 1px solid var(--c-bdr-p);
 }
 
 .banner-border-bottom {
-  border-bottom: 1px solid var(--color-border-primary);
+  border-bottom: 1px solid var(--c-bdr-p);
 }
 
 .banner-border-top-thick {
-  border-top: 4px solid var(--color-primary-500);
+  border-top: 4px solid var(--c-p-500);
 }
 
 .banner-border-bottom-thick {
-  border-bottom: 4px solid var(--color-primary-500);
+  border-bottom: 4px solid var(--c-p-500);
 }
 
 .banner-border-left-accent {
-  border-left: 4px solid var(--color-accent-500);
+  border-left: 4px solid var(--c-a-500);
 }
 
 .banner-border-right-accent {
-  border-right: 4px solid var(--color-accent-500);
+  border-right: 4px solid var(--c-a-500);
 }
 
 /* ==========================================================================
    BANNER SHADOW UTILITIES
    ========================================================================== */
 
-.banner-shadow-sm {
-  box-shadow: var(--shadow-sm);
+.banner-sh-sm {
+  box-shadow: var(--sh-sm);
 }
 
-.banner-shadow-md {
-  box-shadow: var(--shadow-md);
+.banner-sh-md {
+  box-shadow: var(--sh-md);
 }
 
-.banner-shadow-lg {
-  box-shadow: var(--shadow-lg);
+.banner-sh-lg {
+  box-shadow: var(--sh-lg);
 }
 
-.banner-shadow-xl {
-  box-shadow: var(--shadow-xl);
+.banner-sh-xl {
+  box-shadow: var(--sh-xl);
 }
 
-.banner-shadow-inner {
-  box-shadow: var(--shadow-inner);
+.banner-sh-inner {
+  box-shadow: var(--sh-inner);
 }
 
 /* ==========================================================================
@@ -577,44 +577,44 @@
 
 /* Padding utilities specific to banners */
 .banner-padding-xs {
-  padding: var(--space-xs);
+  padding: var(--s-xs);
 }
 
 .banner-padding-sm {
-  padding: var(--space-sm);
+  padding: var(--s-sm);
 }
 
 .banner-padding-md {
-  padding: var(--space-md);
+  padding: var(--s-md);
 }
 
 .banner-padding-lg {
-  padding: var(--space-lg);
+  padding: var(--s-lg);
 }
 
 .banner-padding-xl {
-  padding: var(--space-xl);
+  padding: var(--s-xl);
 }
 
 .banner-padding-2xl {
-  padding: var(--space-2xl);
+  padding: var(--s-2xl);
 }
 
 /* Specific padding directions */
 .banner-padding-x-lg {
-  padding-inline: var(--space-lg);
+  padding-inline: var(--s-lg);
 }
 
 .banner-padding-y-lg {
-  padding-block: var(--space-lg);
+  padding-block: var(--s-lg);
 }
 
 .banner-padding-x-xl {
-  padding-inline: var(--space-xl);
+  padding-inline: var(--s-xl);
 }
 
 .banner-padding-y-xl {
-  padding-block: var(--space-xl);
+  padding-block: var(--s-xl);
 }
 
 /* ==========================================================================
@@ -624,19 +624,19 @@
 
 .banner-fade-in {
   opacity: 0;
-  animation: bannerFadeIn var(--duration-700) var(--ease-out) forwards;
+  animation: bannerFadeIn var(--d-700) var(--e-out) forwards;
 }
 
 .banner-slide-up {
   opacity: 0;
   transform: translateY(2rem);
-  animation: bannerSlideUp var(--duration-700) var(--ease-out) forwards;
+  animation: bannerSlideUp var(--d-700) var(--e-out) forwards;
 }
 
 .banner-slide-down {
   opacity: 0;
   transform: translateY(-2rem);
-  animation: bannerSlideDown var(--duration-700) var(--ease-out) forwards;
+  animation: bannerSlideDown var(--d-700) var(--e-out) forwards;
 }
 
 /* Parallax effect for banner backgrounds */

@@ -98,39 +98,39 @@
    ========================================================================== */
 
 .icon-primary {
-  color: var(--color-primary-600);
+  color: var(--c-p-600);
 }
 
 .icon-secondary {
-  color: var(--color-secondary-600);
+  color: var(--c-s-600);
 }
 
 .icon-accent {
-  color: var(--color-accent-600);
+  color: var(--c-a-600);
 }
 
 .icon-success {
-  color: var(--color-success-600);
+  color: var(--c-ok-600);
 }
 
 .icon-warning {
-  color: var(--color-warning-600);
+  color: var(--c-warn-600);
 }
 
 .icon-error {
-  color: var(--color-error-600);
+  color: var(--c-err-600);
 }
 
 .icon-info {
-  color: var(--color-info-600);
+  color: var(--c-info-600);
 }
 
 .icon-muted {
-  color: var(--color-text-muted);
+  color: var(--c-txt-m);
 }
 
 .icon-inverse {
-  color: var(--color-text-inverse);
+  color: var(--c-txt-inv);
 }
 
 .icon-current {
@@ -144,11 +144,11 @@
    ========================================================================== */
 
 .icon-leading {
-  margin-inline-end: var(--space-2);
+  margin-inline-end: var(--s-2);
 }
 
 .icon-trailing {
-  margin-inline-start: var(--space-2);
+  margin-inline-start: var(--s-2);
 }
 
 .icon-center {
@@ -157,33 +157,33 @@
 
 /* For icons in buttons */
 .btn .icon-leading {
-  margin-inline-end: var(--space-2);
-  margin-inline-start: calc(var(--space-1) * -1);
+  margin-inline-end: var(--s-2);
+  margin-inline-start: calc(var(--s-1) * -1);
 }
 
 .btn .icon-trailing {
-  margin-inline-start: var(--space-2);
-  margin-inline-end: calc(var(--space-1) * -1);
+  margin-inline-start: var(--s-2);
+  margin-inline-end: calc(var(--s-1) * -1);
 }
 
 .btn-sm .icon-leading {
-  margin-inline-end: var(--space-1-5);
-  margin-inline-start: calc(var(--space-1) * -1);
+  margin-inline-end: var(--s-1-5);
+  margin-inline-start: calc(var(--s-1) * -1);
 }
 
 .btn-sm .icon-trailing {
-  margin-inline-start: var(--space-1-5);
-  margin-inline-end: calc(var(--space-1) * -1);
+  margin-inline-start: var(--s-1-5);
+  margin-inline-end: calc(var(--s-1) * -1);
 }
 
 .btn-lg .icon-leading {
-  margin-inline-end: var(--space-3);
-  margin-inline-start: calc(var(--space-1) * -1);
+  margin-inline-end: var(--s-3);
+  margin-inline-start: calc(var(--s-1) * -1);
 }
 
 .btn-lg .icon-trailing {
-  margin-inline-start: var(--space-3);
-  margin-inline-end: calc(var(--space-1) * -1);
+  margin-inline-start: var(--s-3);
+  margin-inline-end: calc(var(--s-1) * -1);
 }
 
 
@@ -200,15 +200,15 @@
 }
 
 .icon-container-square {
-  border-radius: var(--radius-base);
+  border-radius: var(--r-base);
 }
 
 .icon-container-rounded {
-  border-radius: var(--radius-lg);
+  border-radius: var(--r-lg);
 }
 
 .icon-container-circle {
-  border-radius: var(--radius-full);
+  border-radius: var(--r-full);
 }
 
 /* Icon container sizes */
@@ -244,48 +244,48 @@
 
 /* Icon container backgrounds */
 .icon-container-primary {
-  background-color: var(--color-primary-100);
-  color: var(--color-primary-600);
+  background-color: var(--c-p-100);
+  color: var(--c-p-600);
 }
 
 .icon-container-secondary {
-  background-color: var(--color-secondary-100);
-  color: var(--color-secondary-600);
+  background-color: var(--c-s-100);
+  color: var(--c-s-600);
 }
 
 .icon-container-accent {
-  background-color: var(--color-accent-100);
-  color: var(--color-accent-600);
+  background-color: var(--c-a-100);
+  color: var(--c-a-600);
 }
 
 .icon-container-success {
-  background-color: var(--color-success-50);
-  color: var(--color-success-600);
+  background-color: var(--c-ok-50);
+  color: var(--c-ok-600);
 }
 
 .icon-container-warning {
-  background-color: var(--color-warning-50);
-  color: var(--color-warning-600);
+  background-color: var(--c-warn-50);
+  color: var(--c-warn-600);
 }
 
 .icon-container-error {
-  background-color: var(--color-error-50);
-  color: var(--color-error-600);
+  background-color: var(--c-err-50);
+  color: var(--c-err-600);
 }
 
 .icon-container-info {
-  background-color: var(--color-info-50);
-  color: var(--color-info-600);
+  background-color: var(--c-info-50);
+  color: var(--c-info-600);
 }
 
 .icon-container-muted {
-  background-color: var(--color-neutral-100);
-  color: var(--color-text-muted);
+  background-color: var(--c-n-100);
+  color: var(--c-txt-m);
 }
 
 .icon-container-neutral {
-  background-color: var(--color-neutral-200);
-  color: var(--color-text-secondary);
+  background-color: var(--c-n-200);
+  color: var(--c-txt-s);
 }
 
 
@@ -296,12 +296,12 @@
 
 .icon-interactive {
   cursor: pointer;
-  transition: color var(--duration-150) var(--ease-in-out),
-              transform var(--duration-150) var(--ease-in-out);
+  transition: color var(--d-150) var(--e-in-out),
+              transform var(--d-150) var(--e-in-out);
 }
 
 .icon-interactive:hover {
-  color: var(--color-primary-700);
+  color: var(--c-p-700);
   transform: scale(1.1);
 }
 
@@ -310,17 +310,17 @@
 }
 
 .icon-interactive:focus-visible {
-  outline: 2px solid var(--color-border-focus);
+  outline: 2px solid var(--c-bdr-f);
   outline-offset: 2px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--r-sm);
 }
 
 /* Interactive icon containers */
 .icon-container-interactive {
   cursor: pointer;
-  transition: background-color var(--duration-150) var(--ease-in-out),
-              color var(--duration-150) var(--ease-in-out),
-              transform var(--duration-150) var(--ease-in-out);
+  transition: background-color var(--d-150) var(--e-in-out),
+              color var(--d-150) var(--e-in-out),
+              transform var(--d-150) var(--e-in-out);
 }
 
 .icon-container-interactive:hover {
@@ -332,7 +332,7 @@
 }
 
 .icon-container-interactive:focus-visible {
-  outline: 2px solid var(--color-border-focus);
+  outline: 2px solid var(--c-bdr-f);
   outline-offset: 2px;
 }
 
@@ -392,15 +392,15 @@
 .icon-group {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--s-2);
 }
 
 .icon-group-sm {
-  gap: var(--space-1);
+  gap: var(--s-1);
 }
 
 .icon-group-lg {
-  gap: var(--space-3);
+  gap: var(--s-3);
 }
 
 .icon-group-vertical {
@@ -440,26 +440,26 @@
   inset-inline-end: 0;
   width: 0.5rem;
   height: 0.5rem;
-  background-color: var(--color-error-500);
-  border: 2px solid var(--color-bg-primary);
-  border-radius: var(--radius-full);
+  background-color: var(--c-err-500);
+  border: 2px solid var(--c-bg-p);
+  border-radius: var(--r-full);
   transform: translate(50%, -50%);
 }
 
 .icon-badge-primary::after {
-  background-color: var(--color-primary-500);
+  background-color: var(--c-p-500);
 }
 
 .icon-badge-success::after {
-  background-color: var(--color-success-500);
+  background-color: var(--c-ok-500);
 }
 
 .icon-badge-warning::after {
-  background-color: var(--color-warning-500);
+  background-color: var(--c-warn-500);
 }
 
 .icon-badge-info::after {
-  background-color: var(--color-info-500);
+  background-color: var(--c-info-500);
 }
 
 .icon-badge-lg::after {

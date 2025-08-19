@@ -98,39 +98,39 @@
    ========================================================================== */
 
 .icon-primary {
-  color: var(--c-p-600);
+  color: var(--color-primary-600);
 }
 
 .icon-secondary {
-  color: var(--c-s-600);
+  color: var(--color-secondary-600);
 }
 
 .icon-accent {
-  color: var(--c-a-600);
+  color: var(--color-accent-600);
 }
 
 .icon-success {
-  color: var(--c-ok-600);
+  color: var(--color-success-600);
 }
 
 .icon-warning {
-  color: var(--c-warn-600);
+  color: var(--color-warning-600);
 }
 
 .icon-error {
-  color: var(--c-err-600);
+  color: var(--color-error-600);
 }
 
 .icon-info {
-  color: var(--c-info-600);
+  color: var(--color-info-600);
 }
 
 .icon-muted {
-  color: var(--c-txt-m);
+  color: var(--color-text-muted);
 }
 
 .icon-inverse {
-  color: var(--c-txt-inv);
+  color: var(--color-text-inverse);
 }
 
 .icon-current {
@@ -144,11 +144,11 @@
    ========================================================================== */
 
 .icon-leading {
-  margin-inline-end: var(--s-2);
+  margin-inline-end: var(--space-2);
 }
 
 .icon-trailing {
-  margin-inline-start: var(--s-2);
+  margin-inline-start: var(--space-2);
 }
 
 .icon-center {
@@ -157,33 +157,33 @@
 
 /* For icons in buttons */
 .btn .icon-leading {
-  margin-inline-end: var(--s-2);
-  margin-inline-start: calc(var(--s-1) * -1);
+  margin-inline-end: var(--space-2);
+  margin-inline-start: calc(var(--space-1) * -1);
 }
 
 .btn .icon-trailing {
-  margin-inline-start: var(--s-2);
-  margin-inline-end: calc(var(--s-1) * -1);
+  margin-inline-start: var(--space-2);
+  margin-inline-end: calc(var(--space-1) * -1);
 }
 
 .btn-sm .icon-leading {
-  margin-inline-end: var(--s-1-5);
-  margin-inline-start: calc(var(--s-1) * -1);
+  margin-inline-end: var(--space-1-5);
+  margin-inline-start: calc(var(--space-1) * -1);
 }
 
 .btn-sm .icon-trailing {
-  margin-inline-start: var(--s-1-5);
-  margin-inline-end: calc(var(--s-1) * -1);
+  margin-inline-start: var(--space-1-5);
+  margin-inline-end: calc(var(--space-1) * -1);
 }
 
 .btn-lg .icon-leading {
-  margin-inline-end: var(--s-3);
-  margin-inline-start: calc(var(--s-1) * -1);
+  margin-inline-end: var(--space-3);
+  margin-inline-start: calc(var(--space-1) * -1);
 }
 
 .btn-lg .icon-trailing {
-  margin-inline-start: var(--s-3);
-  margin-inline-end: calc(var(--s-1) * -1);
+  margin-inline-start: var(--space-3);
+  margin-inline-end: calc(var(--space-1) * -1);
 }
 
 
@@ -200,15 +200,15 @@
 }
 
 .icon-container-square {
-  border-radius: var(--r-base);
+  border-radius: var(--radius-base);
 }
 
 .icon-container-rounded {
-  border-radius: var(--r-lg);
+  border-radius: var(--radius-lg);
 }
 
 .icon-container-circle {
-  border-radius: var(--r-full);
+  border-radius: var(--radius-full);
 }
 
 /* Icon container sizes */
@@ -244,48 +244,48 @@
 
 /* Icon container backgrounds */
 .icon-container-primary {
-  background-color: var(--c-p-100);
-  color: var(--c-p-600);
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-600);
 }
 
 .icon-container-secondary {
-  background-color: var(--c-s-100);
-  color: var(--c-s-600);
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-600);
 }
 
 .icon-container-accent {
-  background-color: var(--c-a-100);
-  color: var(--c-a-600);
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-600);
 }
 
 .icon-container-success {
-  background-color: var(--c-ok-50);
-  color: var(--c-ok-600);
+  background-color: var(--color-success-50);
+  color: var(--color-success-600);
 }
 
 .icon-container-warning {
-  background-color: var(--c-warn-50);
-  color: var(--c-warn-600);
+  background-color: var(--color-warning-50);
+  color: var(--color-warning-600);
 }
 
 .icon-container-error {
-  background-color: var(--c-err-50);
-  color: var(--c-err-600);
+  background-color: var(--color-error-50);
+  color: var(--color-error-600);
 }
 
 .icon-container-info {
-  background-color: var(--c-info-50);
-  color: var(--c-info-600);
+  background-color: var(--color-info-50);
+  color: var(--color-info-600);
 }
 
 .icon-container-muted {
-  background-color: var(--c-n-100);
-  color: var(--c-txt-m);
+  background-color: var(--color-neutral-100);
+  color: var(--color-text-muted);
 }
 
 .icon-container-neutral {
-  background-color: var(--c-n-200);
-  color: var(--c-txt-s);
+  background-color: var(--color-neutral-200);
+  color: var(--color-text-secondary);
 }
 
 
@@ -296,12 +296,12 @@
 
 .icon-interactive {
   cursor: pointer;
-  transition: color var(--d-150) var(--e-in-out),
-              transform var(--d-150) var(--e-in-out);
+  transition: color var(--duration-150) var(--ease-in-out),
+              transform var(--duration-150) var(--ease-in-out);
 }
 
 .icon-interactive:hover {
-  color: var(--c-p-700);
+  color: var(--color-primary-700);
   transform: scale(1.1);
 }
 
@@ -310,17 +310,17 @@
 }
 
 .icon-interactive:focus-visible {
-  outline: 2px solid var(--c-bdr-f);
+  outline: 2px solid var(--color-border-focus);
   outline-offset: 2px;
-  border-radius: var(--r-sm);
+  border-radius: var(--radius-sm);
 }
 
 /* Interactive icon containers */
 .icon-container-interactive {
   cursor: pointer;
-  transition: background-color var(--d-150) var(--e-in-out),
-              color var(--d-150) var(--e-in-out),
-              transform var(--d-150) var(--e-in-out);
+  transition: background-color var(--duration-150) var(--ease-in-out),
+              color var(--duration-150) var(--ease-in-out),
+              transform var(--duration-150) var(--ease-in-out);
 }
 
 .icon-container-interactive:hover {
@@ -332,7 +332,7 @@
 }
 
 .icon-container-interactive:focus-visible {
-  outline: 2px solid var(--c-bdr-f);
+  outline: 2px solid var(--color-border-focus);
   outline-offset: 2px;
 }
 
@@ -392,15 +392,15 @@
 .icon-group {
   display: flex;
   align-items: center;
-  gap: var(--s-2);
+  gap: var(--space-2);
 }
 
 .icon-group-sm {
-  gap: var(--s-1);
+  gap: var(--space-1);
 }
 
 .icon-group-lg {
-  gap: var(--s-3);
+  gap: var(--space-3);
 }
 
 .icon-group-vertical {
@@ -440,26 +440,26 @@
   inset-inline-end: 0;
   width: 0.5rem;
   height: 0.5rem;
-  background-color: var(--c-err-500);
-  border: 2px solid var(--c-bg-p);
-  border-radius: var(--r-full);
+  background-color: var(--color-error-500);
+  border: 2px solid var(--color-bg-primary);
+  border-radius: var(--radius-full);
   transform: translate(50%, -50%);
 }
 
 .icon-badge-primary::after {
-  background-color: var(--c-p-500);
+  background-color: var(--color-primary-500);
 }
 
 .icon-badge-success::after {
-  background-color: var(--c-ok-500);
+  background-color: var(--color-success-500);
 }
 
 .icon-badge-warning::after {
-  background-color: var(--c-warn-500);
+  background-color: var(--color-warning-500);
 }
 
 .icon-badge-info::after {
-  background-color: var(--c-info-500);
+  background-color: var(--color-info-500);
 }
 
 .icon-badge-lg::after {
