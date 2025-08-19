@@ -2,6 +2,8 @@ title: Stackbit Starter Theme
 baseURL: /
 languageCode: 'en-uk'
 
+build:
+  writeStats: true
 
 params:
   header:
@@ -62,6 +64,3 @@ markup:
       unsafe: true
 permalinks:
   pages: "/:slug/"
-
-build:
-  writeStats: true
