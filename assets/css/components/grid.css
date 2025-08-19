@@ -141,7 +141,7 @@
 .g-gap-24 { gap: var(--s-24); }
 .g-gap-32 { gap: var(--s-32); }
 
-/* Semantic grid gap utilities */
+/* Semantic grid gap utilities  */
 .g-gap-xs { gap: var(--g-gap-xs); }
 .g-gap-sm { gap: var(--g-gap-sm); }
 .g-gap-md { gap: var(--g-gap-md); }
