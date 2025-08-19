@@ -1,5 +1,8 @@
 {
   "name": "wfgbuilder",
+  "vars": {
+    "HUGO_VERSION": "0.148.2"
+  },
   "compatibility_date": "2025-08-18",
   "assets": {
     "directory": "./public",
@@ -8,7 +11,7 @@
     "run_worker_first": false
   },
   "build": {
-    "command": "HUGO_ENVIRONMENT=production hugo build --gc --minify",
+    "command": "hugo build --gc --minify"
   },
   "workers_dev": true,
   "preview_urls": true
