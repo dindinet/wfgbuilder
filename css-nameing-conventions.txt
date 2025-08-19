@@ -1,0 +1,117 @@
+  First, I'll examine the current naming scheme in your CSS files to understand the existing pattern.
+ ╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ ✔  ReadManyFiles Will attempt to read and concatenate files using patterns: `assets/css/abstracts/variables.css`, `assets/css/components/cards.css`, `assets/css/layouts/site.css` (within target director… │
+ │                                                                                                                                                                                                             │
+ │    ### ReadManyFiles Result (Target Dir: `/home/papo/projects/hugo/wfgbuilder`)                                                                                                                             │
+ │                                                                                                                                                                                                             │
+ │    Successfully read and concatenated content from **3 file(s)**.                                                                                                                                           │
+ │                                                                                                                                                                                                             │
+ │    **Processed Files:**                                                                                                                                                                                     │
+ │    - `assets/css/abstracts/variables.css`                                                                                                                                                                   │
+ │    - `assets/css/components/cards.css`                                                                                                                                                                      │
+ │    - `assets/css/layouts/site.css`                                                                                                                                                                          │
+ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+✦ /* ==========================================================================
+     RESPONSIVE LAYOUT ADJUSTMENTS
+     ========================================================================== */
+
+
+  @media (min-width: 768px) {
+    .container {
+      padding-inline: var(--space-lg);
+    }
+  }
+
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-inline: var(--space-xl);
+    }
+  }
+
+
+  /* ==========================================================================
+     DEBUGGING UTILITIES
+     ========================================================================== */
+
+
+  / Uncomment to visualize all containers /
+  /*
+  .container {
+    outline: 1px dashed var(--color-primary-400);
+  }
+  */
+
+
+  / Uncomment to visualize all sections /
+  /*
+  .site-section {
+    outline: 1px dashed var(--color-secondary-400);
+  }
+  */
+  Based on the files, your current naming convention is very descriptive and follows a clear, readable structure. To reduce file size while preserving clarity, I suggest a convention that uses systematic
+  abbreviations for common terms.
+
+  Here is a proposed naming convention, broken down into two parts: Custom Properties and CSS Classes.
+
+
+  1. Suggested Convention for Custom Properties
+
+  Your current custom properties are long (e.g., --color-text-primary, --font-weight-semibold). We can shorten these by abbreviating the categories and properties.
+
+  Proposed Abbreviation System:
+
+
+   * Category: color -> c, font-family -> ff, font-weight -> fw, font-size -> fs, line-height -> lh, space -> s, radius -> r, shadow -> sh, z-index -> z, duration -> d.
+   * Name/Type: primary -> p, secondary -> s, accent -> a, neutral -> n, text -> txt, background -> bg, border -> bdr.
+   * State/Variant: success -> ok, warning -> warn, error -> err, info -> info, component -> comp, heading -> hd.
+
+  Examples:
+
+
+
+  ┌────────────────────────────────┬─────────────────────────┐
+  │ Original Name                  │ Proposed Short Name     │
+  ├────────────────────────────────┼─────────────────────────┤
+  │ `--color-primary-500`          │ `--c-p-500`             │
+  │ `--color-text-primary`         │ `--c-txt-p`             │
+  │ `--color-bg-secondary`         │ `--c-bg-s`              │
+  │ `--font-weight-semibold`       │ `--fw-600` or `--fw-sb` │
+  │ `--font-size-heading-2xl`      │ `--fs-hd-2xl`           │
+  │ `--space-component-padding-lg` │ `--s-comp-p-lg`         │
+  │ `--radius-lg`                  │ `--r-lg`                │
+  │ `--shadow-md`                  │ `--sh-md`               │
+  └────────────────────────────────┴─────────────────────────┘
+
+  2. Suggested Convention for CSS Classes
+
+
+  Your classes use a BEM-like (Block-Element-Modifier) structure (e.g., card-header, card-elevated). We can make this more concise by shortening the element and modifier names and using standard BEM
+  separators (__ for elements, -- for modifiers).
+
+  Proposed Structure: block-name__element-name--modifier-name
+
+  Examples:
+
+
+
+  ┌──────────────────────────┬──────────────────────┬─────────────────────────────────────┐
+  │ Original Class           │ Proposed Short Class │ Logic                               │
+  ├──────────────────────────┼──────────────────────┼─────────────────────────────────────┤
+  │ `.card-header`           │ `.card__hdr`         │ Element `header` -> `hdr`           │
+  │ `.card-title`            │ `.card__title`       │ Element `title` -> `title`          │
+  │ `.card-actions`          │ `.card__actions`     │ Element `actions` -> `actions`      │
+  │ `.card-elevated`         │ `.card--elevated`    │ Modifier `elevated`                 │
+  │ `.card-compact`          │ `.card--sm`          │ Modifier `compact` -> `sm` (small)  │
+  │ `.card-spacious`         │ `.card--lg`          │ Modifier `spacious` -> `lg` (large) │
+  │ `.card-success`          │ `.card--ok`          │ Modifier `success` -> `ok`          │
+  │ `.site-section`          │ `.section`           │ Block `site-section` -> `section`   │
+  │ `.site-section--compact` │ `.section--sm`       │ Modifier `compact` -> `sm`          │
+  │ `.container--wide`       │ `.container--wide`   │ Modifier `wide`                     │
+  └──────────────────────────┴──────────────────────┴─────────────────────────────────────┘
+
+  Summary
+
+
+  Adopting this approach would significantly shorten your class and custom property names, leading to a smaller final CSS bundle. The system uses consistent abbreviations and a standard BEM structure, which
+  should help maintain readability for developers familiar with the convention.

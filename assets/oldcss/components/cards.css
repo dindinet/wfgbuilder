@@ -1,0 +1,589 @@
+/* ==========================================================================
+   CARD COMPONENT SYSTEM
+   Flexible card components designed for Hugo grid integration
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE CARD STYLES
+   Foundation styles for all card variants
+   ========================================================================== */
+
+.card {
+  /* Container setup */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  /* Visual styling using design tokens */
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  
+  /* Internal spacing */
+  padding: var(--space-card-padding); /* 24px default */
+  gap: var(--space-4); /* 16px between card elements */
+  
+  /* Typography inheritance */
+  color: var(--color-text-primary);
+  
+  /* Smooth interactions */
+  transition: all var(--duration-200) var(--ease-out);
+  
+  /* Prevent content overflow */
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-border-secondary);
+}
+
+.card:focus-within {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   CARD CONTENT ELEMENTS
+   Individual components within cards
+   ========================================================================== */
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-block-end: var(--space-2);
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Card Body */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.card-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.card-text:last-child {
+  margin-block-end: 0;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-border-primary);
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-4);
+}
+
+.card-actions.card-actions-full {
+  justify-content: stretch;
+}
+
+.card-actions.card-actions-full .btn {
+  flex: 1;
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.card-image-full {
+  margin: calc(-1 * var(--space-card-padding));
+  margin-block-end: var(--space-4);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Card Avatar */
+.card-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--color-border-primary);
+}
+
+/* Card Badge */
+.card-badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  padding-block: var(--space-1);
+  padding-inline: var(--space-2);
+  background-color: var(--color-primary-600);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   CARD VARIANTS
+   Different card styles for various use cases
+   ========================================================================== */
+
+/* Elevated Card */
+.card-elevated {
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* Outlined Card */
+.card-outlined {
+  background-color: transparent;
+  border: 2px solid var(--color-border-secondary);
+  box-shadow: none;
+}
+
+.card-outlined:hover {
+  border-color: var(--color-primary-300);
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Filled Card */
+.card-filled {
+  background-color: var(--color-bg-muted);
+  border: none;
+  box-shadow: none;
+}
+
+.card-filled:hover {
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Interactive Card */
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-300);
+}
+
+.card-interactive:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-base);
+}
+
+/* Compact Card */
+.card-compact {
+  padding: var(--space-component-padding-sm); /* 12px */
+  gap: var(--space-2);
+}
+
+.card-compact .card-title {
+  font-size: var(--font-size-lg);
+}
+
+.card-compact .card-actions {
+  margin-block-start: var(--space-2);
+}
+
+/* Spacious Card */
+.card-spacious {
+  padding: var(--space-component-padding-lg); /* 24px */
+  gap: var(--space-6);
+}
+
+.card-spacious .card-actions {
+  margin-block-start: var(--space-6);
+}
+
+/* ==========================================================================
+   SEMANTIC CARD VARIANTS
+   Cards with semantic meaning and colors
+   ========================================================================== */
+
+/* Success Card */
+.card-success {
+  border-color: var(--color-success-500);
+  background-color: var(--color-success-50);
+}
+
+.card-success .card-title {
+  color: var(--color-success-700);
+}
+
+.card-success:hover {
+  border-color: var(--color-success-600);
+  box-shadow: 0 4px 6px -1px rgb(34 197 94 / 0.1);
+}
+
+/* Warning Card */
+.card-warning {
+  border-color: var(--color-warning-500);
+  background-color: var(--color-warning-50);
+}
+
+.card-warning .card-title {
+  color: var(--color-warning-700);
+}
+
+.card-warning:hover {
+  border-color: var(--color-warning-600);
+  box-shadow: 0 4px 6px -1px rgb(245 158 11 / 0.1);
+}
+
+/* Error Card */
+.card-error {
+  border-color: var(--color-error-500);
+  background-color: var(--color-error-50);
+}
+
+.card-error .card-title {
+  color: var(--color-error-700);
+}
+
+.card-error:hover {
+  border-color: var(--color-error-600);
+  box-shadow: 0 4px 6px -1px rgb(239 68 68 / 0.1);
+}
+
+/* Info Card */
+.card-info {
+  border-color: var(--color-info-500);
+  background-color: var(--color-info-50);
+}
+
+.card-info .card-title {
+  color: var(--color-info-700);
+}
+
+.card-info:hover {
+  border-color: var(--color-info-600);
+  box-shadow: 0 4px 6px -1px rgb(6 182 212 / 0.1);
+}
+
+/* ==========================================================================
+   HUGO-SPECIFIC CARD LAYOUTS
+   Pre-built patterns for common Hugo use cases
+   ========================================================================== */
+
+/* Blog Post Card */
+.card-post {
+  display: grid;
+  grid-template-areas: 
+    "image"
+    "header"
+    "content"
+    "meta"
+    "actions";
+  gap: var(--space-4);
+}
+
+.card-post .card-image { grid-area: image; }
+.card-post .card-header { grid-area: header; margin-block-end: 0; }
+.card-post .card-body { grid-area: content; }
+.card-post .card-meta { grid-area: meta; }
+.card-post .card-actions { grid-area: actions; margin-block-start: 0; }
+
+/* Feature Card */
+.card-feature {
+  text-align: center;
+  align-items: center;
+}
+
+.card-feature .card-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-inline: auto;
+  margin-block-end: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-100);
+  border-radius: var(--radius-full);
+  color: var(--color-primary-600);
+}
+
+/* Team Member Card */
+.card-team {
+  text-align: center;
+}
+
+.card-team .card-avatar {
+  width: 5rem;
+  height: 5rem;
+  margin-inline: auto;
+  margin-block-end: var(--space-3);
+}
+
+.card-team .card-role {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-block-start: var(--space-1);
+}
+
+/* Testimonial Card */
+.card-testimonial {
+  position: relative;
+  padding-block-start: calc(var(--space-card-padding) + var(--space-4));
+}
+
+.card-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-200);
+  line-height: 1;
+}
+
+.card-testimonial .card-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-border-primary);
+}
+
+/* Product Card */
+.card-product .card-price {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+  margin-block-start: var(--space-2);
+}
+
+.card-product .card-price-original {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  margin-inline-start: var(--space-2);
+}
+
+/* ==========================================================================
+   GRID INTEGRATION UTILITIES
+   Classes to enhance card behavior in grid layouts
+   ========================================================================== */
+
+/* Featured card that spans multiple grid cells */
+.card-featured {
+  /* This works with your grid system utilities */
+  /* Usage: <div class="card card-featured col-span-2"> */
+  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-50) 100%);
+  border: 2px solid var(--color-primary-200);
+}
+
+.card-featured .card-title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary-700);
+}
+
+/* Masonry-style cards for grid-gallery */
+.card-masonry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Cards with aspect ratio maintenance */
+.card-aspect-square {
+  aspect-ratio: 1;
+}
+
+.card-aspect-video {
+  aspect-ratio: 16/9;
+}
+
+.card-aspect-photo {
+  aspect-ratio: 4/3;
+}
+
+/* ==========================================================================
+   DARK THEME ADAPTATIONS
+   Card styling for dark themes
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  .card-success {
+    background-color: color-mix(in srgb, var(--color-success-500) 10%, var(--color-bg-primary));
+    border-color: var(--color-success-600);
+  }
+  
+  .card-warning {
+    background-color: color-mix(in srgb, var(--color-warning-500) 10%, var(--color-bg-primary));
+    border-color: var(--color-warning-600);
+  }
+  
+  .card-error {
+    background-color: color-mix(in srgb, var(--color-error-500) 10%, var(--color-bg-primary));
+    border-color: var(--color-error-600);
+  }
+  
+  .card-info {
+    background-color: color-mix(in srgb, var(--color-info-500) 10%, var(--color-bg-primary));
+    border-color: var(--color-info-600);
+  }
+
+  .card-feature .card-icon {
+    background-color: var(--color-primary-900);
+    color: var(--color-primary-300);
+  }
+  
+  .card-featured {
+    background: linear-gradient(135deg, 
+      color-mix(in srgb, var(--color-primary-500) 15%, var(--color-bg-primary)) 0%, 
+      color-mix(in srgb, var(--color-secondary-500) 15%, var(--color-bg-primary)) 100%);
+    border-color: var(--color-primary-600);
+  }
+}
+
+:root[data-theme="dark"] .card-success,
+.dark .card-success {
+  background-color: color-mix(in srgb, var(--color-success-500) 10%, var(--color-bg-primary));
+  border-color: var(--color-success-600);
+}
+
+:root[data-theme="dark"] .card-warning,
+.dark .card-warning {
+  background-color: color-mix(in srgb, var(--color-warning-500) 10%, var(--color-bg-primary));
+  border-color: var(--color-warning-600);
+}
+
+:root[data-theme="dark"] .card-error,
+.dark .card-error {
+  background-color: color-mix(in srgb, var(--color-error-500) 10%, var(--color-bg-primary));
+  border-color: var(--color-error-600);
+}
+
+:root[data-theme="dark"] .card-info,
+.dark .card-info {
+  background-color: color-mix(in srgb, var(--color-info-500) 10%, var(--color-bg-primary));
+  border-color: var(--color-info-600);
+}
+
+:root[data-theme="dark"] .card-feature .card-icon,
+.dark .card-feature .card-icon {
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-300);
+}
+
+:root[data-theme="dark"] .card-featured,
+.dark .card-featured {
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--color-primary-500) 15%, var(--color-bg-primary)) 0%, 
+    color-mix(in srgb, var(--color-secondary-500) 15%, var(--color-bg-primary)) 100%);
+  border-color: var(--color-primary-600);
+}
+
+/* ==========================================================================
+   RESPONSIVE CARD BEHAVIORS
+   Cards adapt to different container sizes
+   ========================================================================== */
+
+/* Container query support for modern browsers */
+@container (max-width: 300px) {
+  .card {
+    padding: var(--space-component-padding-sm);
+    gap: var(--space-2);
+  }
+  
+  .card-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .card-actions {
+    flex-direction: column;
+  }
+  
+  .card-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Fallback using CSS Grid implicit behavior */
+.card-responsive {
+  container-type: inline-size;
+}
+
+/* ==========================================================================
+   ANIMATION UTILITIES FOR CARDS
+   ========================================================================== */
+
+.card-fade-in {
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: cardFadeIn var(--duration-500) var(--ease-out) forwards;
+}
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-slide-up {
+  transform: translateY(2rem);
+  animation: cardSlideUp var(--duration-300) var(--ease-out) forwards;
+}
+
+@keyframes cardSlideUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays for grids */
+.card:nth-child(1) { animation-delay: 0ms; }
+.card:nth-child(2) { animation-delay: 100ms; }
+.card:nth-child(3) { animation-delay: 200ms; }
+.card:nth-child(4) { animation-delay: 300ms; }
+.card:nth-child(5) { animation-delay: 400ms; }
+.card:nth-child(6) { animation-delay: 500ms; }
