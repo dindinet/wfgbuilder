@@ -8,7 +8,7 @@
   {{ end }}
 
   <div class="container container--wide">
-    <div class="grid grid-cols-auto-fit-sm g-gap-xl">
+    <div class="grid grid-cols-auto-fit-sm grid-gap-xl">
       {{ $section_author := false }}
       {{ if $section.author }}
         {{ $author_id_kebab := replace (replace $section.author "data/team/" "") ".json" "" }}
