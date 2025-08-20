@@ -2,7 +2,7 @@ name = 'wfgbuilder'
 compatibility_date = '2025-08-18'
 
 [build]
-command = 'chmod=+x build.sh && ./build.sh'
+command = 'chmod=+x ./build.sh && ./build.sh'
 
 [assets]
 directory = './public'
