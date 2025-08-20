@@ -42,7 +42,22 @@
         {{ $css = $css | append (resources.Get "css/layouts/post-page.css") }}
         {{ $css = $css | append (resources.Get "css/layouts/section.css") }}
 
-        <link rel="stylesheet" href="{{ ($css | resources.Concat "css/bundle.css" | resources.Minify | css.PostCSS | resources.Fingerprint).RelPermalink }}">
+        
+
+{{ with $css | resources.Concat "css/bundle.css" }}
+  {{ if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ else }}
+    {{ with . | postCSS | minify | fingerprint | resources.PostProcess }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+
+
+
         {{ if .Site.Params.favicon }}
         <link rel="icon" href="{{ $.Site.Params.favicon | relURL }}">
         {{ end }}
