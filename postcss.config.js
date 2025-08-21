@@ -12,7 +12,8 @@ const purgecss = purgeCSSPlugin({
     ];
   },
   // https://purgecss.com/safelisting.html
-  safelist: []
+  safelist: [],
+  variables: true,
 });
 
 module.exports = {
