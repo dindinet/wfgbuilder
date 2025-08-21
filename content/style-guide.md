@@ -320,13 +320,13 @@ The typography system uses `clamp()` for fluid font sizing, ensuring responsiven
 ### 2.1. Font Families
 
 <p style="font-family: var(--font-family-sans); font-size: var(--font-size-base);">
-  **Sans-serif:** <code>--font-family-sans</code> (ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji")
+  <strong>Sans-serif:</strong> <code>--font-family-sans</code> (ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji")
 </p>
 <p style="font-family: var(--font-family-serif); font-size: var(--font-size-base);">
-  **Serif:** <code>--font-family-serif</code> (ui-serif, Georgia, Cambria, "Times New Roman", Times, serif)
+  <strong>Serif:</strong> <code>--font-family-serif</code> (ui-serif, Georgia, Cambria, "Times New Roman", Times, serif)
 </p>
 <p style="font-family: var(--font-family-mono); font-size: var(--font-size-base);">
-  **Monospace:** <code>--font-family-mono</code> (ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace)
+  <strong>Monospace:</strong> <code>--font-family-mono</code> (ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace)
 </p>
 
 ### 2.2. Font Weights
@@ -781,7 +781,7 @@ The card component provides flexible containers for content, with various styles
 #### 5.5.1. Blog Post Card (`.card-post`)
 
 <div class="card card-post" style="width: 350px;">
-  <img src="https://via.placeholder.com/350x200" alt="Placeholder Image" class="card-image">
+  <img src="https://res.cloudinary.com/dklongley/image/upload/w_300/girlsonly.webp" alt="Placeholder Image" class="card-image">
   <header class="card-header">
     <h3 class="card-title">Example Blog Post</h3>
   </header>
@@ -808,11 +808,11 @@ The card component provides flexible containers for content, with various styles
 #### 5.5.3. Team Member Card (`.card-team`)
 
 <div class="card card-team" style="width: 250px;">
-  <img src="https://via.placeholder.com/100x100" alt="Team Member Photo" class="card-avatar">
-  <h3 class="card-title">Jane Doe</h3>
+  <img src="https://res.cloudinary.com/dklongley/image/upload/w_100/sq-dind.jpg" alt="Team Member Photo" class="card-avatar">
+  <h3 class="card-title">Doe Joe</h3>
   <div class="card-body">
     <p class="card-text card-role">Lead Developer</p>
-    <p class="card-text">Jane is passionate about clean code and innovative solutions.</p>
+    <p class="card-text">Joe is passionate about clean code and innovative solutions.</p>
   </div>
 </div>
 
@@ -823,7 +823,7 @@ The card component provides flexible containers for content, with various styles
     <p class="card-text">"This product has transformed our workflow. Highly recommend it to everyone!"</p>
   </div>
   <div class="card-footer card-author">
-    <img src="https://via.placeholder.com/50x50" alt="Author Photo" class="card-avatar">
+    <img src="https://res.cloudinary.com/dklongley/image/upload/w_50/borrego.jpg" alt="Author Photo" class="card-avatar">
     <div>
       <h4 class="card-title" style="font-size: var(--font-size-base);">John Smith</h4>
       <p class="card-text" style="font-size: var(--font-size-sm);">CEO, Example Corp.</p>
@@ -834,7 +834,7 @@ The card component provides flexible containers for content, with various styles
 #### 5.5.5. Product Card (`.card-product`)
 
 <div class="card card-product" style="width: 280px;">
-  <img src="https://via.placeholder.com/280x180" alt="Product Image" class="card-image">
+  <img src="https://res.cloudinary.com/dklongley/image/upload/w_200/green-is-winning/0_HpH5TppSillznQny.webp" alt="Product Image" class="card-image">
   <h3 class="card-title">Awesome Product</h3>
   <div class="card-body">
     <p class="card-text card-price">$49.99 <span class="card-price-original">$79.99</span></p>
