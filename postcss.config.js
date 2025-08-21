@@ -12,8 +12,13 @@ const purgecss = purgeCSSPlugin({
     ];
   },
   // https://purgecss.com/safelisting.html
-  safelist: [],
   variables: true,
+  safelist: {
+    standard: [/^text-/],
+    variables:[/^--font-/, /^--space-/,/^--color-/,/^--line-/,/^--letter-/] 
+  
+},
+  
 });
 
 module.exports = {
