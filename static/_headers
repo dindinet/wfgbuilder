@@ -1,9 +1,23 @@
 /images/*.jpg
+  Cache-Control: public, max-age=31556952, immutable
+
 /images/*.webp
+  Cache-Control: public, max-age=31556952, immutable
+
 /images/*.png
+  Cache-Control: public, max-age=31556952, immutable
+
 /images/*.svg
+  Cache-Control: public, max-age=31556952, immutable
+
 /*.jpg
+  Cache-Control: public, max-age=31556952, immutable
+
 /*.webp
+  Cache-Control: public, max-age=31556952, immutable
+
 /*.png
+  Cache-Control: public, max-age=31556952, immutable
+  
 /*.svg
   Cache-Control: public, max-age=31556952, immutable
