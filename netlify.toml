@@ -5,7 +5,8 @@
   public,
   max-age=31556952,
   immutable'''
-  
+
+[[headers]]  
   for = "/*.jpg"
   [headers.values]
   cache-control = '''
@@ -13,13 +14,15 @@
   max-age=31556952,
   immutable'''
 
+[[headers]]
   for = "/*.png"
   [headers.values]
   cache-control = '''
   public,
   max-age=31556952,
   immutable'''
-  
+
+[[headers]]  
   for = "/*.svg"
   [headers.values]
   cache-control = '''
