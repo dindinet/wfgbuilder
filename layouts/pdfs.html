@@ -1,7 +1,7 @@
 {{ define "content" }}
-<div class="container container-wide my-6">
+  <div class="container container-wide my-6">
    {{ with resources.GetMatch "images/*.pdf" }}
      <a href="{{ .RelPermalink }}">{{ replace .RelPermalink "/images/" "" }}</a>
    {{ end }}
-   </div>
+  </div>
 {{ end }}
