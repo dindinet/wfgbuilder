@@ -137,6 +137,7 @@
 .my-20 { margin-block: var(--space-20); }
 .my-24 { margin-block: var(--space-24); }
 .my-32 { margin-block: var(--space-32); }
+.my-40 { margin-block: var(--space-40); }
 
 /* Margin Top (block-start) */
 .mt-0 { margin-block-start: var(--space-0); }
