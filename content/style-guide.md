@@ -1,3 +1,8 @@
+---
+title: Say It. Own It.
+subtitle: Read it. Believe it.
+---
+
 # Style Guide
 
 This document serves as a comprehensive visual guide and test bed for the project's CSS framework. It showcases all available design tokens, utility classes, and components.
