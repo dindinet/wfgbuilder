@@ -114,10 +114,10 @@
       <source srcset="{{ $mobile600jpg.RelPermalink }} {{ index $mobileSizes 0 }}w, {{ $mobile400jpg.RelPermalink }} {{ index $mobileSizes 1 }}w, {{ $mobile300jpg.RelPermalink }} {{ index $mobileSizes 2 }}w">
       
       {{/* Fallback img for old browsers - use middle tablet size */}}
-      <img src="{{ $tablet600jpg.RelPermalink }}" alt="{{ $alt }}"{{ with $loading }} loading="{{ . }}"{{ end }}>
+      <img src="{{ $tablet600jpg.RelPermalink }}" alt="{{ $alt }}"{{ with $loading }} loading="{{ . }}" {{if eq . "eager" }} fetchpriority="high"{{ end }} {{ end }}>
     </picture>
   {{- else -}}
     {{/* Fallback if image resource not found */}}
-    <img src="{{ $src }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $loading }} loading="{{ . }}"{{ end }}>
+    <img src="{{ $src }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $loading }} loading="{{ . }}" {{if eq . "eager" }} fetchpriority="high"{{ end }} {{ end }}>
   {{- end -}}
 {{- end -}}
