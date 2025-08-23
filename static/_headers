@@ -1,0 +1,9 @@
+/images/*.jpg
+/images/*.webp
+/images/*.png
+/images/*.svg
+/*.jpg
+/*.webp
+/*.png
+/*.svg
+  Cache-Control: public, max-age=31556952, immutable
