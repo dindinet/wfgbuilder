@@ -9,3 +9,6 @@
 
 /*.svg
   Cache-Control: public, max-age=31556952, immutable
+
+/*.css
+  Cache-Control: public, max-age=31556952, immutable
