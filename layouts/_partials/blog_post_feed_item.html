@@ -4,7 +4,20 @@
   <div class="card-post">
     {{ if $post.Params.image }}
     <a class="card-image" href="{{ $post.RelPermalink }}">
-      <img class="card-image" src="{{ replace $post.Params.image "upload" "upload/w_362"  | relURL }}" alt="{{ $post.Params.image_alt }}" />
+        {{ partial "responsive/pictures-cw.html" 
+        (dict 
+         "src" $post.Params.image
+         "alt" $post.Params.image_alt 
+         "loading" "lazy"
+         "class" "responsive-img"
+             "containerWidth" (dict 
+             "desktop" 33
+             "tablet" 50
+             "mobile" 100
+              )
+        ) 
+      }}
+     
     </a>
     {{ end }}
     <div class="card-body">

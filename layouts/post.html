@@ -1,11 +1,24 @@
 {{ define "content" }}
 
 <article class="post">
-  <div class="container container--full">
+  <div class="container container--wide">
 
     {{ if .Params.image }}
     <div class="post-featured-image">
-      <img src="{{ $.Params.image | relURL }}" alt="{{ $.Params.image_alt }}" />
+
+        {{ partial "responsive/pictures-cw.html" 
+        (dict 
+         "src" $.Params.image
+         "alt" $.Params.image_alt 
+         "loading" "lazy"
+         "class" "responsive-img"
+             "containerWidth" (dict 
+             "desktop" 33
+             "tablet" 50
+             "mobile" 100
+              )
+        ) 
+      }}
     </div>
     {{ end }}
   </div>
