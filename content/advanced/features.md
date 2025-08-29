@@ -27,7 +27,7 @@ sections:
     image_alt: Feature 1 placeholder image
     image_position: right
     actions:
-    - label: Learn More
+    - label: Feature 1 details
       url: "/about"
       style: primary
   - title: Feature 2
@@ -38,7 +38,7 @@ sections:
     image_alt: Feature 2 placeholder image
     image_position: left
     actions:
-    - label: Learn More
+    - label: Feature 2 details
       url: "/style-guide"
       style: primary
   - title: Feature 3
@@ -49,7 +49,7 @@ sections:
     image_alt: Feature 3 placeholder image
     image_position: right
     actions:
-    - label: Learn More
+    - label: Feature 3 details
       url: "/blog"
       style: primary
 seo:
