@@ -34,7 +34,7 @@ sections:
         image_position: right
         align: left
         actions:
-          - label: Feature 1 details
+          - label: Increase Melon Skills
             url: /features
             style: secondary
       - title: Feature 2
@@ -46,7 +46,7 @@ sections:
         image_position: left
         align: left
         actions:
-          - label: Feature 2 details
+          - label: Play an Instrument
             url: /features
             style: secondary
       - title: Feature 3
@@ -57,7 +57,7 @@ sections:
         image_alt: Feature 3 placeholder image
         image: https://res.cloudinary.com/dklongley/image/upload/w_558/lemons.jpg
         actions:
-          - label: Feature 3 details
+          - label: The Magic of Lemons
             url: /features
             style: secondary
   - type: blog_feed_section
