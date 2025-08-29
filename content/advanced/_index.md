@@ -16,7 +16,7 @@ sections:
     type: hero_section
     image: https://res.cloudinary.com/dklongley/image/upload/w_558/gallerymultipapo.jpg
     actions:
-      - label: Learn More
+      - label: Open Your account
         url: /features
         style: primary
       - label: Contact Us
@@ -70,7 +70,7 @@ sections:
     subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
       metus quis lorem malesuada luctus.
     actions:
-      - label: Learn More
+      - label: Get More Customers
         url: /features
         style: primary
     background_color: cornsilk
