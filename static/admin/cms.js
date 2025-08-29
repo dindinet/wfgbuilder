@@ -135,7 +135,7 @@ const run = () => {
                 }
             });
 
-            return h('div', { className: 'page-preview' }, section_widgets);
+            return h('div', { className: 'page-preview catanddog' }, section_widgets);
         };
 
         const PostPreview = (props) => {
@@ -148,7 +148,7 @@ const run = () => {
             const date = entry.getIn(['data', 'date']);
             const body = widgetFor('body');
 
-            return h('div', { className: 'post-preview' },
+            return h('div', { className: 'post-preview kitandpup' },
                 h('h1', null, title),
                 h('div', { className: 'post-meta' },
                     h('span', { className: 'date' }, date && new Date(date).toLocaleDateString()),

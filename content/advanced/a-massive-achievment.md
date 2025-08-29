@@ -27,5 +27,5 @@ sections:
     actions:
       - style: primary
         label: Sign Up
-        url: https://dindi.net
+        url: https://dindi.net       
 ---

@@ -11,3 +11,25 @@
   {{ block "main" . }}{{ end }}
 </body>
 </html>
+
+        {{ $qcss := resources.Match "css/**.css" }}  
+
+        {{ with $qcss | resources.Concat "css/wfg.css" }}
+
+          {{ if hugo.IsDevelopment }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}">
+          {{ else }}
+            {{ with . | postCSS | minify | fingerprint | resources.PostProcess }}
+              <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+
+
+{{ if hugo.IsProduction }}
+  {{ $critical := resources.Get "css/wfg.css" | postCSS | minify | fingerprint | resources.PostProcess }}
+    <style>{{ $critical.Content | safeCSS }}</style>
+  {{ else }}
+     <link rel="stylesheet" href="{{ $critical.RelPermalink }}">
+{{ end }}

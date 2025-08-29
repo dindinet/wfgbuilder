@@ -1,18 +1,18 @@
 ---
-title: Home
+title: DUmp Home
 sections:
-  - image_alt: The Multi Papo
+  - image_alt: The Multi Excellent Papo
     align: center
     image_position: right
     background:
-      nobackground_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
+      background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
       background_color: blue
       background_image_opacity: 60
       background_image_size: cover
       background_image_repeat: no-repeat
     has_background: true
     subtitle: We wouldn't need heroes if we calmed down and used our minds a bit more
-    title: This Is A Hero Headline
+    title: This Is A Nero Headline
     type: hero_section
     image: https://res.cloudinary.com/dklongley/image/upload/w_558/gallerymultipapo.jpg
     actions:
@@ -113,5 +113,6 @@ seo:
     - name: twitter:image
       value: images/starter-preview.png
       relativeUrl: true
-layout: advanced            
+layout: advanced
+url: /        
 ---

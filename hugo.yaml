@@ -62,5 +62,16 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
 permalinks:
-  pages: "/:slug/"
+  pages: "/:contentbasename/"
+  advanced: "/:contentbasename/"
+
+
+outputFormats:
+  decapConfig:
+    mediaType: "application/yaml"
+    baseName: "config"
+    path: "admin"
+    isPlainText: true
+

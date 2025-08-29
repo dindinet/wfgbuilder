@@ -23,23 +23,7 @@
           {{ end }}
         {{ end }}
 
-        {{ $qcss := resources.Match "css/**.css" }}  
-
-        {{ with $qcss | resources.Concat "css/wfg.css" }}
-          {{ if hugo.IsProduction }}
-            {{ with . | postCSS | minify | fingerprint | resources.PostProcess }}
-              {{ if $.Page.IsHome }}
-                <style>{{ .Content | safeCSS }}</style>
-              {{ else }}
-                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-              {{ end }}
-            {{ end }}
-          {{ else }}
-            <link rel="stylesheet" href="{{ .RelPermalink }}">
-          {{ end }}
-        {{ end }}
-
-
+        <link rel="stylesheet" href="{{ (resources.Get "sass/main.scss" | css.Sass (dict "indentWidth" 4 "outputStyle" "compressed" "precision" 10 "targetPath" "css/main.css")).Permalink }}">
 
         {{ if .Site.Params.favicon }}
         <link rel="icon" href="{{ $.Site.Params.favicon | relURL }}">

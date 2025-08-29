@@ -3,6 +3,34 @@ title: Say It. Own It.
 subtitle: Read it. Believe it.
 ---
 
+<div class="grid grid-min-320 grid-gap-lg">
+  <div class="card card-elevated" >
+    <h3 class="card-title">Elevated Card</h3>
+    <div class="card-body">
+      <p class="card-text">This card has a more prominent shadow, giving it an elevated appearance.</p>
+    </div>
+  </div>
+  <div class="card card-outlined" s>
+    <h3 class="card-title">Outlined Card</h3>
+    <div class="card-body">
+      <p class="card-text">This card features a distinct border and transparent background.</p>
+    </div>
+  </div>
+  <div class="card card-filled" >
+    <h3 class="card-title">Filled Card</h3>
+    <div class="card-body">
+      <p class="card-text">This card has a muted background color, providing a subtle visual distinction.</p>
+    </div>
+  </div>
+  <div class="card card-interactive" >
+    <h3 class="card-title">Interactive Card</h3>
+    <div class="card-body">
+      <p class="card-text">This card responds to hover and active states, indicating interactivity.</p>
+    </div>
+  </div>
+</div>
+
+
 # Style Guide
 
 This document serves as a comprehensive visual guide and test bed for the project's CSS framework. It showcases all available design tokens, utility classes, and components.

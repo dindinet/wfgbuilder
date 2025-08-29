@@ -79,5 +79,4 @@ seo:
     value: images/5.png
     relativeUrl: true
 layout: advanced
-
 ---
