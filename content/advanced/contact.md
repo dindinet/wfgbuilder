@@ -1,7 +1,7 @@
 ---
 title: Contact Us
 sections:
-  - type: contact_section
+  - type: ContactSection
 seo:
   title: ''
   description: ''

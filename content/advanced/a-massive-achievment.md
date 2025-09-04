@@ -13,13 +13,13 @@ sections:
     has_background: false
     subtitle: You have done your bit. It's time to come home.
     title: My Bloody Hero
-    type: hero_section
+    type: HeroSection
     image: images/italianvillage.jpg
     actions:
       - style: primary
         label: Screen the idea
         url: https://google.com
-  - type: cta_section
+  - type: CtaSection
     has_background: false
     background_color: white
     title: More than Words

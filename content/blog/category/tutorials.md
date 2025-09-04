@@ -1,10 +1,10 @@
 ---
 title: Tutorials
 sections:
-  - type: hero_section
+  - type: HeroSection
     title: All Posts In Tutorials
     align: center
-  - type: blog_feed_section
+  - type: BlogFeedSection
     show_recent: false
     category: data/categories/tutorials.json
 seo:

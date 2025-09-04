@@ -1,0 +1,15 @@
+name: CtaSection
+label: CTA Section
+widget: object
+fields:
+  - {label: Title, name: title, widget: string}
+  - {label: Subtitle, name: subtitle, widget: string}
+  - name: actions
+    label: Actions
+    widget: list
+    fields:
+      - {label: Label, name: label, widget: string}
+      - {label: URL, name: url, widget: string}
+      - {label: Style, name: style, widget: select, options: ["primary", "secondary"]}
+  - {label: Has Background, name: has_background, widget: boolean, default: false}
+  - {label: Background Color, name: background_color, widget: string}

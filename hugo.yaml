@@ -72,6 +72,6 @@ outputFormats:
   decapConfig:
     mediaType: "application/yaml"
     baseName: "config"
-    path: "admin"
+    path: "/"
     isPlainText: true
 

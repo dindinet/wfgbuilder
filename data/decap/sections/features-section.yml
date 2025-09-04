@@ -1,0 +1,22 @@
+name: FeaturesSection
+label: Features Section
+widget: object
+fields:
+  - {label: Title, name: title, widget: string}
+  - name: features
+    label: Features
+    widget: list
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Content, name: content, widget: markdown}
+      - {label: Image, name: image, widget: image}
+      - {label: Image Alt, name: image_alt, widget: string}
+      - {label: Image Position, name: image_position, widget: select, options: ["left", "right"]}
+      - {label: Align, name: align, widget: select, options: ["left", "center", "right"]}
+      - name: actions
+        label: Actions
+        widget: list
+        fields:
+          - {label: Label, name: label, widget: string}
+          - {label: URL, name: url, widget: string}
+          - {label: Style, name: style, widget: select, options: ["primary", "secondary"]}

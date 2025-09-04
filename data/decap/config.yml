@@ -1,0 +1,101 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "/assets/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/style-guide.md"
+        label: "Style Guide"
+        name: "style-guide"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/features.md"
+        label: "Features Page"
+        name: "features"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/terms.md"
+        label: "Terms Page"
+        name: "terms"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "relation", collection: "authors", search_fields: ["first_name", "last_name"], display_fields: ["first_name", "last_name"], value_field: "id"}
+      - {label: "Categories", name: "categories", widget: "relation", collection: "categories", search_fields: ["title"], display_fields: ["title"], value_field: "id", multiple: true}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Alt", name: "image_alt", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - name: seo
+        label: SEO
+        widget: object
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - name: extra
+            label: Extra
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Value, name: value, widget: string}
+              - {label: Key Name, name: keyName, widget: string}
+              - {label: Relative URL, name: relativeUrl, widget: boolean, default: false}
+  - name: "authors"
+    label: "Authors"
+    folder: "data/team"
+    create: true
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "First Name", name: "first_name", widget: "string"}
+      - {label: "Last Name", name: "last_name", widget: "string"}
+      - {label: "Photo", name: "photo", widget: "image"}
+      - {label: "Photo Alt", name: "photo_alt", widget: "string"}
+      - {label: "Bio", name: "bio", widget: "text"}
+  - name: "categories"
+    label: "Categories"
+    folder: "data/categories"
+    create: true
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+  - name: "advanced"
+    label: "Advanced Pages"
+    folder: "content/advanced"
+    create: true
+    fields: []

@@ -21,7 +21,7 @@ collections:
             label: Page Sections
             widget: list
             types:
-              - name: hero_section
+              - name: HeroSection
                 label: Hero Section
                 widget: object
                 fields:
@@ -48,7 +48,7 @@ collections:
                       - {label: Background Image Size, name: background_image_size, widget: select, options: ["cover", "contain"]}
                       - {label: Background Image Repeat, name: background_image_repeat, widget: select, options: ["no-repeat", "repeat"]}
                   - {label: "Has Background", name: "has_background", widget: "boolean", default: false}
-              - name: features_section
+              - name: FeaturesSection
                 label: Features Section
                 widget: object
                 fields:
@@ -70,14 +70,14 @@ collections:
                           - {label: Label, name: label, widget: string}
                           - {label: URL, name: url, widget: string}
                           - {label: Style, name: style, widget: select, options: ["primary", "secondary"]}
-              - name: blog_feed_section
+              - name: BlogFeedSection
                 label: Blog Feed Section
                 widget: object
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Show Recent, name: show_recent, widget: boolean, default: true}
                   - {label: Recent Count, name: recent_count, widget: number, value_type: "int"}
-              - name: cta_section
+              - name: CtaSection
                 label: CTA Section
                 widget: object
                 fields:
@@ -139,7 +139,7 @@ collections:
             label: Page Sections
             widget: list
             types:
-              - name: hero_section
+              - name: HeroSection
                 label: Hero Section
                 widget: object
                 fields:
@@ -166,7 +166,7 @@ collections:
                       - {label: Background Image Size, name: background_image_size, widget: select, options: ["cover", "contain"]}
                       - {label: Background Image Repeat, name: background_image_repeat, widget: select, options: ["no-repeat", "repeat"]}
                   - {label: "Has Background", name: "has_background", widget: "boolean", default: false}
-              - name: features_section
+              - name: FeaturesSection
                 label: Features Section
                 widget: object
                 fields:
@@ -188,14 +188,14 @@ collections:
                           - {label: Label, name: label, widget: string}
                           - {label: URL, name: url, widget: string}
                           - {label: Style, name: style, widget: select, options: ["primary", "secondary"]}
-              - name: blog_feed_section
+              - name: BlogFeedSection
                 label: Blog Feed Section
                 widget: object
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Show Recent, name: show_recent, widget: boolean, default: true}
                   - {label: Recent Count, name: recent_count, widget: number, value_type: "int"}
-              - name: cta_section
+              - name: CtaSection
                 label: CTA Section
                 widget: object
                 fields:
@@ -259,3 +259,5 @@ collections:
     fields:
       - {label: "ID", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
+
+  -advanced:

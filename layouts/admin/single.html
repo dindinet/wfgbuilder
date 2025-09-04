@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  {{/* Generate the JS file from template, then build it */}}
+  {{ $js := partial "decap-preview-template.js" . }}
+  
+  {{ $processedJs := $js | resources.FromString "js/decap-preview-generated.js" | js.Build | fingerprint }}
+  <script src="{{ $processedJs.RelPermalink }}"></script>
+  
+  <script src="https://sharadraj.in/hugo-shortcodes-netlify-cms/dist/hugo_shortcodes_netlify_cms.js"></script>
+</body>
+</html>

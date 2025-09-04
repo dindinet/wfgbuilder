@@ -13,7 +13,7 @@ sections:
     has_background: true
     subtitle: We wouldn't need heroes if we calmed down and used our minds a bit more
     title: This Is A Nero Headline
-    type: hero_section
+    type: HeroSection
     image: https://res.cloudinary.com/dklongley/image/upload/w_558/gallerymultipapo.jpg
     actions:
       - label: Open Your account
@@ -22,7 +22,7 @@ sections:
       - label: Contact Us
         url: /contact
         style: secondary
-  - type: features_section
+  - type: FeaturesSection
     title: Features
     features:
       - title: Feature 1
@@ -60,21 +60,20 @@ sections:
           - label: The Magic of Lemons
             url: /features
             style: secondary
-  - type: blog_feed_section
+  - type: BlogFeedSection
     show_recent: true
     title: What's New
     recent_count: 3
-  - type: cta_section
+  - type: CtaSection
     has_background: true
     title: This Is A CTA
-    subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
-      metus quis lorem malesuada luctus.
+    subtitle: I consider this to be a temporary best CTA
     actions:
       - label: Get More Customers
         url: /features
         style: primary
     background_color: cornsilk
-  - type: features_section
+  - type: FeaturesSection
     title: Wow! Even 'More' features
     features:
       - title: Turbo
@@ -114,5 +113,5 @@ seo:
       value: images/starter-preview.png
       relativeUrl: true
 layout: advanced
-url: /        
+url: /
 ---

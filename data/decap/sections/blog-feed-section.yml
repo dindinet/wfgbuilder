@@ -1,0 +1,7 @@
+name: BlogFeedSection
+label: Blog Feed Section
+widget: object
+fields:
+  - {label: Title, name: title, widget: string}
+  - {label: Show Recent, name: show_recent, widget: boolean, default: true}
+  - {label: Recent Count, name: recent_count, widget: number, value_type: "int"}

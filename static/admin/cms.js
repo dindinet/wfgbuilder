@@ -122,13 +122,13 @@ const run = () => {
                 const component_props = { ...section, getAsset: getAsset };
 
                 switch (type) {
-                    case 'hero_section':
+                    case 'HeroSection':
                         return h(HeroSectionPreview, component_props);
-                    case 'features_section':
+                    case 'FeaturesSection':
                         return h(FeaturesSectionPreview, component_props);
-                    case 'blog_feed_section':
+                    case 'BlogFeedSection':
                         return h(BlogFeedSectionPreview, component_props);
-                    case 'cta_section':
+                    case 'CtaSection':
                         return h(CtaSectionPreview, component_props);
                     default:
                         return h('div', null, `Unknown section type: ${type}`);

@@ -97,13 +97,13 @@ const PagePreview = ({ entry, getAsset }) => {
       const type = section.get("type");
       const props = { ...section.toJS(), getAsset };
       switch (type) {
-        case "hero_section":
+        case "HeroSection":
           return h(HeroSectionPreview, props);
-        case "features_section":
+        case "FeaturesSection":
           return h(FeaturesSectionPreview, props);
-        case "blog_feed_section":
+        case "BlogFeedSection":
           return h(BlogFeedSectionPreview, props);
-        case "cta_section":
+        case "CtaSection":
           return h(CtaSectionPreview, props);
         // Add other section previews here
         default:

@@ -1,10 +1,10 @@
 ---
 title: General
 sections:
-  - type: hero_section
+  - type: HeroSection
     title: All Posts In General
     align: center
-  - type: blog_feed_section
+  - type: BlogFeedSection
     show_recent: false
     category: data/categories/general.json
 seo:

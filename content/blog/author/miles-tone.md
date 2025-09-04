@@ -1,10 +1,10 @@
 ---
 title: Miles Tone
 sections:
-  - type: hero_section
+  - type: HeroSection
     title: All Posts By Miles Tone
     align: center
-  - type: blog_feed_section
+  - type: BlogFeedSection
     show_recent: false
     author: data/team/miles-tone.json
 seo:

@@ -1,0 +1,27 @@
+name: HeroSection
+label: Hero Section
+widget: object
+fields:
+  - {label: Title, name: title, widget: string}
+  - {label: Subtitle, name: subtitle, widget: string}
+  - {label: Image, name: image, widget: image}
+  - {label: Image Alt, name: image_alt, widget: string}
+  - {label: Image Position, name: image_position, widget: select, options: ["left", "right"]}
+  - {label: Align, name: align, widget: select, options: ["left", "center", "right"]}
+  - name: actions
+    label: Actions
+    widget: list
+    fields:
+      - {label: Label, name: label, widget: string}
+      - {label: URL, name: url, widget: string}
+      - {label: Style, name: style, widget: select, options: ["primary", "secondary"]}
+  - name: background
+    label: Background
+    widget: object
+    fields:
+      - {label: Background Color, name: background_color, widget: string}
+      - {label: Background Image, name: background_image, widget: image}
+      - {label: Background Image Opacity, name: background_image_opacity, widget: number, value_type: "int", min: 0, max: 100}
+      - {label: Background Image Size, name: background_image_size, widget: select, options: ["cover", "contain"]}
+      - {label: Background Image Repeat, name: background_image_repeat, widget: select, options: ["no-repeat", "repeat"]}
+  - {label: "Has Background", name: "has_background", widget: "boolean", default: false}

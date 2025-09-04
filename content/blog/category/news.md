@@ -1,10 +1,10 @@
 ---
 title: News
 sections:
-  - type: hero_section
+  - type: HeroSection
     title: All Posts In News
     align: center
-  - type: blog_feed_section
+  - type: BlogFeedSection
     show_recent: false
     category: data/categories/news.json
 seo:

@@ -1,10 +1,10 @@
 ---
 title: Dave Longley
 sections:
-  - type: hero_section
+  - type: HeroSection
     title: All Posts By Dave Longley
     align: center
-  - type: blog_feed_section
+  - type: BlogFeedSection
     show_recent: false
     author: data/team/dave-longley.json
 seo:

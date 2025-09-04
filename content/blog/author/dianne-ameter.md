@@ -1,10 +1,10 @@
 ---
 title: Dianne Ameter
 sections:
-  - type: hero_section
+  - type: HeroSection
     title: All Posts By Dianne Ameter
     align: center
-  - type: blog_feed_section
+  - type: BlogFeedSection
     show_recent: false
     author: data/team/dianne-ameter.json
 seo:
