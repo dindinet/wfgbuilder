@@ -1,22 +1,20 @@
 ---
 title: Features
 sections:
-  - image_alt: ""
-    align: ""
-    image_position: ""
-    background: ""
-    has_background: ""
-    subtitle: Feature Me Good
-    title: A New Feature Section
-    type: FeaturesSection
-    image: ""
-    actions:
-      - label: ""
-        url: ""
-  - type: HeroSection
-    title: Features
-    subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  - image_alt: Feature 3 placeholder image
     align: center
+    image_position: left
+    background:
+      background_color: blue
+      background_image: /images/vallealmendros.jpg
+      background_image_opacity: 21
+      background_image_size: cover
+      background_image_repeat: no-repeat
+    has_background: false
+    subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    title: Features
+    type: HeroSection
+    image: /images/italianvillage.jpg
   - type: FeaturesSection
     features:
       - title: Feature 1
@@ -62,6 +60,7 @@ sections:
       - label: toot
         url: /
         style: secondary
+    background_color: grey
 seo:
   title: Features
   description: This is the features page

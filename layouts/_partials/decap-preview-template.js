@@ -15,7 +15,7 @@ const run = () => {
         const h = window.h;
         // --- Child Preview Components ---
         {{- range $previewFiles }}
-          {{ .Content | safeJS }}
+          {{ .Content | safeHTML }}
         {{- end }}
         // --- Main Page Preview Component ---
         const PagePreview = ({ entry, getAsset, getCollection, widgetFor }) => {

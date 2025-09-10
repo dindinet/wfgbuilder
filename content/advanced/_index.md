@@ -1,5 +1,5 @@
 ---
-title: DUmp Home
+title: Dump Home
 sections:
   - image_alt: The Multi Excellent Papo
     align: center

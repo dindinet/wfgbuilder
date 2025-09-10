@@ -368,7 +368,7 @@
 
 .btn-group .btn {
   border-radius: 0;
-  border-inline-end-width: 0;
+  border-inline-end-width: 1px;
 }
 
 .btn-group .btn:first-child {
