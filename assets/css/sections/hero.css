@@ -1,0 +1,96 @@
+        /*
+         * LAYOUT & POSITIONING
+         * Centers the content on the page and handles image overlay using CSS Grid.
+         */
+        .section--hero-centered {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 100vw;
+            height: 80vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .bgimage {
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 3;  
+            width:100%;
+            height:100%;        
+            object-fit: cover;
+        }
+
+        /*
+         * HERO TEXT CONTENT
+         * Styles the main text overlay and its components.
+         */
+        #herotext {
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 3;             
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            z-index: 10;
+            width: 100%;
+
+
+            
+        } 
+        .announcement {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            background-color: rgba(75, 85, 99, 0.5);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.5;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        #herotext .section-title, #herotext .announcement, #herotext p, #herotext .menu-link{
+            color: var(--color-text-inverse);
+            }
+
+        #herotext .menu-link:hover{
+            color: var(--color-primary-700);
+        }
+        /*
+         * BUTTONS AND LINKS
+         * Styles the call-to-action buttons.
+         */
+        .funding-announcement {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            background-color: rgba(75, 85, 99, 0.5);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.5;
+            color: var(--color-accent-300);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .funding-announcement a {
+            font-weight: 600;
+            color: var(--color-white);
+            margin-left: 0.5rem;
+            text-decoration: none;
+        }
+
+        /* Responsive font sizes 
+        @media (min-width: 640px) {
+            .section-title {
+                font-size: var(--font-size-xl);
+            }
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: var(--font-size-lg);
+            }
+        }
+        */

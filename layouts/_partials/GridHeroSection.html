@@ -1,0 +1,44 @@
+{{ $section := .section }}
+
+    <div class="section--hero-centered">
+        <!-- Background image, stretched to fill the container 1644088379091-d574269d422f-->
+         <!-- https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply  -->
+         {{ if $section.bgimage }}
+        <img id="bgimage" src="{{ $section.bgimage }}" alt="" class="bgimage">
+
+         {{ end }}
+        <!-- The main content container -->
+        <div id="herotext">
+            
+            {{ if $section.announcement }}
+            <div style="margin-bottom: 1rem;">               
+                <div class="funding-announcement">
+                    {{ $section.announcement  }}
+                    <a href="#" style="position: relative;">
+                        <span aria-hidden="true" class="absolute-inset-0"></span>{{ $section.announcementbtntxt  }} <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+
+            {{ if $section.title }}
+            <h1 class="section-title">
+                {{ $section.title }}
+            </h1>
+            {{ end }}
+
+            {{ if $section.subtitle }}
+            <p class="section-subtitle">
+                {{ $section.subtitle }}
+            </p>
+            {{ end }}
+
+        {{ if $section.actions }}
+        <div class="banner-actions btn-group">
+          {{ $include_dict := dict "actions" $section.actions }}
+          {{ partial "section_actions.html" $include_dict }}
+        </div>
+        {{ end }}            
+
+        </div>
+    </div>

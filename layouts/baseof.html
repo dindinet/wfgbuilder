@@ -22,12 +22,12 @@
             <meta {{ $key_name }}="{{ $meta.name }}" content="{{ $meta.value }}">
           {{ end }}
         {{ end }}
-
-        {{ $qcss := resources.Match "css/**.css" }}  
+ 
+        {{ $qcss := resources.Match "css/**.css" }}
 
         {{ with $qcss | resources.Concat "css/wfg.css" }}
           {{ if hugo.IsProduction }}
-            {{ with . | postCSS | minify | fingerprint | resources.PostProcess }}
+            {{ with . | postCSS | minify | resources.PostProcess }}
               {{ if $.Page.IsHome }}
                 <style>{{ .Content | safeCSS }}</style>
               {{ else }}

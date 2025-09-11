@@ -29,4 +29,4 @@ const HeroSectionPreview = (props) => {
     );
 };
 
-export default HeroSectionPreview;
+//export default HeroSectionPreview;
