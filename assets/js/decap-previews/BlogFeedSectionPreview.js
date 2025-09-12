@@ -3,7 +3,17 @@ const BlogFeedSectionPreview = (props) => {
 
     let postsToDisplay = [];
     if (show_recent && posts) {
-        postsToDisplay = posts.slice(0, recent_count);
+        // 1. Filter out entries that aren't posts (like the blog index page)
+        // 2. Create a shallow copy before sorting to avoid mutating props
+        const sortedPosts = [...posts]
+            .filter(p => p.data && p.data.date) 
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+
+        if (recent_count > 0) {
+            postsToDisplay = sortedPosts.slice(0, recent_count);
+        } else {
+            postsToDisplay = sortedPosts;
+        }
     }
 
     let content;
@@ -13,13 +23,13 @@ const BlogFeedSectionPreview = (props) => {
         content = h('p', { className: 'text-gray-500' }, "No posts found to display.");
     } else {
         content = h('div', { className: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' },
-            postsToDisplay.map((post, index) => (
-                h('div', { key: index, className: 'bg-white p-4 rounded-lg shadow-md border border-dashed border-gray-300' },
-                    h('h3', { className: 'text-lg font-semibold text-gray-800' }, post.title),
-                    h('p', { className: 'text-sm text-gray-500 mt-1' }, post.date),
-                    h('p', { className: 'mt-2 text-sm text-gray-600' }, post.summary)
-                )
-            ))
+            postsToDisplay.map((post, index) => {
+                return h('div', { key: index, className: 'bg-white p-4 rounded-lg shadow-md border border-dashed border-gray-300' }, [
+                    h('h3', { className: 'text-lg font-semibold text-gray-800' }, post.data.title),
+                    h('p', { className: 'text-sm text-gray-500 mt-1' }, new Date(post.data.date).toLocaleDateString()),
+                    h('p', { className: 'mt-2 text-sm text-gray-600' }, post.data.excerpt)
+                ]);
+            })
         );
     }
 
@@ -33,5 +43,3 @@ const BlogFeedSectionPreview = (props) => {
         )
     );
 };
-
-export default BlogFeedSectionPreview;

@@ -3,7 +3,7 @@ title: Dump Home
 sections:
   - type: GridHeroSection
     title: Connect to build your business
-    announcement: Meet your new customers where their minds are at. 
+    announcement: Meet your new customers where their minds are at.
     announcementbtntxt: Get Started
     subtitle: Reach the people who need you right when they need you most.
     bgimage: https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=204060&sat=-100&exp=15&blend-mode=multiply
@@ -56,7 +56,7 @@ sections:
   - type: BlogFeedSection
     show_recent: true
     title: What's New
-    recent_count: 3
+    recent_count: 6
   - type: CtaSection
     has_background: true
     title: This Is A CTA
@@ -74,7 +74,7 @@ sections:
         image: https://res.cloudinary.com/dklongley/image/upload/w_558/lemons.jpg
         image_alt: Turbo Lemons
         image_position: left
-        align: center
+        align: left
         actions:
           - label: Turbo Now
             url: /turbo

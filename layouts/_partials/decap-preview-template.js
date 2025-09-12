@@ -18,26 +18,45 @@ const run = () => {
           {{ .Content | safeHTML }}
         {{- end }}
         // --- Main Page Preview Component ---
-        const PagePreview = ({ entry, getAsset, getCollection, widgetFor }) => {
-            const sections = entry.getIn(["data", "sections"]);
-            if (!sections) {
-                return widgetFor("body");
+        const PagePreview = createClass({
+            getInitialState: function() {
+                return { posts: [], loadingPosts: true };
+            },
+            componentDidMount: function() {
+                this.props.getCollection('posts').then(collection => {
+                    // collection is an array of Immutable Maps, convert each to a JS object.
+                    const posts = collection.map(entry => entry.toJS());
+                    console.log('Fetched posts:', posts);
+                    this.setState({ posts: posts, loadingPosts: false });
+                }).catch(error => {
+                    console.error("Error fetching posts:", error);
+                    this.setState({ loadingPosts: false });
+                });
+            },
+            render: function() {
+                const { entry, getAsset, widgetFor } = this.props;
+                const { posts, loadingPosts } = this.state;
+
+                const sections = entry.getIn(["data", "sections"]);
+                if (!sections) {
+                    return widgetFor("body");
+                }
+                return h("div", { class: "page-preview" },
+                    sections.map((section, index) => {
+                        const type = section.get("type");
+                        const props = { ...section.toJS(), getAsset, h, key: type, posts, loadingPosts };
+                        switch (type) {
+                          {{- range $previewFiles }}
+                            case "{{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js"  }}":
+                                return h({{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js" }}Preview, props);
+                          {{- end }}
+                            default:
+                                return h("div", null, `Unknown section type: ${type}`);
+                        }
+                    })
+                );
             }
-            return h("div", { class: "page-preview" },
-                sections.map((section, index) => {
-                    const type = section.get("type");
-                    const props = { ...section.toJS(), getAsset, h, key: type };
-                    switch (type) {
-                      {{- range $previewFiles }}
-                        case "{{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js"  }}":
-                            return h({{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js" }}Preview, props);
-                      {{- end }}
-                        default:
-                            return h("div", null, `Unknown section type: ${type}`);
-                    }
-                })
-            );
-        };
+        });
         CMS.registerPreviewTemplate("advanced", PagePreview);
 
         const PostPreview = (props) => {
@@ -62,7 +81,7 @@ const run = () => {
             );
         };
         CMS.registerPreviewTemplate("posts", PostPreview);
-
+        CMS.registerPreviewStyle("{{ absURL "" }}css/wfg.min.css");
     };
 
     check();
