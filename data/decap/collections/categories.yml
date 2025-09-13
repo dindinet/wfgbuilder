@@ -1,0 +1,10 @@
+- name: "categories"
+  label: "Categories"
+  folder: "data/categories"
+  create: true
+  slug: "{{id}}"
+  format: "json"
+  fields:
+    - {label: "ID", name: "id", widget: "string"}
+    - {label: "Link", name: "link", widget: "string", required: false}
+    - {label: "Title", name: "title", widget: "string"}

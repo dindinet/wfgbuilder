@@ -1,0 +1,14 @@
+- name: "team"
+  label: "Team"
+  folder: "data/team"
+  create: true
+  slug: "{{id}}"
+  format: "json"
+  fields:
+    - {label: "ID", name: "id", widget: "string"}
+    - {label: "Link", name: "link", widget: "string", required: false}
+    - {label: "First Name", name: "first_name", widget: "string"}
+    - {label: "Last Name", name: "last_name", widget: "string"}
+    - {label: "Photo", name: "photo", widget: "image", required: false}
+    - {label: "Photo Alt", name: "photo_alt", widget: "string", required: false}
+    - {label: "Bio", name: "bio", widget: "markdown", required: false}

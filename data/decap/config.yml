@@ -8,6 +8,31 @@ media_folder: "/assets/images"
 public_folder: "/images"
 
 collections:
+  - name: "authors"
+    label: "Authors - Team Members"
+    folder: "data/team"
+    create: true
+    slug: "{{id}}"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Link", name: "link", widget: "string", required: false}
+      - {label: "First Name", name: "first_name", widget: "string"}
+      - {label: "Last Name", name: "last_name", widget: "string"}
+      - {label: "Photo", name: "photo", widget: "image", required: false}
+      - {label: "Photo Alt", name: "photo_alt", widget: "string", required: false}
+      - {label: "Bio", name: "bio", widget: "markdown", required: false}
+  - name: "categories"
+    label: "Categories"
+    folder: "data/categories"
+    create: true
+    slug: "{{id}}"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Link", name: "link", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+
   - name: "pages"
     label: "Pages"
     files:
@@ -76,24 +101,6 @@ collections:
               - {label: Value, name: value, widget: string}
               - {label: Key Name, name: keyName, widget: string}
               - {label: Relative URL, name: relativeUrl, widget: boolean, default: false}
-  - name: "authors"
-    label: "Authors"
-    folder: "data/team"
-    create: true
-    fields:
-      - {label: "ID", name: "id", widget: "string"}
-      - {label: "First Name", name: "first_name", widget: "string"}
-      - {label: "Last Name", name: "last_name", widget: "string"}
-      - {label: "Photo", name: "photo", widget: "image"}
-      - {label: "Photo Alt", name: "photo_alt", widget: "string"}
-      - {label: "Bio", name: "bio", widget: "text"}
-  - name: "categories"
-    label: "Categories"
-    folder: "data/categories"
-    create: true
-    fields:
-      - {label: "ID", name: "id", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
   - name: "advanced"
     label: "Advanced Pages"
     folder: "content/advanced"

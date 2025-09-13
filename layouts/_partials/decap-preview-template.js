@@ -17,42 +17,96 @@ const run = () => {
         {{- range $previewFiles }}
           {{ .Content | safeHTML }}
         {{- end }}
+
+        const previewComponents = {
+        {{- range $previewFiles }}
+          "{{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js"  }}": {{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js" }}Preview,
+        {{- end }}
+        };
+
         // --- Main Page Preview Component ---
         const PagePreview = createClass({
             getInitialState: function() {
-                return { posts: [], loadingPosts: true };
+                return { collections: {}, isLoading: true };
             },
+
             componentDidMount: function() {
-                this.props.getCollection('posts').then(collection => {
-                    // collection is an array of Immutable Maps, convert each to a JS object.
-                    const posts = collection.map(entry => entry.toJS());
-                    console.log('Fetched posts:', posts);
-                    this.setState({ posts: posts, loadingPosts: false });
+                this.fetchCollections();
+            },
+
+            componentDidUpdate: function(prevProps) {
+                if (prevProps.entry !== this.props.entry) {
+                    this.fetchCollections();
+                }
+            },
+
+            fetchCollections: function() {
+                const { entry } = this.props;
+                const sections = entry.getIn(['data', 'sections']);
+                if (!sections) {
+                    this.setState({ isLoading: false });
+                    return;
+                }
+
+                const sectionTypes = sections.map(s => s.get('type'));
+                const collectionsToFetch = new Set();
+
+                sectionTypes.forEach(type => {
+                    const component = previewComponents[type];
+                    if (component && component.needs) {
+                        component.needs.forEach(coll => collectionsToFetch.add(coll));
+                    }
+                });
+
+                if (collectionsToFetch.size === 0) {
+                    this.setState({ isLoading: false });
+                    return;
+                }
+
+                const fetchPromises = Array.from(collectionsToFetch).map(coll =>
+                    this.props.getCollection(coll).then(data => ({ name: coll, data: data.map(d => d.toJS()) }))
+                );
+
+                Promise.all(fetchPromises).then(fetchedCollections => {
+                    const collections = fetchedCollections.reduce((acc, curr) => {
+                        acc[curr.name] = curr.data;
+                        return acc;
+                    }, {});
+                    this.setState({ collections, isLoading: false });
                 }).catch(error => {
-                    console.error("Error fetching posts:", error);
-                    this.setState({ loadingPosts: false });
+                    console.error("Error fetching collections:", error);
+                    this.setState({ isLoading: false });
                 });
             },
+
             render: function() {
                 const { entry, getAsset, widgetFor } = this.props;
-                const { posts, loadingPosts } = this.state;
+                const { collections, isLoading } = this.state;
 
                 const sections = entry.getIn(["data", "sections"]);
                 if (!sections) {
                     return widgetFor("body");
                 }
+
                 return h("div", { class: "page-preview" },
-                    sections.map((section, index) => {
+                    sections.map((section) => {
                         const type = section.get("type");
-                        const props = { ...section.toJS(), getAsset, h, key: type, posts, loadingPosts };
-                        switch (type) {
-                          {{- range $previewFiles }}
-                            case "{{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js"  }}":
-                                return h({{ replace .Name "/js/decap-previews/" "" | strings.TrimSuffix "Preview.js" }}Preview, props);
-                          {{- end }}
-                            default:
-                                return h("div", null, `Unknown section type: ${type}`);
+                        const component = previewComponents[type];
+
+                        if (!component) {
+                            return h("div", null, `Unknown section type: ${type}`);
                         }
+                        
+                        const props = {
+                            ...section.toJS(),
+                            getAsset,
+                            h,
+                            key: type,
+                            collections,
+                            isLoading
+                        };
+
+                        return h(component, props);
                     })
                 );
             }
