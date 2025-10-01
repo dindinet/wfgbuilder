@@ -1,0 +1,9 @@
+name: FullWidthHeadingSection
+label: Full Width Heading Section
+widget: object
+fields:
+  - {label: Title, name: title, widget: string}
+  - {label: 'Title Colour', name: titlecolour, widget: 'color', enableAlpha: true, allowInput: true, required: false }
+  - {label: Subtitle, name: subtitle, widget: string}
+  - {label: 'Subtitle position', name: subtitleposition, widget: select, options: ["above", "below"]}
+  - {label: 'Subtitle Colour', name: subtitlecolour, widget: 'color', enableAlpha: true, allowInput: true, required: false }

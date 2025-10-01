@@ -1,0 +1,13 @@
+{{ $section := .section }}
+<section id="headings">
+  <div class="full-width">
+    {{ if eq $section.subtitleposition  "above" }}
+    <h2 class="text-highlight" {{ with $section.subtitlecolour }}style="color:{{ $section.subtitlecolour}}"{{ end }}>{{ $section.subtitle }}</h2>
+    {{ end }}
+    <h1 {{ with $section.titlecolour }}style="color:{{ $section.titlecolor}};"{{ end }}>{{ $section.title}}</h1>
+    {{ if eq $section.subtitleposition  "below" }}
+    <h2 class="text-highlight" {{ with $section.subtitlecolour }}style="color:{{ $section.subtitlecolour}}"{{ end }}>{{ $section.subtitle }}</h2>
+    {{ end }}
+  </div>
+</section>
+

@@ -1,0 +1,230 @@
+:root {
+  --clr-primary: hsl(0, 0%, 100%); /*hsl(229 33% 21%);*/
+  --clr-secondary: purple; /*#302047;*/
+  --clr-accent: hsl(261, 59%, 81%); /*hsl(21deg 85% 60%);*/
+  --clr-highlight: hsl(46, 97%, 86%);
+
+  --wrapper-padding-inline: 3rem;
+  --wrapper-max-width: 40rem;
+
+  --section-padding-block: 2rem;
+
+  --large-text: 2.4rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5125rem;
+  line-height: 1.4;
+  color: rgb(0, 0, 0);
+  background-color: var(--clr-primary);
+  xbackground-image: linear-gradient(to bottom right, blue, purple, red);
+  background-blend-mode: multiply;
+}
+
+p{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.full-width{
+  max-width: 100vw;
+  max-height: fit-content;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.full-width figure{
+ margin-inline: 0;
+}
+.full-width figcaption{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(0.5rem, 1.25rem, 2rem);
+  display:flex;
+  justify-content: center;
+  margin-block-start: 1rem;
+  padding-inline: 1rem;
+  background-size:0cqmax
+}
+.full-width h1 {
+  font-size: clamp(2rem, 5vw, 8rem);
+  line-height: 1;
+  letter-spacing: -0.2rem;
+  margin-inline: 2vw;
+  margin-block: 1.5rem;
+}
+.full-width .jumbo{
+  margin-inline: 5vw;
+  font-size: clamp(3rem, 10vw, 10rem);
+}
+
+section {
+  padding-block: var(--section-padding-block);
+}
+
+.primary {
+  xcolor: white;
+  background-color: var(--clr-primary);
+}
+
+.secondary {
+  color: white;
+  background-color: var(--clr-secondary);
+}
+
+.accent {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+}
+
+.button {
+  display: inline-flex;
+  padding: 0.75em 1.5em;
+  background: var(--clr-accent);
+  color: purple;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875em;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
+section .wrapper {
+  max-width: var(--wrapper-max-width);
+  margin-inline: auto;
+  padding: var(--wrapper-padding-inline);
+}
+
+
+
+.full-width img{
+  object-fit:cover;
+  overflow: hidden;
+  height: 100%;
+  
+}
+/* remove the padding so images can take up the entire height */
+.full-width-split-screen {
+  padding-block: 0;
+}
+
+/* match the section padding for the text blocks for
+consistency */
+.full-width-split-screen > :not(img) {
+  padding-block: var(--section-padding-block);
+  padding-inline: var(--wrapper-padding-inline);
+}
+
+.bg-primary{
+  background-color: var(--clr-primary)
+}
+.bg-secondary{
+  background-color: var(--clr-secondary)
+}
+.bg-accent{
+  background-color: var(--clr-accent)
+}
+.text-primary{
+  color: var(--clr-primary);
+}
+.text-secondary{
+  color: var(--clr-secondary);
+}
+.text-accent{
+  color: var(--clr-accent);
+}
+.text-highlight{
+color: var(--clr-highlight);
+}
+.text-white{
+  color:white;
+}
+.large-text{font-size: var(--large-text);}
+.text-pop{text-shadow: 2px 2px #000000;}
+@media (min-width: 600px) {
+  .full-width-split-screen {
+    /* outermost columns emulate the spacing from the .wrapper
+     while the two inner columns divide the rest of the space
+     into two equal parts */
+    display: grid;
+    grid-template-columns:
+      minmax(var(--wrapper-padding-inline), 1fr)
+      minmax(0, calc(var(--wrapper-max-width) / 2))
+      minmax(0, calc(var(--wrapper-max-width) / 2))
+      minmax(var(--wrapper-padding-inline), 1fr);
+
+    /* for positioning the pseudo-elements
+       to fill in the rest of the background*/
+    position: relative;
+  }
+
+  /* ensure the image fill up the entire space available */
+  .full-width-split-screen > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* if the image is on the left, it covers the entire left half */
+  .full-width-split-screen > img:first-child {
+    grid-column: 1 / 3;
+  }
+
+  /* if the image is on the right, it covers the entire right half */
+  .full-width-split-screen > img:last-child {
+    grid-column: 3 / -1;
+  }
+
+  /* make sure text doesn't touch the edge of the viewport 
+   and the content is vertically centered */
+  .full-width-split-screen > :not(img) {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  /* if the non-image is first, place it in the second column
+     (first column is empty to emulate the .wrapper) */
+  .full-width-split-screen > :not(img):first-child {
+    padding-left: 0;
+    grid-column: 2 / 3;
+  }
+
+  /* if the non-image is last, place it in the third column
+     (fourth column is empty to emulate the .wrapper) */
+  .full-width-split-screen > :not(img):last-child {
+    padding-right: 0;
+    grid-column: 3 / 4;
+  }
+
+  /* at large screens, ensure the background color
+     goes to the edge of the page */
+  .full-width-split-screen > :not(img)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+  }
+
+  /* ensures the background color fills the entire left side */
+  .full-width-split-screen > :not(img):first-child::before {
+    grid-column: 1 / 2;
+  }
+
+  /* ensures the background color fills the entire right side */
+  .full-width-split-screen > :not(img):last-child::before {
+    grid-column: 4 / 5;
+  }
+}
+
+

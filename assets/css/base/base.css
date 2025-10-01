@@ -379,7 +379,10 @@ figcaption {
 img {
   border-radius: var(--radius-md);
 }
-
+.responsive-img{
+    object-fit: cover;
+    height: 100%;
+}
 /* ==========================================================================
    UTILITY CLASSES FOR CONTENT
    ========================================================================== */

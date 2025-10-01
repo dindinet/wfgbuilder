@@ -2,14 +2,18 @@
 title: A Massive Achievment
 layout: advanced
 sections:
+  - type: FullWidthImageSection
+    image: /images/lake-city.png
+    caption: Mind the Gap
+    image_alt: My home town. A city by the lake.
   - image_alt: A village in Italy
     align: left
     image_position: right
     background:
       background_color: white
       background_image_opacity: 100
-      background_image_size: cover
-      background_image_repeat: no-repeat
+      background_image_size: null
+      background_image_repeat: null
     has_background: false
     subtitle: You have done your bit. It's time to come home.
     title: My Bloody Hero
@@ -27,5 +31,5 @@ sections:
     actions:
       - style: primary
         label: Sign Up
-        url: https://dindi.net       
+        url: https://dindi.net
 ---

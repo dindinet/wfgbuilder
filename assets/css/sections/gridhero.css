@@ -1,4 +1,4 @@
-        /*
+/*
          * LAYOUT & POSITIONING
          * Centers the content on the page and handles image overlay using CSS Grid.
          */
@@ -81,16 +81,3 @@
             margin-left: 0.5rem;
             text-decoration: none;
         }
-
-        /* Responsive font sizes 
-        @media (min-width: 640px) {
-            .section-title {
-                font-size: var(--font-size-xl);
-            }
-        }
-        @media (min-width: 768px) {
-            .section-title {
-                font-size: var(--font-size-lg);
-            }
-        }
-        */

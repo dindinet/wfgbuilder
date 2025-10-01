@@ -3,7 +3,9 @@ label: Hero Section
 widget: object
 fields:
   - {label: Title, name: title, widget: string}
+  - {label: 'Title Color', name: 'titlecolor', widget: 'color', enableAlpha: true, allowInput: true, required: false }
   - {label: Subtitle, name: subtitle, widget: string}
+  - {label: 'Subtitle Color', name: 'subtitlecolor', widget: 'color', enableAlpha: true, allowInput: true, required: false }
   - {label: Image, name: image, widget: image}
   - {label: Image Alt, name: image_alt, widget: string}
   - {label: Image Position, name: image_position, widget: select, options: ["left", "right"]}
@@ -19,9 +21,9 @@ fields:
     label: Background
     widget: object
     fields:
-      - {label: Background Color, name: background_color, widget: string}
-      - {label: Background Image, name: background_image, widget: image}
+      - {label: Background Color, name: background_color, widget: color, enableAlpha: true, allowInput: true}
+      - {label: Background Image, name: background_image, widget: image, required: false}
       - {label: Background Image Opacity, name: background_image_opacity, widget: number, value_type: "int", min: 0, max: 100}
-      - {label: Background Image Size, name: background_image_size, widget: select, options: ["cover", "contain"]}
-      - {label: Background Image Repeat, name: background_image_repeat, widget: select, options: ["no-repeat", "repeat"]}
+      - {label: Background Image Size, name: background_image_size, widget: select, options: ["cover", "contain"], required: false}
+      - {label: Background Image Repeat, name: background_image_repeat, widget: select, options: ["no-repeat", "repeat"], required: false}
   - {label: "Has Background", name: "has_background", widget: "boolean", default: false}

@@ -42,7 +42,7 @@
       }}
       </div>
       {{ end }}
-
+      <style> .hero-content .section-title{color: {{ $section.titlecolor | safeCSS }};} .hero-content .section-subtitle{color: {{ $section.subtitlecolor | safeCSS }};}</style>
       <div class="hero-content">
         {{ if $section.title }}
         <h1 class="section-title h2-bold">{{ $section.title }}</h1>

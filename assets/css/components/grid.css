@@ -53,6 +53,8 @@
 .grid-min-320 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 .grid-min-350 { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
 .grid-min-400 { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
+.grid-min-600 { grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); }
+.grid-min-33vw { grid-template-columns: repeat(auto-fit, minmax(33.33vw, 1fr)); }
 
 /* Auto-fill variant (maintains empty columns) */
 .grid-cols-auto-fill {

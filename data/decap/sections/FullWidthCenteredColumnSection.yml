@@ -1,0 +1,5 @@
+name: FullWidthCenteredColumnSection
+label: Centered Column Section
+widget: object
+fields:
+  - {label: Content, name: content, widget: markdown, buttons: [bold, italic, link, heading-one, heading-two, heading-three, quote, bulleted-list, numbered-list]}

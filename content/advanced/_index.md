@@ -1,5 +1,5 @@
 ---
-title: Dump Home
+title: The Big Home
 sections:
   - type: GridHeroSection
     title: Connect to build your business
@@ -56,7 +56,7 @@ sections:
   - type: BlogFeedSection
     show_recent: true
     title: What's New
-    recent_count: 6
+    recent_count: 3
   - type: CtaSection
     has_background: true
     title: This Is A CTA
@@ -81,6 +81,8 @@ sections:
             style: primary
   - image_alt: The Multi Excellent Papo
     align: center
+    titlecolor: "#fff"
+    subtitlecolor: "#fff"
     image_position: right
     background:
       background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
