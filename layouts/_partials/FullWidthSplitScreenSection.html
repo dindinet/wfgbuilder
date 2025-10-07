@@ -1,0 +1,21 @@
+{{ $section := .section }}
+<section class="full-width-split-screen">
+{{ if eq $section.imageposition  "left" }}
+
+  <img src="{{ $section.image }}" alt="{{ $section.image_alt }}"/>
+
+{{ end }}
+
+<div>
+    {{ partial "markdownify-block" $section.content }}
+</div>
+
+{{ if eq $section.imageposition  "right" }}  
+
+  <img src="{{ $section.image }}" alt="{{ $section.image_alt }}"/>
+
+{{ end }}
+  
+  
+
+</section>

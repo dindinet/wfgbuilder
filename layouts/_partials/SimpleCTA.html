@@ -1,0 +1,20 @@
+{{ $section := .section }}
+<section class="section">
+  <div class="container container--{{ $section.width }}"> 
+      <div class="wfg-bg-cta" style="background-color: {{ $section.bgcolor | safeCSS }}; {{ if $section.bgimage }}  {{ else }}padding-block: 4cqw; {{ end }}">
+        {{ if $section.bgimage }}
+        <img src="{{ $section.bgimage }}" class="bg-image">
+        {{ end }}
+        <div class="content">
+          <h3>{{ $section.tagline }}</h3>
+          <h2>{{ $section.offertext }}</h2>
+          <h3>{{ $section.description }}</h3>
+          <actions>
+            {{ range $action := $section.actions }}
+            <button style="color:{{ $action.textcolor }};background-color:{{ $action.bgcolor }};">{{ $action.text}}</button>
+            {{ end }}
+          </actions>
+        </div>
+      </div>
+  </div>
+</section>

@@ -58,7 +58,8 @@ sections:
     title: What's New
     recent_count: 3
   - type: CtaSection
-    has_background: true
+    has_background: false
+    background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
     title: This Is A CTA
     subtitle: I consider this to be a temporary best CTA
     actions:
@@ -102,6 +103,11 @@ sections:
       - label: Contact Us
         url: /contact
         style: secondary
+  - type: TeamSection
+    title: All the Young Dudes
+    team:
+      - dianne-ameter
+      - david-longley
 seo:
   title: Stackbit Starter Theme
   description: The preview of the Starter theme

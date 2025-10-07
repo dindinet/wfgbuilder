@@ -3,11 +3,13 @@
   <div class="container container--md">
 
     {{ if $section.title }}
-    <h2 class="section__title align-center">{{ $section.title }}</h2>
+    <h2 class="">{{ $section.title }}</h2>
     {{ end }}
-
+    {{ if $section.subtitle }}
+    <h3 class="">{{ $section.subtitle }}</h3>
+    {{ end }}
     {{ if $section.content }}
-    <div class="section__copy">
+    <div class="">
       {{ partial "markdownify-block" $section.content }}
     </div>
     {{ end }}

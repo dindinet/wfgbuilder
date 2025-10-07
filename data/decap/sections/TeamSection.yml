@@ -1,0 +1,13 @@
+name: TeamSection
+label: Team Section
+widget: object
+fields:
+  - {label: Title, name: title, widget: string, required: false}
+  - name: team
+    label: Team Members
+    widget: relation
+    collection: "authors"
+    search_fields: ["id", "first_name", "last_name"]
+    value_field: "{{slug}}"
+    display_fields: ["id"]
+    multiple: true

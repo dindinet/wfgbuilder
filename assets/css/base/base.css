@@ -73,7 +73,7 @@ h6, .h6 {
 
 /* Paragraph Styling */
 p {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
   margin-block-end: var(--space-md);
   max-width: var(--content-reading-width);
@@ -81,7 +81,7 @@ p {
 
 /* Lead paragraph variant */
 p.lead {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);

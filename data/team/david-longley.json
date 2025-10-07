@@ -1,8 +1,9 @@
 {
-    "id": "DKL",
-    "first_name": "David",
-    "last_name": "Longley",
-    "photo": "images/dall·e-2022-09-28-22.13.38-my-head-is-a-flower-growing-in-the-desert.png",
-    "photo_alt": "DKL the flower headed idiot",
-    "bio": "Not so normal and a little cattastic. Idiosyncratic and a teensy bit dogmatic"
+  "id": "david-longley",
+  "link": "blog/author/david-longley",
+  "first_name": "David",
+  "last_name": "Longley",
+  "photo": "images/dall·e-2022-09-28-22.13.38-my-head-is-a-flower-growing-in-the-desert.png",
+  "photo_alt": "DKL the flower headed idiot",
+  "bio": "Not so normal and a bit dogmatic. Idiosyncratic and a little cat-tastic."
 }

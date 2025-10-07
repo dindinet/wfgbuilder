@@ -90,13 +90,13 @@
 {{/* Handle solid color background */}}
 {{- if $bgColor -}}
   <style>
-  .{{ $uniqueClass }} {
+  .ctabgclass {
     background-color: {{ $bgColor | safeHTML }};
     position: relative;
   }
   </style>
   
-  <section class="{{ $class }} {{ $uniqueClass }}">
+  <section oldclass="{{ $uniqueClass }}" class="{{ $class }} ">
 
 {{/* Handle linear gradient background */}}
 {{- else if $linearGradient -}}
@@ -126,13 +126,13 @@
   {{- end -}}
   
   <style>
-  .{{ $uniqueClass }} {
+  .ctabgclass {
     background: {{ $gradientValue | safeCSS }};
     position: relative;
   }
   </style>
   
-  <section class="{{ $class }} {{ $uniqueClass }}">
+  <section oldclass="{{ $uniqueClass }}" class="{{ $class }} ">
 
 {{/* Handle radial gradient background */}}
 {{- else if $radialGradient -}}
@@ -163,13 +163,13 @@
   {{- end -}}
   
   <style>
-  .{{ $uniqueClass }} {
+  .ctabgclass {
     background: {{ $gradientValue | safeCSS }};
     position: relative;
   }
   </style>
   
-  <section class="{{ $class }} {{ $uniqueClass }}">
+  <section oldclass="{{ $uniqueClass }}" class="{{ $class }} ">
 
 {{/* Handle image background (original functionality) */}}
 {{- else if $src -}}
@@ -181,8 +181,8 @@
 
   {{/* Handle SVG case - use original image */}}
   {{- if $isSVG -}}
-    <style>
-    .{{ $uniqueClass }} {
+    <style id="{{ $uniqueClass }} ">
+    .ctabgimage {
       background-image: url('{{ $src }}');
       background-size: {{ $bgSize | safeCSS }};
       background-repeat: {{ $bgRepeat | safeCSS }};
@@ -190,17 +190,17 @@
       position: relative;
     }
     
-    .{{ $uniqueClass }} picture {
+    .ctabgclass picture {
       /* Allow picture to flow normally with content */
     }
     
-    .{{ $uniqueClass }} picture img {
+    .ctabgclass picture img {
       width: 100%;
       height: auto;
     }
     </style>
     
-    <section class="{{ $class }} {{ $uniqueClass }}">
+    <section oldclass="{{ $uniqueClass }}" class="{{ $class }} ">
   {{- else -}}
     {{/* Get the image resource */}}
     {{- $image := "" -}}
@@ -210,8 +210,8 @@
         {{- $image = $tryResult.Value -}}
       {{- else -}}
         {{/* Fallback if remote image fails to load */}}
-        <style>
-        .{{ $uniqueClass }} {
+        <style id="{{ $uniqueClass }}">
+        .ctabgimage {
           background-image: url('{{ $src }}');
           background-size: {{ $bgSize | safeCSS }};
           background-repeat: {{ $bgRepeat | safeCSS }};
@@ -219,17 +219,17 @@
           position: relative;
         }
         
-        .{{ $uniqueClass }} picture {
+        .ctabgclass picture {
           /* Allow picture to flow normally with content */
         }
         
-        .{{ $uniqueClass }} picture img {
+        .ctabgclass picture img {
           width: 100%;
           height: auto;
         }
         </style>
         
-        <section class="{{ $class }} {{ $uniqueClass }}">
+        <section oldclass="{{ $uniqueClass }}" class="{{ $class }} ">
       {{- end -}}
     {{- else -}}
       {{- $image = resources.Get $src -}}
@@ -265,8 +265,8 @@
           {{- $bgImage = $bgImage.Filter (images.Opacity $opacity) -}}
       {{- end -}}
       
-      <style>
-      .{{ $uniqueClass }} {
+      <style id="{{ $uniqueClass }}">
+      .ctabgimage {
         background-image: url('{{ $bgImage.RelPermalink }}');
         background-size: {{ $bgSize }};
         background-repeat: {{ $bgRepeat }};
@@ -274,21 +274,21 @@
         position: relative;
       }
       
-      .{{ $uniqueClass }} picture {
+      .ctabgclass picture {
         /* Allow picture to flow normally with content */
       }
       
-      .{{ $uniqueClass }} picture img {
+      .ctabgclass picture img {
         width: 100%;
         height: auto;
       }
       </style>
       
-      <section class="{{ $class }} {{ $uniqueClass }}">
+      <section oldclass="{{ $uniqueClass }}" class="{{ $class }} ">
     {{- else -}}
       {{/* Fallback if image resource not found */}}
       <style>
-      .{{ $uniqueClass }} {
+      .ctabgclass {
         background-image: url('{{ $src }}');
         background-size: {{ $bgSize }};
         background-repeat: {{ $bgRepeat }};
@@ -296,17 +296,17 @@
         position: relative;
       }
       
-      .{{ $uniqueClass }} picture {
+      .ctabgclass picture {
         /* Allow picture to flow normally with content */
       }
       
-      .{{ $uniqueClass }} picture img {
+      .ctabgclass picture img {
         width: 100%;
         height: auto;
       }
       </style>
       
-      <section class="{{ $class }} {{ $uniqueClass }}">
+      <section oldclass="{{ $uniqueClass }}" class="{{ $class }} ">
     {{- end -}}
   {{- end -}}
 

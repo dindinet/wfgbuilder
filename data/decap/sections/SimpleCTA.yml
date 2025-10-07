@@ -1,0 +1,21 @@
+label: Simple CTA
+name: SimpleCTA
+widget: object
+fields:
+  - label: Width
+    name: width
+    widget: select
+    options: ['narrow', 'wide', 'extra-wide', 'full', 'flush']
+    default: 'flush'
+  - { label: Offer Text, name: offertext, widget: string }
+  - { label: Tagline, name: tagline, widget: string }
+  - { label: Description, name: description, widget: string }
+  - { label: Background Color, name: bgcolor, widget: color }
+  - { label: Background Image, name: bgimage, widget: image, required: false }
+  - label: Actions
+    name: actions
+    widget: list
+    fields:
+      - { label: Text, name: text, widget: string }
+      - { label: Text Color, name: textcolor, widget: color }
+      - { label: Background Color, name: bgcolor, widget: color }
