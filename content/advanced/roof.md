@@ -8,7 +8,7 @@ sections:
     caption: Look at that roof
   - type: FullWidthCenteredColumnSection
     content: |-
-      ## Dramatic Angle
+      ## Dramatic Angled Roof
 
       Simple geometry and minimalist design.
 ---
