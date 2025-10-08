@@ -121,4 +121,5 @@ collections:
     label: "Advanced Pages"
     folder: "content/advanced"
     create: true
+    preview_path: {{slug}}
     fields: []
