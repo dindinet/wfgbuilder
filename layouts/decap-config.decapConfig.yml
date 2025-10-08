@@ -12,7 +12,8 @@
             {{- $updated_fields = $updated_fields | append $field -}}
         {{- end -}}
         {{- $title_field := dict "label" "Title" "name" "title" "widget" "string" -}}
-        {{- $updated_fields = $updated_fields | append $title_field -}}
+        {{- $layout_field := dict "label" "Layout" "name" "layout" "widget" "hidden" "default" "advanced" -}}
+        {{- $updated_fields = $updated_fields | append $title_field | append $layout_field -}}
         {{- $sections_field := dict "label" "Page Sections" "name" "sections" "widget" "list" "types" $new_sections -}}
         {{- $updated_fields = $updated_fields | append $sections_field -}}
         {{- $updated_collection := merge $collection (dict "fields" $updated_fields) -}}
