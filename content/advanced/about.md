@@ -83,9 +83,9 @@ sections:
       - dianne-ameter
       - dave-longley
   - type: SimpleCTA
-    width: extra-wide
+    width: wide
     offertext: 50% OFF
-    tagline: DAILY OFFER
+    tagline: YOUR DAILY OFFER
     description: first 3 customers only
     bgcolor: hsl(30,50%,50%)
     bgimage: https://res.cloudinary.com/dklongley/image/upload/v1636708792/sperm-whales-sleeping-vertically-in-a-group.avif
