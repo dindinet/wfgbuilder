@@ -6,7 +6,10 @@ backend:
   branch: main
   base_url: https://wfgmodular.pages.dev/ #url for Oauth app on Github Developer settings
   auth_endpoint: /api/auth
+  squash_merges: true
+  preview_context: 'cloudflare preview deploy'
   show_preview_links: true
+
 media_library:
   name: cloudinary
   config:

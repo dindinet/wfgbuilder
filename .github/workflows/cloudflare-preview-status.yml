@@ -15,8 +15,10 @@ jobs:
         with:
           script: |
             const getPreviewUrlForCheck = (check) => {
+              console.log(check)
               const regex = /<strong>Preview URL:<\/strong><\/td><td>\n<a href='(.*?)'>/s;
               const match = check?.output?.summary?.match(regex);
+              console.log(match)
               return match?.[1];
             };
 
@@ -25,7 +27,7 @@ jobs:
                 data: { check_runs: checks },
               } = await github.rest.checks.listForRef({ owner, repo, ref });
 
-              return checks.find((check) => check.app.slug === "cloudflare-pages");
+              return checks.find((check) => check.app.slug === "cloudflare-workers-and-pages");
             };
 
             const createDeployStatus = async (owner, repo, sha, target_url) => {
@@ -54,5 +56,4 @@ jobs:
               console.log("Created status for Cloudflare preview deploy");
             };
 
-            await main();
-            
+            await main();   
