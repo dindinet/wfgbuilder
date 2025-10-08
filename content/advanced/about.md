@@ -83,21 +83,21 @@ sections:
       - dianne-ameter
       - dave-longley
   - type: SimpleCTA
-    width: flush
+    width: extra-wide
     offertext: 50% OFF
     tagline: DAILY OFFER
     description: first 3 customers only
     bgcolor: hsl(30,50%,50%)
-    bgimage: https://res.cloudinary.com/dklongley/image/upload/v1552584982/AG2/portofino5.avif
-    actions: 
+    bgimage: https://res.cloudinary.com/dklongley/image/upload/v1636708792/sperm-whales-sleeping-vertically-in-a-group.avif
+    actions:
       - text: I'll take the 'I'm not ready yet' special
         textcolor: white
-        bgcolor: grey
-      - text: Give me 50% off now
+        bgcolor: Silver
+        target: /not-ready
+      - text: I want 50% off now
         textcolor: white
-        bgcolor: goldenrod
-
-  
+        bgcolor: "#dfa505"
+        target: /50-off
   - type: TeamSection
     title: More of the team
     team:

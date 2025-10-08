@@ -39,6 +39,9 @@
   color: var(--h3-color);
   margin-block: 0rem;
   }
+  & a:hover{
+    color: black;
+  }
   & actions{
     display:block;
     margin: 4cqw;
@@ -54,5 +57,9 @@
     background-color:goldenrod;
     font-size: 4cqw; 
     margin-right: 4cqw;
+  }
+  & button:hover{
+    filter: hue-rotate(90deg);
+    outline: 3px solid var(--color-border-primary);
   }
  }

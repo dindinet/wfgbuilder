@@ -28,12 +28,14 @@ const SimpleCTAPreview = (props) => {
           h('h3', {}, description),
           h('div', { class: 'actions' },
             actions.map(action =>
-              h('button', {
-                style: {
-                  color: action.textcolor,
-                  backgroundColor: action.bgcolor
-                }
-              }, action.text)
+              h('a', { href: action.target },
+                h('button', {
+                  style: {
+                    color: action.textcolor,
+                    backgroundColor: action.bgcolor
+                  }
+                }, action.text)
+              )
             )
           )
         )

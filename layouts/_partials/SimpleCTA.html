@@ -11,7 +11,7 @@
           <h3>{{ $section.description }}</h3>
           <actions>
             {{ range $action := $section.actions }}
-            <button style="color:{{ $action.textcolor }};background-color:{{ $action.bgcolor }};">{{ $action.text}}</button>
+            <a href='{{ $action.target }}'><button style="color:{{ $action.textcolor }};background-color:{{ $action.bgcolor }};">{{ $action.text}}</button></a>
             {{ end }}
           </actions>
         </div>

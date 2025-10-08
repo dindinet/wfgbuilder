@@ -19,3 +19,4 @@ fields:
       - { label: Text, name: text, widget: string }
       - { label: Text Color, name: textcolor, widget: color }
       - { label: Background Color, name: bgcolor, widget: color }
+      - { label: 'Action Target', name: target, widget: string }

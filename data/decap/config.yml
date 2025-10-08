@@ -1,8 +1,19 @@
 local_backend: true
 
 backend:
-  name: git-gateway
+  name: github
+  repo: dindinet/wfgbuilder
   branch: main
+  base_url: https://wfgmodular.pages.dev/ #url for Oauth app on Github Developer settings
+  auth_endpoint: /api/auth
+  show_preview_links: true
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dklongley
+    api_key: 325856925759214
+    multiple: false
+    output_filename_only: false
 
 media_folder: "/assets/images"
 public_folder: "/images"
