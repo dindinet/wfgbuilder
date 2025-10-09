@@ -23,4 +23,4 @@
     {{- end -}}
 {{- end -}}
 {{- $updated_config := merge $decap_config (dict "collections" $updated_collections) -}}
-{{ $updated_config | transform.Remarshal "yaml" }}
+{{  $updated_config | transform.Remarshal "yaml" }}
