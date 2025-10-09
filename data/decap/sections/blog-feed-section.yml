@@ -1,5 +1,5 @@
 name: BlogFeedSection
-label: Blog Feed Section
+label: (WFG) Blog Feed
 widget: object
 fields:
   - {label: Title, name: title, widget: string}

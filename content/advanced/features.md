@@ -1,20 +1,13 @@
 ---
 title: Features
+layout: advanced
 sections:
-  - image_alt: Feature 3 placeholder image
-    align: center
-    image_position: left
-    background:
-      background_color: blue
-      background_image: /images/vallealmendros.jpg
-      background_image_opacity: 21
-      background_image_size: cover
-      background_image_repeat: no-repeat
-    has_background: false
-    subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    title: Features
-    type: HeroSection
-    image: /images/italianvillage.jpg
+  - type: SimpleCTA
+    width: wide
+    offertext: Your Very Own
+    tagline: Because you always needed one
+    description: Grapple
+    bgcolor: "#ba2e2e"
   - type: FeaturesSection
     features:
       - title: Feature 1
@@ -34,7 +27,7 @@ sections:
           quam nulla. Ullamcorper a lacus vestibulum sed arcu non odio euismod
           lacinia.
         align: left
-        image: https://res.cloudinary.com/dklongley/image/upload/v1552645065/AG2/AF1QipMtuFx1qr8VSF8y24Re4V_pjDlnVN1pW1usXktb_s2400.jpg
+        image: https://res.cloudinary.com/dklongley/image/upload/v1758364298/place-potrayed-politically_dfebom.jpg
         image_alt: Feature 2 placeholder image
         image_position: left
         actions:
@@ -52,15 +45,13 @@ sections:
           - label: How to do it.
             url: /blog
             style: primary
-  - type: CtaSection
-    has_background: false
-    title: CTA Me now
-    subtitle: cta for friends
-    actions:
-      - label: toot
-        url: /
-        style: secondary
-    background_color: grey
+    content: |-
+      ## We can allow this
+
+
+
+      This has to be one of the most infuriating problems
+    title: Look at all the confusing features
 seo:
   title: Features
   description: This is the features page
@@ -87,5 +78,4 @@ seo:
     - name: twitter:image
       value: images/5.png
       relativeUrl: true
-layout: advanced
 ---

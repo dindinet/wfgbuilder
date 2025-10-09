@@ -1,4 +1,4 @@
-label: Simple CTA
+label: (WFG) Simple CTA
 name: SimpleCTA
 widget: object
 fields:
@@ -8,8 +8,13 @@ fields:
     options: ['narrow', 'wide', 'extra-wide', 'full', 'flush']
     default: 'flush'
   - { label: Offer Text, name: offertext, widget: string }
-  - { label: Tagline, name: tagline, widget: string }
-  - { label: Description, name: description, widget: string }
+  - { label: Offer Text Size, name: offertextsize, widget: select, options: ['4','6','8', '10', '12','14','16'] }
+  - { label: Offer Text Color, name: offertextcolor, widget: color, default: '#000000' }
+  - { label: Offer Text Outline Color, name: offertextoutlinecolor, widget: color, default: '#000000' }
+  - { label: Top Secondary text, name: tagline, widget: string }
+  - { label: Bottom Secondary Text, name: description, widget: string }
+  - { label: Secondary Text Size, name: taglinetextsize, widget: select, options: ['3','4','5','6'] }
+  - { label: Secondary Text Color, name: taglinetextcolor, widget: color, default: '#000000' }
   - { label: Background Color, name: bgcolor, widget: color }
   - { label: Background Image, name: bgimage, widget: image, required: false }
   - label: Actions

@@ -1,11 +1,14 @@
 :root{
---h2-font-family: system-ui;
---h3-font-family: system-ui;
---h2-font-size: 16cqw;
---h3-font-size: 4cqw;
---h2-color: goldenrod;
---h3-color: white;
+--simpleCTA-h2-font-family: system-ui;
+--simpleCTA-h3-font-family: system-ui;
+--simpleCTA-h2-font-size: 16cqw;
+--simpleCTA-h2-outline-color: white;
+--simpleCTA-h3-font-size: 4cqw;
+--simpleCTA-h2-color: goldenrod;
+--simpleCTA-h3-color: white;
 }
+
+
 .wfg-bg-cta  {
  container: cta/inline-size;
 }
@@ -26,17 +29,17 @@
   grid-area: 1 / 1 / -1 / -1;
 }
   & h2{
-  font-family: var(--h2-font-family);
-  font-size:var(--h2-font-size);
-  color: var(--h2-color);
+  font-family: var(--simpleCTA-h2-font-family);
+  font-size:var(--simpleCTA-h2-font-size);
+  color: var(--simpleCTA-h2-color);
   margin-block: 0rem;
-  -webkit-text-stroke: 0.25cqw white;
+  -webkit-text-stroke: calc(var(--simpleCTA-h2-font-size) / 48) var(--simpleCTA-h2-outline-color);
 }
 
   & h3{
-  font-family: var(--h3-font-family);
-  font-size: var(--h3-font-size);
-  color: var(--h3-color);
+  font-family: var(--simpleCTA-h3-font-family);
+  font-size: var(--simpleCTA-h3-font-size);
+  color: var(--simpleCTA-h3-color);
   margin-block: 0rem;
   }
   & a:hover{

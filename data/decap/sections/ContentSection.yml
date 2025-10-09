@@ -1,5 +1,5 @@
 name: ContentSection
-label: General Content Section
+label: (WFG) General Content
 widget: object
 fields:
   - {label: Title ,name: title,widget: string, required: false}

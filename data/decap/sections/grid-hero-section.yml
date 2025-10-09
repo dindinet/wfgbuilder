@@ -1,5 +1,5 @@
 name: GridHeroSection
-label: Grid Hero Section
+label: (WFG) Grid Hero
 widget: object
 fields:
   - {label: Title, name: title, widget: string}

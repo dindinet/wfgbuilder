@@ -1,5 +1,5 @@
 name: CtaSection
-label: CTA Section
+label: CTA
 widget: object
 fields:
   - {label: Title, name: title, widget: string}

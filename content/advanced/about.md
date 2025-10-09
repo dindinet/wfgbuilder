@@ -1,5 +1,6 @@
 ---
 title: Who We Are
+layout: advanced
 sections:
   - type: FullWidthHeadingSection
     title: A Design for Authentic Stories
@@ -82,13 +83,17 @@ sections:
       - miles-tone
       - dianne-ameter
       - dave-longley
-  - type: SimpleCTA
-    width: wide
+  - width: full
+    taglinetextcolor: "#ffffff"
     offertext: 50% OFF
+    offertextoutlinecolor: "#f0f10c"
+    offertextsize: "8"
     tagline: YOUR DAILY OFFER
-    description: first 3 customers only
-    bgcolor: hsl(30,50%,50%)
     bgimage: https://res.cloudinary.com/dklongley/image/upload/v1636708792/sperm-whales-sleeping-vertically-in-a-group.avif
+    type: SimpleCTA
+    offertextcolor: "#bf8040"
+    taglinetextsize: "4"
+    description: first 3 customers only
     actions:
       - text: I'll take the 'I'm not ready yet' special
         textcolor: white
@@ -98,6 +103,7 @@ sections:
         textcolor: white
         bgcolor: "#dfa505"
         target: /50-off
+    bgcolor: hsl(30,50%,50%)
   - type: TeamSection
     title: More of the team
     team:
@@ -130,5 +136,4 @@ seo:
     - name: twitter:image
       value: images/1.png
       relativeUrl: true
-layout: advanced
 ---
