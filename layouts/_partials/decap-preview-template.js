@@ -113,27 +113,96 @@ const run = () => {
         });
         CMS.registerPreviewTemplate("advanced", PagePreview);
 
-        const PostPreview = (props) => {
-            const { entry, getAsset, widgetFor } = props;
-            const title = entry.getIn(['data', 'title']);
-            const image = getAsset(entry.getIn(['data', 'image']));
-            const image_alt = getAsset(entry.getIn(['data', 'image_alt']));
-            const author = entry.getIn(['data', 'author']);
-            const categories = entry.getIn(['data', 'categories']);
-            const date = entry.getIn(['data', 'date']);
-            const body = widgetFor('body');
+        const PostPreview = createClass({
+            getInitialState: function() {
+                return { author: null, isLoading: true };
+            },
 
-            return h('div', { className: 'post-preview kitandpup' },
-                h('h1', null, title),
-                h('div', { className: 'post-meta' },
-                    h('span', { className: 'date' }, date && new Date(date).toLocaleDateString()),
-                    h('span', { className: 'author' }, author),
-                    h('span', { className: 'categories' }, categories?.join(', '))
-                ),
-                image && h('img', { src: image.toString(), alt: image_alt }),
-                h('div', { className: 'post-body' }, body)
-            );
-        };
+            componentDidMount: function() {
+                this.fetchAuthor();
+            },
+
+            componentDidUpdate: function(prevProps) {
+                if (prevProps.entry !== this.props.entry) {
+                    this.fetchAuthor();
+                }
+            },
+
+            fetchAuthor: function() {
+                const { entry, getCollection } = this.props;
+                const authorSlug = entry.getIn(['data', 'author']);
+                if (!authorSlug) {
+                    this.setState({ isLoading: false, author: null });
+                    return;
+                }
+
+                getCollection('team').then(collection => {
+                    const authorEntry = collection.find(item => item.get('slug') === authorSlug);
+                    const authorData = authorEntry ? authorEntry.get('data').toJS() : null;
+                    this.setState({ author: authorData, isLoading: false });
+                }).catch(error => {
+                    console.error("Error fetching team collection:", error);
+                    this.setState({ isLoading: false });
+                });
+            },
+
+            render: function() {
+                const { entry, getAsset, widgetFor } = this.props;
+                const { author, isLoading } = this.state;
+
+                const title = entry.getIn(['data', 'title']);
+                const subtitle = entry.getIn(['data', 'subtitle']);
+                const image = getAsset(entry.getIn(['data', 'image']));
+                const image_alt = entry.getIn(['data', 'image_alt']);
+                const categories = entry.getIn(['data', 'categories']);
+                const date = entry.getIn(['data', 'date']);
+                const tags = entry.getIn(['data', 'tags']);
+                const body = widgetFor('body');
+
+                const formattedDate = date ? new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+                const dateTime = date ? new Date(date).toISOString().slice(0, 16).replace('T', ' ') : '';
+
+                let authorDisplay = null;
+                if (isLoading) {
+                    authorDisplay = h('span', { className: 'post-author' }, ' by loading...');
+                } else if (author) {
+                    const authorName = `${author.first_name} ${author.last_name}`;
+                    if (author.link) {
+                        authorDisplay = h('span', { className: 'post-author' }, ' by ', h('a', { href: author.link }, authorName));
+                    } else {
+                        authorDisplay = h('span', { className: 'post-author' }, ' by ', authorName);
+                    }
+                } else if (entry.getIn(['data', 'author'])) {
+                    // Fallback to slug if author not found
+                    authorDisplay = h('span', { className: 'post-author' }, ' by ', entry.getIn(['data', 'author']));
+                }
+
+                return h('article', { className: 'post' },
+                    h('div', { className: 'container container--wide' },
+                        image && h('div', { className: 'post-featured-image' },
+                            h('img', { src: image.toString(), alt: image_alt, className: 'responsive-img' })
+                        )
+                    ),
+                    h('div', { className: 'container container--narrow' },
+                        h('header', { className: 'post-header' },
+                            categories && h('div', { className: 'post-meta' },
+                                categories.toJS().join(', ')
+                            ),
+                            h('h1', { className: 'post-title mb-0' }, title),
+                            h('h2', { className: 'post-subtitle mt-0' }, subtitle),
+                            h('div', { className: 'post-meta' },
+                                h('span', null, 'On ', h('time', { dateTime: dateTime }, formattedDate)),
+                                authorDisplay
+                            )
+                        ),
+                        h('div', { className: 'post-layout' }, body),
+                        tags && h('footer', { className: 'post-tags' },
+                            tags.toJS().join(', ')
+                        )
+                    )
+                );
+            }
+        });
         CMS.registerPreviewTemplate("posts", PostPreview);
         CMS.registerPreviewStyle("{{ absURL "" }}css/wfg.min.css");
     };
