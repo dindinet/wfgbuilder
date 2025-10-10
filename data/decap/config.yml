@@ -15,8 +15,6 @@ media_library:
   config:
     cloud_name: dklongley
     api_key: 956814941626765
-    multiple: false
-    output_filename_only: false
 
 publish_mode: editorial_workflow
 
