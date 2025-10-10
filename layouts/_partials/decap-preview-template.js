@@ -136,15 +136,15 @@ const run = () => {
                     return;
                 }
 
-                getCollection('team').then(collection => {
+                getCollection('authors').then(collection => {
                     if (!collection) {
-                        console.warn('Team collection not found or empty.');
+                        console.warn('Authors collection not found or empty.');
                         this.setState({ isLoading: false, author: null });
                         return;
                     }
                     const authorEntry = collection.find(item => {
                         if (!item || typeof item.get !== 'function') {
-                            console.warn('Invalid item in team collection, skipping:', item);
+                            console.warn('Invalid item in authors collection, skipping:', item);
                             return false;
                         }
                         return item.get('slug') === authorSlug;
@@ -152,7 +152,7 @@ const run = () => {
                     const authorData = authorEntry ? authorEntry.get('data').toJS() : null;
                     this.setState({ author: authorData, isLoading: false });
                 }).catch(error => {
-                    console.error("Error fetching team collection:", error);
+                    console.error("Error fetching authors collection:", error);
                     this.setState({ isLoading: false });
                 });
             },
