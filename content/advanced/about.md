@@ -86,7 +86,7 @@ sections:
   - width: full
     taglinetextcolor: "#ffffff"
     offertext: 50% OFF
-    offertextoutlinecolor: "#f0f10c"
+    offertextoutlinecolor: "#ffffff"
     offertextsize: "8"
     tagline: YOUR DAILY OFFER
     bgimage: https://res.cloudinary.com/dklongley/image/upload/v1636708792/sperm-whales-sleeping-vertically-in-a-group.avif
