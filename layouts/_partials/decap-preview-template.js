@@ -137,7 +137,18 @@ const run = () => {
                 }
 
                 getCollection('team').then(collection => {
-                    const authorEntry = collection.find(item => item.get('slug') === authorSlug);
+                    if (!collection) {
+                        console.warn('Team collection not found or empty.');
+                        this.setState({ isLoading: false, author: null });
+                        return;
+                    }
+                    const authorEntry = collection.find(item => {
+                        if (!item || typeof item.get !== 'function') {
+                            console.warn('Invalid item in team collection, skipping:', item);
+                            return false;
+                        }
+                        return item.get('slug') === authorSlug;
+                    });
                     const authorData = authorEntry ? authorEntry.get('data').toJS() : null;
                     this.setState({ author: authorData, isLoading: false });
                 }).catch(error => {
