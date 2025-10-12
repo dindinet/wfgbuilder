@@ -91,6 +91,7 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{slug}}"
+    preview_path: "blog/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
