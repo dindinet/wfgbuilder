@@ -24,5 +24,3 @@ It wasn't always like this. My memories of childhood are of the struggle to scra
 ![In real life](https://img.freepik.com/free-photo/leisure-bridge-donau-graffiti-famous_1127-2345.jpg "In reality")
 
 {{< youtube UQ8-gBJ7yV0 >}}
-
-{{< vimeo 347119375 >}}
