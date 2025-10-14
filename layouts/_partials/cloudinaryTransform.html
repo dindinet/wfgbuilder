@@ -1,0 +1,27 @@
+{{- $url := .url -}}
+{{- $width := .width -}}
+{{- $useCloudflare := .useCloudflare -}}
+{{- $siteUrl := .siteUrl -}}
+{{- $transforms := printf "c_fill,g_auto,q_auto,dpr_auto,f_auto,w_%d" $width -}}
+
+{{- $cloudinaryUrl := $url -}}
+{{- if strings.Contains $url "/upload/" -}}
+  {{- $parts := split $url "/upload/" -}}
+  {{- if ge (len $parts) 2 -}}
+    {{- $baseURL := printf "%s/upload/" (index $parts 0) -}}
+    {{- $publicIDWithExt := index $parts 1 -}}
+    
+    {{- $publicID := $publicIDWithExt -}}
+    {{- if strings.Contains $publicID "." -}}
+      {{- $publicID = replaceRE `\.[^.]*$` "" $publicIDWithExt -}}
+    {{- end -}}
+    
+    {{- $cloudinaryUrl = printf "%s%s/%s" $baseURL $transforms $publicID -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $useCloudflare -}}
+  {{- printf "https://websitesforgrowth.com/cdn-cgi/image/format=auto/%s"  $cloudinaryUrl -}}
+{{- else -}}
+  {{- printf "%s%s" (site.Params.imgcache) $cloudinaryUrl -}}
+{{- end -}}

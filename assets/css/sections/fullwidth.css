@@ -235,6 +235,7 @@ section .wrapper {
   .full-width-split-screen > :not(img):not(picture):first-child {
     padding-left: 0;
     grid-column: 2 / 3;
+    order: 0;
   }
 
   /* if the non-image is last, place it in the third column

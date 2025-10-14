@@ -53,6 +53,7 @@ params:
       href="https://www.websitesforgrowth.com
       target="_blank" rel="noopener">now</a>
   domain: 'https://rajestic-mabbit-b3866.netlify.app'
+  imgcache: 'https://websitesforgrowth.com/cdn-cgi/image/format=auto/'
 taxonomies:
   stub: stub
 disableKinds:
