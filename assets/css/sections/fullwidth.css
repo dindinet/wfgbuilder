@@ -108,49 +108,74 @@ section .wrapper {
 .full-width img{
   object-fit:cover;
   overflow: hidden;
-  height: 100%;
-  
+  height: 100%;  
+}
+/* Unset the global border-radius for the full-width images in this component */
+.full-width img,
+.full-width picture > img {
+  border-radius: unset;
 }
 /* remove the padding so images can take up the entire height */
 .full-width-split-screen {
   padding-block: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-/* match the section padding for the text blocks for
-consistency */
-.full-width-split-screen > :not(img) {
+
+/* On mobile, ensure the image is always first */
+.full-width-split-screen > picture,
+.full-width-split-screen > img {
+  order: 1;
+  border-radius: unset;
+}
+
+/* match the section padding for the text blocks for consistency */
+.full-width-split-screen > :not(img):not(picture) {
   padding-block: var(--section-padding-block);
   padding-inline: var(--wrapper-padding-inline);
+  order: 2;
 }
 
-.bg-primary{
-  background-color: var(--clr-primary)
+/* Unset the global border-radius for the full-bleed images in this component */
+.full-width-split-screen > img,
+.full-width-split-screen > picture > img {
+  border-radius: 0;
 }
-.bg-secondary{
-  background-color: var(--clr-secondary)
+
+.bg-primary {
+  background-color: var(--clr-primary);
 }
-.bg-accent{
-  background-color: var(--clr-accent)
+.bg-secondary {
+  background-color: var(--clr-secondary);
 }
-.text-primary{
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+.text-primary {
   color: var(--clr-primary);
 }
-.text-secondary{
+.text-secondary {
   color: var(--clr-secondary);
 }
-.text-accent{
+.text-accent {
   color: var(--clr-accent);
 }
-.text-highlight{
-color: var(--clr-highlight);
+.text-highlight {
+  color: var(--clr-highlight);
 }
-.text-white{
-  color:white;
+.text-white {
+  color: white;
 }
-.large-text{font-size: var(--large-text);}
-.text-pop{text-shadow: 2px 2px #000000;}
+.large-text {
+  font-size: var(--large-text);
+}
+.text-pop {
+  text-shadow: 2px 2px #000000;
+}
+
 @media (min-width: 600px) {
-.full-width-split-screen {
+  .full-width-split-screen {
     /* outermost columns emulate the spacing from the .wrapper
      while the two inner columns divide the rest of the space
      into two equal parts */
@@ -166,26 +191,40 @@ color: var(--clr-highlight);
     position: relative;
   }
 
-  /* ensure the image fill up the entire space available */
-  .full-width-split-screen > img {
+  /* ensure the image/picture fill up the entire space available */
+  .full-width-split-screen > img,
+  .full-width-split-screen > picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ensure img inside picture also fills the space */
+  .full-width-split-screen > picture > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  /* if the image is on the left, it covers the entire left half */
-  .full-width-split-screen > img:first-child {
+  /* ensure standalone img fills the space */
+  .full-width-split-screen > img {
+    object-fit: cover;
+  }
+
+  /* if the image/picture is on the left, it covers the entire left half */
+  .full-width-split-screen > img:first-child,
+  .full-width-split-screen > picture:first-child {
     grid-column: 1 / 3;
   }
 
-  /* if the image is on the right, it covers the entire right half */
-  .full-width-split-screen > img:last-child {
+  /* if the image/picture is on the right, it covers the entire right half */
+  .full-width-split-screen > img:last-child,
+  .full-width-split-screen > picture:last-child {
     grid-column: 3 / -1;
   }
 
-  /* make sure text doesn't touch the edge of the viewport 
-   and the content is vertically centered */
-  .full-width-split-screen > :not(img) {
+  /* make sure text doesn't touch the edge of the viewport
+     and the content is vertically centered */
+  .full-width-split-screen > :not(img):not(picture) {
     display: grid;
     align-content: center;
     justify-items: start;
@@ -193,21 +232,21 @@ color: var(--clr-highlight);
 
   /* if the non-image is first, place it in the second column
      (first column is empty to emulate the .wrapper) */
-  .full-width-split-screen > :not(img):first-child {
+  .full-width-split-screen > :not(img):not(picture):first-child {
     padding-left: 0;
     grid-column: 2 / 3;
   }
 
   /* if the non-image is last, place it in the third column
      (fourth column is empty to emulate the .wrapper) */
-  .full-width-split-screen > :not(img):last-child {
+  .full-width-split-screen > :not(img):not(picture):last-child {
     padding-right: 0;
     grid-column: 3 / 4;
   }
 
   /* at large screens, ensure the background color
      goes to the edge of the page */
-  .full-width-split-screen > :not(img)::before {
+  .full-width-split-screen > :not(img):not(picture)::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -215,14 +254,12 @@ color: var(--clr-highlight);
   }
 
   /* ensures the background color fills the entire left side */
-  .full-width-split-screen > :not(img):first-child::before {
+  .full-width-split-screen > :not(img):not(picture):first-child::before {
     grid-column: 1 / 2;
   }
 
   /* ensures the background color fills the entire right side */
-  .full-width-split-screen > :not(img):last-child::before {
+  .full-width-split-screen > :not(img):not(picture):last-child::before {
     grid-column: 4 / 5;
   }
 }
-
-

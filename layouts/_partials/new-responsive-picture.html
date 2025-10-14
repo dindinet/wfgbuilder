@@ -1,0 +1,88 @@
+{{/*
+  Responsive Picture Partial for Hugo
+  
+  Usage:
+  {{ partial "picture.html" (dict 
+    "src" "images/hero.jpg"
+    "alt" "Hero image description"
+    "class" "responsive-image"
+    "breakpoints" (slice
+      (dict "width" 320 "size" "320x240")
+      (dict "width" 480 "size" "480x360")
+      (dict "width" 768 "size" "768x576")
+      (dict "width" 1024 "size" "1024x768")
+      (dict "width" 1280 "size" "1280x960")
+      (dict "width" 1440 "size" "1440x1080")
+      (dict "width" 1920 "size" "1920x1440")
+    )
+    "defaultSize" "1024x768"
+    "loading" "lazy"
+  ) }}
+  
+  Parameters:
+  - src: Source image path (required)
+  - alt: Alt text for accessibility (required)
+  - class: CSS classes for the img element (optional)
+  - breakpoints: Slice of dicts with "width" and "size" (optional)
+  - defaultSize: Fallback image size for <img> tag (optional, defaults to original)
+  - loading: Loading attribute (optional, defaults to "lazy")
+*/}}
+
+{{ $src := .src }}
+{{ $alt := .alt }}
+{{ $class := .class | default "" }}
+{{ $breakpoints := .breakpoints | default slice }}
+{{ $defaultSize := .defaultSize | default "" }}
+{{ $loading := .loading | default "lazy" }}
+
+{{/* Sort breakpoints by width in descending order for proper cascade */}}
+{{ $sortedBreakpoints := sort $breakpoints "width" "desc" }}
+
+<picture>
+  {{/* Generate source elements for each breakpoint */}}
+  {{ range $sortedBreakpoints }}
+    {{ $size := .size }}
+    {{ $width := .width }}
+    {{ $resizedImage := "" }}
+    
+    {{/* Check if the source is a page resource */}}
+    {{ if $.Page.Resources }}
+      {{ $image := $.Page.Resources.GetMatch $src }}
+      {{ if $image }}
+        {{ $resizedImage = ($image.Resize $size).RelPermalink }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* If not found in page resources, try site resources */}}
+    {{ if not $resizedImage }}
+      {{ with resources.Get $src }}
+        {{ $resizedImage = (.Resize $size).RelPermalink }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* If still not found, use the original path with size query */}}
+    {{ if not $resizedImage }}
+      {{ $resizedImage = printf "%s?size=%s" $src $size }}
+    {{ end }}
+    
+    <source media="(min-width: {{ $width }}px)" srcset="{{ $resizedImage }}">
+  {{ end }}
+  
+  {{/* Default img tag for browsers that don't support picture or smallest viewport */}}
+  {{ $defaultImage := $src }}
+  {{ if $defaultSize }}
+    {{/* Try to resize for default */}}
+    {{ if $.Page.Resources }}
+      {{ $image := $.Page.Resources.GetMatch $src }}
+      {{ if $image }}
+        {{ $defaultImage = ($image.Resize $defaultSize).RelPermalink }}
+      {{ end }}
+    {{ else }}
+      {{ with resources.Get $src }}
+        {{ $defaultImage = (.Resize $defaultSize).RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  <img src="{{ $defaultImage }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }} loading="{{ $loading }}">
+</picture>

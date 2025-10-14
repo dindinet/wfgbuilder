@@ -2,7 +2,23 @@
 <section class="full-width-split-screen">
 {{ if eq $section.imageposition  "left" }}
 
-  <img src="{{ $section.image }}" alt="{{ $section.image_alt }}"/>
+  
+
+          {{ partial "responsive/pictures-cwx.html" 
+        (dict 
+         "src" $section.image
+         "alt" $section.image_alt 
+         "loading" "lazy"
+         "class" "responsive-img"
+             "containerWidth" (dict 
+             "xlarge" 75
+             "large" 75
+             "desktop" 75
+             "tablet" 75
+             "mobile" 100
+              )
+        ) 
+      }}
 
 {{ end }}
 
@@ -12,7 +28,21 @@
 
 {{ if eq $section.imageposition  "right" }}  
 
-  <img src="{{ $section.image }}" alt="{{ $section.image_alt }}"/>
+        {{ partial "responsive/pictures-cwx.html" 
+        (dict 
+         "src" $section.image
+         "alt" $section.image_alt 
+         "loading" "lazy"
+         "class" "responsive-img right"
+             "containerWidth" (dict 
+             "xlarge" 75
+             "large" 75
+             "desktop" 75
+             "tablet" 75
+             "mobile" 100
+              )
+        ) 
+      }}
 
 {{ end }}
   
