@@ -1,5 +1,6 @@
 name: CtaSection
 label: CTA
+summary: 'CTA - {{fields.title}}'
 widget: object
 fields:
   - {label: Title, name: title, widget: string}

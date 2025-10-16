@@ -1,5 +1,6 @@
 name: ContentSection
 label: (WFG) General Content
+summary: '{{fields.title}}-{{fields.subtitle}}'
 widget: object
 fields:
   - {label: Title ,name: title,widget: string, required: false}

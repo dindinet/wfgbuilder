@@ -20,8 +20,8 @@
   {{- end -}}
 {{- end -}}
 
-{{- if $useCloudflare -}}
-  {{- printf "https://websitesforgrowth.com/cdn-cgi/image/format=auto/%s"  $cloudinaryUrl -}}
-{{- else -}}
+{{- if site.Params.imgcache -}}
   {{- printf "%s%s" (site.Params.imgcache) $cloudinaryUrl -}}
+{{- else -}}
+  {{- $cloudinaryUrl -}}
 {{- end -}}

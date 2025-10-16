@@ -1,5 +1,7 @@
 name: FullWidthCenteredColumnSection
 label: (WFG) Centered Column
+summary: '{{fields.description}}'
 widget: object
 fields:
+  - {label: Description(CMS) ,name: description, widget: string, required: true}
   - {label: Content, name: content, widget: markdown, buttons: [bold, italic, link, heading-one, heading-two, heading-three, quote, bulleted-list, numbered-list]}

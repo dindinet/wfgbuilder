@@ -1,5 +1,6 @@
 name: FullWidthHeadingSection
 label: Full Width Heading Section
+summary: '{{fields.title}} - {{fields.subtitle}}'
 widget: object
 fields:
   - {label: Title, name: title, widget: string}

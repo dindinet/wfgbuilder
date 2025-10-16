@@ -12,6 +12,7 @@ sections:
     image: https://res.cloudinary.com/dklongley/image/upload/jetty_gluhvj.jpg
     image_alt: Children on a jetty looking out to sea.
     caption: Making sense of place, in a world of small boats.
+    description: Small Boats
   - type: FullWidthCenteredColumnSection
     content: >-
       ### Visual Consistency Can Reinforce Authenticity
@@ -29,10 +30,11 @@ sections:
 
 
       <iframe name="iframe_aemet_id33044" width="100%" height="100%" tabindex="0" id="iframe_aemet_id33044" src="https://www.aemet.es/es/eltiempo/prediccion/municipios/mostrarwidget/tibi-id03129?w=g4p010100001ohmffffffx4f86d9t95b6e9r0s8n2" frameborder="0" scrolling="no"></iframe>
-  - type: FullWidthSplitScreenSection
-    image: https://res.cloudinary.com/dklongley/image/upload/l_text:Roboto_120:England%2520Imagined,x_0,y_40,g_south,co_rgb:ffffff/wide-gaudi-organic-renewable-futerism_mmsbfx.jpg
+    description: Visual Consistency Can Reinforce Authenticity
+  - ximage: https://res.cloudinary.com/dklongley/image/upload/l_text:Roboto_40:England%2520Imagined,x_0,y_40,g_south,co_rgb:ffffff/wide-gaudi-organic-renewable-futerism_mmsbfx.jpg
     imageposition: left
-    image_alt: Nice Times
+    image_alt: Nice Dream
+    width: extra-wide
     caption: null
     content: >-
       Artwork has always played a central role in propaganda because it can move
@@ -40,10 +42,15 @@ sections:
       conscious processing,   visual images strike quickly at the emotions.
 
       Propaganda artwork is designed to be bold, memorable, and often simplified so that its message is instantly understood. By using strong symbols, colors, and compositions,   artists can reinforce ideas of power, unity, fear, or hope, depending on the intended effect. This immediacy makes artwork one of the most effective tools for persuading   or mobilizing audiences.
+    type: FullWidthSplitScreenSection
+    image: https://res.cloudinary.com/dklongley/image/upload/wide-gaudi-organic-renewable-futerism_mmsbfx.jpg
+    description: UK Imagined
   - type: FullWidthSplitScreenSection
-    image: https://res.cloudinary.com/dklongley/image/upload/l_text:Roboto_120:England%2520Reformed,x_0,y_40,g_south,co_rgb:ffffff/wide-pure-england_kjqxmp.jpg
+    description: UK Reformed
+    width: extra-wide
+    image: https://res.cloudinary.com/dklongley/image/upload/wide-pure-england_kjqxmp.jpg
     imageposition: right
-    image_alt: Nice Times
+    image_alt: Nice Past
     caption: null
     content: >-
       Artwork has always played a central role in propaganda because it can move
@@ -52,9 +59,11 @@ sections:
 
       Propaganda artwork is designed to be bold, memorable, and often simplified so that its message is instantly understood. By using strong symbols, colors, and compositions, artists can reinforce ideas of power, unity, fear, or hope, depending on the intended effect. This immediacy makes artwork one of the most effective tools for persuading or mobilizing audiences.
   - type: FullWidthSplitScreenSection
-    image: https://res.cloudinary.com/dklongley/image/upload/l_text:Roboto_120:England%2520Remade,x_0,y_40,g_south,co_rgb:ffffff/wide-eco-coastal-village_euuosy.jpg
+    description: UK Rebuilt
+    width: extra-wide
+    image: https://res.cloudinary.com/dklongley/image/upload/wide-eco-coastal-village_euuosy.jpg
     imageposition: left
-    image_alt: Nice Times
+    image_alt: Nice Future
     caption: null
     content: >-
       Artwork has always played a central role in propaganda because it can move
@@ -84,12 +93,12 @@ sections:
       - dianne-ameter
       - dave-longley
   - width: full
-    taglinetextcolor: "#ffffff"
+    taglinetextcolor: "#db3f3f"
     offertext: 50% OFF
     offertextoutlinecolor: "#f0f10c"
     offertextsize: "8"
     tagline: YOUR DAILY OFFER
-    bgimage: https://res.cloudinary.com/dklongley/image/upload/v1636708792/sperm-whales-sleeping-vertically-in-a-group.avif
+    bgimage: https://res.cloudinary.com/dklongley/image/upload/v1552594911/AG2/marksmob.jpg
     type: SimpleCTA
     offertextcolor: "#bf8040"
     taglinetextsize: "4"

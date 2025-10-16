@@ -1,7 +1,9 @@
 name: FullWidthImageSection
 label: Full Width Image Section
+summary: '{{fields.description}} : {{fields.image_alt}}'
 widget: object
 fields:
+  - {label: Description(CMS) ,name: description, widget: string, required: true}
   - {label: Image, name: image, widget: image}
   - {label: 'Image alt text', name: image_alt, widget: string }
   - {label: 'Image Caption', name: caption, widget: string, required: false}

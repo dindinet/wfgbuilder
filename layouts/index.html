@@ -1,0 +1,15 @@
+{{ define "content" }}
+  {{/* First, check for the page builder sections */}}
+  {{ if .Params.sections }}
+    {{ range $section := .Params.sections }}
+      {{ $include_dict := dict "section" $section "Site" $.Site }}
+      {{ $component := print $section.type ".html" }}
+      {{ partial $component $include_dict }}
+    {{ end }}
+  {{ else }}
+    {{/* If no sections, just render the content from _index.md */}}
+    <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        {{ .Content }}
+    </div>
+  {{ end }}
+{{ end }}

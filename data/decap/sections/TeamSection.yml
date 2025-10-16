@@ -1,5 +1,6 @@
 name: TeamSection
 label: Team Section
+summary: '{{fields.title}}'
 widget: object
 fields:
   - {label: Title, name: title, widget: string, required: false}

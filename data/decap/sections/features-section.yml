@@ -1,5 +1,6 @@
 name: FeaturesSection
 label: Features Section
+summary: 'FEATURE - {{fields.title}}'
 widget: object
 fields:
   - {label: Title, name: title, widget: string}

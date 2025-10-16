@@ -1,5 +1,6 @@
 label: (WFG) Simple CTA
 name: SimpleCTA
+summary: '{{fields.offertext}} - {{fields.tagline}}'
 widget: object
 fields:
   - label: Width

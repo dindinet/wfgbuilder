@@ -1,0 +1,13 @@
+{{ define "content" }}
+  <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <ul>
+      {{ range .Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

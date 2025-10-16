@@ -1,8 +1,11 @@
 name: FullWidthSplitScreenSection
 label: Centered Content with a Full Bleed Image
+summary: '{{fields.description}} : {{fields.image_alt}}'
 widget: object
 fields:
+  - {label: Description(CMS) ,name: description, widget: string, required: true}
   - {label: Image ,name: image, widget: image, required: true}
+  - {label: Image Width ,name: width, widget: select, options: ["full", "extra-wide", "wide", "flush"], default: ["full"], required: true}  
   - {label: 'Image Alt Text',name: image_alt, widget: string, required: false}
   - {label: 'Image Position', name: imageposition, widget: select, options: ["left", "right"]}
   - {label: Content, name: content, widget: markdown, buttons: [bold, italic, link, heading-two, heading-three, quote, bulleted-list, numbered-list]}

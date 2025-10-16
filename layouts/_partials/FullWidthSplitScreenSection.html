@@ -1,5 +1,5 @@
 {{ $section := .section }}
-<section class="full-width-split-screen">
+<section class="full-width-split-screen container container--{{ $section.width }}">
 {{ if eq $section.imageposition  "left" }}
 
   
@@ -40,8 +40,7 @@
              "desktop" 75
              "tablet" 75
              "mobile" 100
-              )
-        ) 
+              )       ) 
       }}
 
 {{ end }}

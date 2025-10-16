@@ -1,5 +1,6 @@
 name: GridHeroSection
 label: (WFG) Grid Hero
+summary: '{{fields.title}} - {{fields.subtitle}}'
 widget: object
 fields:
   - {label: Title, name: title, widget: string}
