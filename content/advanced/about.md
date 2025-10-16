@@ -102,7 +102,7 @@ sections:
     type: SimpleCTA
     offertextcolor: "#bf8040"
     taglinetextsize: "4"
-    description: First 3 customers only. Joion the Gang
+    description: First 3 customers only. Join the Gang
     actions:
       - text: I'll take the 'I'm not ready yet' special
         textcolor: white
