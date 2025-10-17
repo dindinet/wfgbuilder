@@ -92,7 +92,7 @@ sections:
       - miles-tone
       - dianne-ameter
       - dave-longley
-  - width: full
+  - width: extra-wide
     taglinetextcolor: "#db3f3f"
     offertext: 50% OFF
     offertextoutlinecolor: "#f0f10c"

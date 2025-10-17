@@ -14,7 +14,7 @@
   <div class="container container--wide">
 
   {{ range $feature := $section.features }} <!--1-->
-    <div class="grid grid-cols-auto-fit-sm grid-gap-xl {{ if eq $feature.align "center" }} text-center{{ end }}{{ if eq $feature.align "right" }} text-right{{ end }}">
+    <div class="grid grid-cols-auto-fit-sm grid-gap-xl items-center {{ if eq $feature.align "center" }} text-center{{ end }}{{ if eq $feature.align "right" }} text-right{{ end }}">
 
   {{ if $feature.image }} <!-- 2-->
     <div class="my-lg {{ if eq $feature.image_position "right" }} media-right{{ end }}">
