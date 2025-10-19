@@ -1,7 +1,7 @@
 {{ $categories := .categories }}
 {{ $container_class := .container_class }}
 <div>
-  <span class="small">In </span>
+  <small>In </small>
   {{ $category_len := len $categories }}
   {{ range $category_idx, $category := $categories }}
     {{ $category_data := index site.Data.categories $category }}
