@@ -2,6 +2,14 @@
 title: Blog
 layout: advanced
 sections:
+  - type: FullWidthHeadingSection
+    subtitleposition: above
+    subtitle: A good read for all
+    title: Insightful Articles
+  - type: BlogFeedSection
+    show_recent: true
+    width: wide
+    recent_count: 10000  
   - arrowsinout: out
     displaypager: true
     scrollby: 1
@@ -71,15 +79,7 @@ sections:
         scrollerimagealt: Fourth Slider Image                     
     visibleslides: 3
     type: SliderSection
-    nextvisible: 0
-  - type: FullWidthHeadingSection
-    subtitleposition: above
-    subtitle: A good read for all
-    title: Insightful Articles
-  - type: BlogFeedSection
-    show_recent: true
-    width: wide
-    recent_count: 10000             
+    nextvisible: 0           
 seo:
   title: Blog
   description: This is the blog page
