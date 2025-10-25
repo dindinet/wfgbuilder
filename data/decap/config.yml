@@ -50,13 +50,13 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/about.md"
+      - file: "content/about.md"          
         label: "About Page"
         name: "about"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}          
       - file: "content/style-guide.md"
         label: "Style Guide"
         name: "style-guide"
@@ -88,10 +88,10 @@ collections:
 
   - name: "posts"
     label: "Blog Posts"
-    folder: "content/blog"
+    folder: "content/news"
     create: true
     slug: "{{slug}}"
-    preview_path: "blog/{{slug}}"
+    preview_path: "news/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}

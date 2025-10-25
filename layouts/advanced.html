@@ -1,9 +1,13 @@
 {{ define "content" }}
-
-{{ range $section := .Params.sections }}
-  {{ $include_dict := dict "section" $section "Site" $.Site }}
-  {{ $component := print $section.type ".html" }}
-  {{ partial $component $include_dict }}
-{{ end }}
-
-{{ end }}
+{{ $.Store.Set "pageScripts" slice }}
+  {{ range $section := .Params.sections }}
+    {{ $include_dict := dict "section" $section "Site" $.Site "Page" . }}
+    {{ $component := print $section.type ".html" }}
+    {{ partial $component $include_dict }}
+  
+    {{ if fileExists (printf "assets/js/pageSections/%s.js" $section.type) }}
+      {{ $.Store.Add "pageScripts" $section.type }}
+    {{ end }}
+  
+  {{ end }}
+{{ end }}  

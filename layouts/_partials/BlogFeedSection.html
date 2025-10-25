@@ -7,7 +7,7 @@
   </div>
   {{ end }}
 
-  <div class="container container--wide">
+  <div class="container container--{{ $section.width}}">
     <div class="grid grid-cols-auto-fit-sm grid-gap-xl">
       {{ $section_author := false }}
       {{ if $section.author }}

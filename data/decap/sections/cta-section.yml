@@ -3,6 +3,7 @@ label: CTA
 summary: 'CTA - {{fields.title}}'
 widget: object
 fields:
+  - {label: Width of section on page  ,name: width, widget: select, options: ["full", "extra-wide", "wide", "flush"], default: ["wide"], required: true}  
   - {label: Title, name: title, widget: string}
   - {label: Subtitle, name: subtitle, widget: string}
   - name: actions

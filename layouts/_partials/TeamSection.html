@@ -2,12 +2,12 @@
 <section class="section section--team">
 
   {{ if $section.title }}
-  <div class="container container--md align-center">
+  <div class="container container--{{ $section.width }} align-center">
     <h2 class="section-title">{{ $section.title }}</h2>
   </div>
   {{ end }}
 
-  <div class="container container--lg">
+  <div class="container container--{{ $section.width }}">
     <div class="grid grid-cols-auto-fit-sm grid-gap-xl">
 
       {{ range $person_id := $section.team }}

@@ -14,6 +14,7 @@ sections:
     caption: Making sense of place, in a world of small boats.
     description: Small Boats
   - type: FullWidthCenteredColumnSection
+    width: flush
     content: >-
       ### Visual Consistency Can Reinforce Authenticity
 
@@ -31,6 +32,7 @@ sections:
 
       <iframe name="iframe_aemet_id33044" width="100%" height="100%" tabindex="0" id="iframe_aemet_id33044" src="https://www.aemet.es/es/eltiempo/prediccion/municipios/mostrarwidget/tibi-id03129?w=g4p010100001ohmffffffx4f86d9t95b6e9r0s8n2" frameborder="0" scrolling="no"></iframe>
     description: Visual Consistency Can Reinforce Authenticity
+
   - ximage: https://res.cloudinary.com/dklongley/image/upload/l_text:Roboto_40:England%2520Imagined,x_0,y_40,g_south,co_rgb:ffffff/wide-gaudi-organic-renewable-futerism_mmsbfx.jpg
     imageposition: left
     image_alt: Nice Dream
@@ -86,8 +88,10 @@ sections:
       {{< youtube aZOcEZyjQ8k >}}
     title: What We Can Do and What We Cannot
     subtitle: When we fail we try again
+    width: narrow
   - type: TeamSection
     title: Our Wonderful Team
+    width: wide
     team:
       - miles-tone
       - dianne-ameter
@@ -115,6 +119,7 @@ sections:
     bgcolor: hsl(30,50%,50%)
   - type: TeamSection
     title: More of the team
+    width: wide
     team:
       - david-longley
       - eleanor-carr

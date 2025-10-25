@@ -4,4 +4,5 @@ summary: '{{fields.description}}'
 widget: object
 fields:
   - {label: Description(CMS) ,name: description, widget: string, required: true}
+  - {label: Width of section on page  ,name: width, widget: select, options: ["full", "extra-wide", "wide", "flush"], default: ["flush"], required: true}    
   - {label: Content, name: content, widget: markdown, buttons: [bold, italic, link, heading-one, heading-two, heading-three, quote, bulleted-list, numbered-list]}

@@ -1,6 +1,6 @@
 const ContentSectionPreview = createClass({
   render: function () {
-    const { title, subtitle, content } = this.props;
+    const { title, subtitle, content, width } = this.props;
     const MarkdownPreview = window.CMS.getWidget("markdown").preview;
 
     return h(
@@ -8,7 +8,7 @@ const ContentSectionPreview = createClass({
       { className: "section" },
       h(
         "div",
-        { className: "container container--md" },
+        { className: `container container--${width}` },
         title && h("h2", { className: "" }, title),
         subtitle && h("p", { className: "" }, subtitle),
         content &&

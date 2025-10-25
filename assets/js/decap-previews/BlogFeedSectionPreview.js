@@ -1,5 +1,5 @@
 const BlogFeedSectionPreview = (props) => {
-    const { title, show_recent, recent_count, collections, isLoading, h, getAsset } = props;
+    const { title, show_recent, recent_count, width, collections, isLoading, h, getAsset } = props;
     const posts = collections.posts || [];
     const authors = collections.authors || [];
     const categories = collections.categories || [];
@@ -91,7 +91,7 @@ const BlogFeedSectionPreview = (props) => {
     }
 
     return h('div', { className: 'blog-feed-section p-6 bg-gray-50 rounded-lg' },
-        h('div', { className: 'container mx-auto' },
+        h('div', { className: `container container--${width}` },
             h('h2', { className: 'text-2xl font-bold mb-4' }, title),
             h('p', { className: 'text-sm text-gray-500 mb-6' },
                 show_recent ? `Previewing ${postsToDisplay.length} recent posts.` : "Not showing recent posts."

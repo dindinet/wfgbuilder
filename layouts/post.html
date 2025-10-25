@@ -25,7 +25,7 @@
   <div class="container container--narrow">
     <header class="post-header">
       {{ if .Params.categories }}
-        {{ $include_dict := dict "categories" $.Params.categories "container_class" "post-meta" }}
+        {{ $include_dict := dict "categories" $.Params.categories "container_class" "post-tag" }}
         {{ partial "blog_post_categories.html" $include_dict }}
       {{ end }}
       <h1 class="post-title mb-0">{{ .Params.title }}</h1>

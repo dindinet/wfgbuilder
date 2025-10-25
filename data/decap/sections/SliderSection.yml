@@ -1,0 +1,35 @@
+name: SliderSection
+label: (WFG) Image Slider
+summary: 'Image Slider {{fields.title}} - {{fields.subtitle}}'
+widget: object
+fields:
+  - {label: Title, name: title, widget: string, required: false}
+  - {label: Subtitle, name: subtitle, widget: string, required: false}
+  - {label: Scroller Name, name: scrollername, widget: string, required: true}
+  - {label: Width of Slider on page  ,name: scrollerwidth, widget: select, options: ["full", "extra-wide", "wide", "flush"], default: ["full"], required: true}    
+  - {label: No of images to display, name: visibleslides, widget: number, min: 1, max: 20, step: 1, default: 1}  
+  - {label: No of images to scroll, name: scrollby, widget: number,  min: 1, max: 20, step: 1, default: 1}
+  - {label: Control Arrows color, name: arrowcolor, widget: color, required: false}
+  - {label: Control Arrows hover color, name: arrowhovercolor, widget: color, required: false}
+  - label: "Control Arrows position"
+    name: "arrowposition"
+    widget: "select"
+    options:
+        - { label: "Left and right of slides", value: "sides" }
+        - { label: "Below slides", value: "below" }
+  - label: "Control Arrows position inside or outside the slide"
+    name: "arrowinout"
+    widget: "select"
+    options:
+        - { label: "Inside the slide", value: "in" }
+        - { label: "Outside the slide", value: "out" }
+  - {label: "Display pager", name: "displaypager", widget: "boolean", default: true}
+  - {label: Portion of next slide visible, name: nextvisible, widget: number, min: 5, max: 50, step: 5, default: 5}
+  - name: scrollerimages
+    label: Scroller Images
+    widget: list
+    fields:
+        - {label: Image, name: scrollerimage, widget: image}
+        - {label: Image Alt text, name: scrollerimagealt, widget: string, required: false}  
+
+ 

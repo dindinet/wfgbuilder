@@ -1,6 +1,6 @@
 {{ $section := .section }}
 <section>
-  <div class="wrapper">
+  <div class="container container--{{ $section.width }}">
    {{ partial "markdownify-block" $section.content }}
   </div>
 </section>

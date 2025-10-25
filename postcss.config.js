@@ -14,7 +14,7 @@ const purgecss = purgeCSSPlugin({
   // https://purgecss.com/safelisting.html
   variables: true,
   safelist: {
-    standard: [/^text-/,/^container--/],
+    standard: [/^text-/,/^container--/,/^[id$='pager']/,/^hzd-/],
     variables:[/^--font-/, /^--space-/,/^--color-/,/^--line-/,/^--letter-/] 
   
 },

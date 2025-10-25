@@ -1,12 +1,12 @@
 const CtaSectionPreview = (props) => {
-    const { title, subtitle, actions, has_background, background_color, h } = props;
+    const { title, subtitle, actions, has_background, background_color, width, h } = props;
     return h('div', {
         className: 'cta-section',
         style: {
             backgroundColor: has_background ? background_color : 'transparent',
         },
     },
-        h('div', { className: 'container' },
+        h('div', { className: `container container--${width}` },
             h('h2', null, title),
             h('p', null, subtitle),
             h('div', { className: 'actions' },

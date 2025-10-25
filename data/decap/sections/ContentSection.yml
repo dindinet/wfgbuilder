@@ -5,4 +5,5 @@ widget: object
 fields:
   - {label: Title ,name: title,widget: string, required: false}
   - {label: Subtitle ,name: subtitle,widget: string, required: false}
+  - {label: Width of section on page  ,name: width, widget: select, options: ["full", "extra-wide", "wide", "narrow"], default: ["narrow"], required: true}   
   - {label: Content, name: content, widget: markdown, buttons: [bold, italic, link, heading-one, heading-two, heading-three, quote, bulleted-list, numbered-list]}

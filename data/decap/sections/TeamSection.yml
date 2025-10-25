@@ -12,3 +12,4 @@ fields:
     value_field: "{{slug}}"
     display_fields: ["id"]
     multiple: true
+  - {label: Width of section on page  ,name: width, widget: select, options: ["full", "extra-wide", "wide", "flush"], default: ["wide"], required: true}      

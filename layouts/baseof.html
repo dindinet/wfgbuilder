@@ -59,7 +59,28 @@
           </main>
         
           {{ partial "footer.html" . }}
+
+
         
         </div>
+
+    {{ $pageScripts := $.Store.Get "pageScripts" }}
+    {{ if $pageScripts }}
+
+          {{ $uniqueScripts := $pageScripts | uniq }}
+
+          {{ range $uniqueScripts }}
+              {{ $scriptPath := printf "js/pageSections/%s.js" . }}
+              {{ with resources.Get $scriptPath }}
+                  <script src="{{ .RelPermalink }}" defer></script>
+              {{ else }}
+                  {{ warnf "Could not find script to link: %s" $scriptPath }}
+              {{ end }}
+          {{ end }}
+
+   {{ end }}
+   
+
+
     </body> 
 </html>

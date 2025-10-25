@@ -56,8 +56,10 @@ sections:
   - type: BlogFeedSection
     show_recent: true
     title: What's New
+    width: wide
     recent_count: 3
   - type: CtaSection
+    width: wide
     has_background: false
     background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
     title: This Is A CTA
@@ -105,6 +107,7 @@ sections:
         style: secondary
   - type: TeamSection
     title: All the Young Dudes
+    width: flush
     team:
       - dianne-ameter
       - david-longley

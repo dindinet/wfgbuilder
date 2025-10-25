@@ -1,6 +1,6 @@
 {{ $section := .section }}
 <section class="section">
-  <div class="container container--md">
+  <div class="container container--{{$section.width}}">
 
     {{ if $section.title }}
     <h2 class="">{{ $section.title }}</h2>

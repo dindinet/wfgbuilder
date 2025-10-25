@@ -2,6 +2,7 @@ name: BlogFeedSection
 label: (WFG) Blog Feed
 widget: object
 fields:
-  - {label: Title, name: title, widget: string}
+  - {label: Title, name: title, widget: string, required: false}
   - {label: Show Recent, name: show_recent, widget: boolean, default: true}
-  - {label: Recent Count, name: recent_count, widget: number, value_type: "int"}
+  - {label: Recent Count, name: recent_count, widget: number, value_type: "int", default: 10000}
+  - {label: Width of section on page  ,name: width, widget: select, options: ["full", "extra-wide", "wide", "flush"], default: ["wide"], required: true}  

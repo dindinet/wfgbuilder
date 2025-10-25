@@ -1,5 +1,5 @@
 const TeamSectionPreview = (props) => {
-  const { title, team, collections, isLoading, getAsset, h } = props;
+  const { title, team, width, collections, isLoading, getAsset, h } = props;
   const MarkdownPreview = window.CMS.getWidget('markdown').preview;
 
   // Get all authors from the collections prop, which is passed down by the parent preview.
@@ -23,10 +23,10 @@ const TeamSectionPreview = (props) => {
   }
 
   return h('section', { className: 'section section--team' },
-    title ? h('div', { className: 'container container--md align-center' },
+    title ? h('div', { className: `container container--${width} align-center` },
       h('h2', { className: 'section-title' }, title)
     ) : null,
-    h('div', { className: 'container container--lg' },
+    h('div', { className: `container container--${width}` },
       h('div', { className: 'grid grid-cols-auto-fit-sm grid-gap-xl' },
         teamMembers.map(person => {
           // The 'person' object is the full collection entry.
