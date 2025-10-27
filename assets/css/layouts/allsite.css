@@ -45,7 +45,7 @@
   width: 100%;
   /*max-width: var(--container-lg);*/
   margin-inline: auto;
-  padding-inline: var(--space-md);
+  padding-inline: calc(var(--space-sm) + 1.5625vw);
 }
 
 .container--narrow {
@@ -67,7 +67,6 @@
 
 .container--flush {
   max-width: var(--container-lg);
-  padding-inline: 0;
 }
 
 /* Site Sections */
