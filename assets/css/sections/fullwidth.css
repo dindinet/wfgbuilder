@@ -4,7 +4,7 @@
   --clr-accent: hsl(261, 59%, 81%); /*hsl(21deg 85% 60%);*/
   --clr-highlight: hsl(46, 97%, 86%);
 
-  --wrapper-padding-inline: 3rem;
+  --wrapper-padding-inline: calc(8px + 1.5625vw);
   --wrapper-max-width: 64rem;
 
   --section-padding-block: 2rem;
