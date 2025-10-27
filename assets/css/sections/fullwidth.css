@@ -57,6 +57,10 @@ img {
   letter-spacing: -0.2rem;
   margin-inline: 2vw;
   margin-block: 1.5rem;
+  text-align: center;
+}
+.full-width h2{
+  text-align: center;
 }
 .full-width .jumbo{
   margin-inline: 5vw;
