@@ -12,7 +12,7 @@ fields:
   - {label: Control Arrows color, name: arrowcolor, widget: color, required: false}
   - {label: Control Arrows hover color, name: arrowhovercolor, widget: color, required: false}
   - label: "Control Arrows position"
-    name: "arrowposition"
+    name: "arrowsposition"
     widget: "select"
     options:
         - { label: "Left and right of slides", value: "sides" }
