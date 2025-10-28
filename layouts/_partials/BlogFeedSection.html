@@ -6,9 +6,9 @@
     <h2 class="section-title">{{ $section.title }}</h2>
   </div>
   {{ end }}
-
-  <div class="container container--{{ $section.width}}">
-    <div class="grid grid-cols-auto-fit-sm grid-gap-xl">
+  {{ $defaultWidth := "wide" }}
+  <div class="container container--{{ $section.width | default $defaultWidth }}">
+    <div class="grid grid-min-280 grid-gap-xl">
       {{ $section_author := false }}
       {{ if $section.author }}
         {{ $author_id_kebab := replace (replace $section.author "data/team/" "") ".json" "" }}

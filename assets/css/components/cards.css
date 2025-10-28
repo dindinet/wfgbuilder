@@ -322,6 +322,7 @@
     "meta"
     "actions";
   gap: var(--space-4);
+  font-size: var(--font-size-xs);
 }
 
 .card-post .card-image { grid-area: image; }
