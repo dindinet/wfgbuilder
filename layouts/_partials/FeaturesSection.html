@@ -18,7 +18,7 @@
 
   {{ if $feature.image }} <!-- 2-->
     <div class="my-lg {{ if eq $feature.image_position "right" }} media-right{{ end }}">
-      {{ partial "responsive/pictures-cw.html" 
+      {{ partial "responsive/pictures-cloudinary.html" 
         (dict 
          "src" $feature.image
          "alt" $feature.image_alt

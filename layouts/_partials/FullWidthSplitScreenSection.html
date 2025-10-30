@@ -4,7 +4,7 @@
 
   
 
-          {{ partial "responsive/pictures-cwx.html" 
+          {{ partial "responsive/pictures-cloudinary.html" 
         (dict 
          "src" $section.image
          "alt" $section.image_alt 
@@ -28,7 +28,7 @@
 
 {{ if eq $section.imageposition  "right" }}  
 
-        {{ partial "responsive/pictures-cwx.html" 
+        {{ partial "responsive/pictures-cloudinary.html" 
         (dict 
          "src" $section.image
          "alt" $section.image_alt 

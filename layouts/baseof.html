@@ -71,7 +71,7 @@
 
           {{ range $uniqueScripts }}
               {{ $scriptPath := printf "js/pageSections/%s.js" . }}
-              {{ with resources.Get $scriptPath }}
+              {{ with resources.Get $scriptPath | minify }}
                   <script src="{{ .RelPermalink }}" defer></script>
               {{ else }}
                   {{ warnf "Could not find script to link: %s" $scriptPath }}
