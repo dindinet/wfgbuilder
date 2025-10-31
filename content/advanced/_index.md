@@ -22,7 +22,7 @@ sections:
         content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
           ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh
           fringilla, fringilla.
-        image: /images/honeydew.jpg
+        image: https://res.cloudinary.com/dklongley/image/upload/v1615338258/honeydew.png
         image_alt: Feature 1 placeholder image
         image_position: right
         align: left
@@ -34,7 +34,7 @@ sections:
         content: Ac felis donec et odio pellentesque. Sagittis vitae et leo duis ut diam
           quam nulla. Ullamcorper a lacus vestibulum sed arcu non odio euismod
           lacinia.
-        image: /images/armeniana.png
+        image: https://res.cloudinary.com/dklongley/image/upload/v1761831391/armeniana_qz3guq.jpg
         image_alt: Feature 2 placeholder image
         image_position: left
         align: left

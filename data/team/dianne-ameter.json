@@ -3,7 +3,7 @@
     "link": "news/author/dianne-ameter",
     "first_name": "Dianne",
     "last_name": "Ameter",
-    "photo": "images/dianne-ameter.jpg",
+    "photo": "https://res.cloudinary.com/dklongley/image/upload/v1761831391/dianne-ameter_loevbv.jpg",
     "photo_alt": "Dianne Ameter",
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl ligula, cursus id molestie vel, maximus aliquet risus."
 }

@@ -6,7 +6,7 @@
     {{ if .Params.image }}
     <div class="post-featured-image">
 
-        {{ partial "responsive/pictures-cw.html" 
+        {{ partial "responsive/pictures-cloudinary.html" 
         (dict 
          "src" $.Params.image
          "alt" $.Params.image_alt 

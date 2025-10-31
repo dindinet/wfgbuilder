@@ -28,7 +28,7 @@
       {{ if $section.image }}
       <div class="hero-media {{ if eq $section.image_position "right" }}media-right{{ end }}">
         
-        {{ partial "responsive/pictures-cw.html" 
+        {{ partial "responsive/pictures-cloudinary.html" 
         (dict 
          "src" $section.image
          "alt" $section.image_alt

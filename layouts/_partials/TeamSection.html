@@ -15,9 +15,20 @@
       <div class="cell">
         <div class="card team-member">
           {{ if $person_data.photo }}
-          <figure class="card-image">
-            <img src="{{ $person_data.photo | relURL }}" alt="{{ $person_data.photo_alt }}" />
-          </figure>
+        {{ $alt_text := printf "Team member %s %s" $person_data.first_name $person_data.last_name }}
+        {{ partial "responsive/pictures-cloudinary.html" 
+        (dict 
+         "src" $person_data.photo
+         "alt" $alt_text 
+         "loading" "lazy"
+         "class" "responsive-img"
+             "containerWidth" (dict 
+             "desktop" 25
+             "tablet" 25
+             "mobile" 100
+              )
+        ) 
+      }}
           {{ end }}
           <div class="card-body">
             <header class="card-header">
