@@ -6,7 +6,7 @@ sections:
     announcement: Meet your new customers where their minds are at.
     announcementbtntxt: Get Started
     subtitle: Reach the people who need you right when they need you most.
-    bgimage: https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=204060&sat=-100&exp=15&blend-mode=multiply
+    bgimage: https://res.cloudinary.com/dklongley/image/upload/w_2560,h_861/photo-1644088379091-d574269d422f_fvoy1v.jpg
     bgimage_alt: The gangs all here
     actions:
       - label: Open Your Account
