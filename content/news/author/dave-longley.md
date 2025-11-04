@@ -1,7 +1,7 @@
 ---
 title: Dave Longley
 sections:
-  - type: HeroSection
+  - type: FullWidthHeadingSection
     title: All Posts By Dave Longley
     align: center
   - type: BlogFeedSection

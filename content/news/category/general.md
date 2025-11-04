@@ -1,7 +1,7 @@
 ---
 title: General
 sections:
-  - type: HeroSection
+  - type: FullWidthHeadingSection
     title: All Posts In General
     align: center
   - type: BlogFeedSection

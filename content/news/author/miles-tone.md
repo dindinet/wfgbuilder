@@ -1,7 +1,7 @@
 ---
 title: Miles Tone
 sections:
-  - type: HeroSection
+  - type: FullWidthHeadingSection
     title: All Posts By Miles Tone
     align: center
   - type: BlogFeedSection

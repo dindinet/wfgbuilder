@@ -1,7 +1,7 @@
 ---
 title: Gordon Norman
 sections:
-  - type: HeroSection
+  - type: FullWidthHeadingSection
     title: All Posts By Gordon Norman
     align: center
   - type: BlogFeedSection

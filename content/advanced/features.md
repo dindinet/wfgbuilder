@@ -2,12 +2,6 @@
 title: Features
 layout: advanced
 sections:
-  - type: SimpleCTA
-    width: wide
-    offertext: Your Very Own
-    tagline: Because you always needed one
-    description: Grapple
-    bgcolor: "#ba2e2e"
   - type: FeaturesSection
     features:
       - title: Feature 1

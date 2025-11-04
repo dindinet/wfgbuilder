@@ -1,7 +1,7 @@
 ---
 title: Dianne Ameter
 sections:
-  - type: HeroSection
+  - type: FullWidthHeadingSection
     title: All Posts By Dianne Ameter
     align: center
   - type: BlogFeedSection

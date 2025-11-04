@@ -58,7 +58,7 @@
 
 .grid-min-280-posts{
     display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(280px, 370px));
   column-gap: 2em;
 }
 

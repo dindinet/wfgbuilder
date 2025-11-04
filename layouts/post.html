@@ -49,10 +49,10 @@
       {{ .Content }}
     </div>
 
-    {{ if .Params.tags }}
+    {{ if .Params.categories }}
     <footer class="post-tags">
-      {{ $include_dict := dict "tags" $.Params.tags }}
-      {{ partial "blog_post_tags.html" $include_dict }}
+        {{ $include_dict := dict "categories" $.Params.categories "container_class" "post-tag" }}
+        {{ partial "blog_post_categories.html" $include_dict }}
     </footer>
     {{ end }}
 

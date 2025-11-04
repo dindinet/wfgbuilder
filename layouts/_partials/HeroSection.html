@@ -22,6 +22,17 @@
 
   {{ end }}
 
+  {{ with templates.Current }}
+  <div class="debug">
+    {{ range .Ancestors }}
+      {{ .Filename }}<br>
+      {{ with .Base }}
+        {{ .Filename }}<br>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
+
   <div class="container container--wide my-40">
     <div class="grid grid-hero grid-gap-4{{ if eq $section.align "center" }} align-items-center{{ end }}{{ if eq $section.align "right" }} text-right{{ end }}">
 

@@ -1,7 +1,7 @@
 ---
 title: News
 sections:
-  - type: HeroSection
+  - type: FullWidthHeadingSection
     title: All Posts In News
     align: center
   - type: BlogFeedSection

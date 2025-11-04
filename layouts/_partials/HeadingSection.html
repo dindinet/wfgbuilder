@@ -1,0 +1,8 @@
+{{ $section := .section }}
+<section id="headings">
+  <div class="full-width">
+
+    <h2 class="h2-bold" {{ with $section.titlecolour }}style="color:{{ $section.titlecolor}};"{{ end }}>{{ $section.title}}</h2>
+
+  </div>
+</section>

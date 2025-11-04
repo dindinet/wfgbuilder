@@ -1,7 +1,7 @@
 ---
 title: Tutorials
 sections:
-  - type: HeroSection
+  - type: FullWidthHeadingSection
     title: All Posts In Tutorials
     align: center
   - type: BlogFeedSection
