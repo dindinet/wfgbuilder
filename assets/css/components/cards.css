@@ -313,6 +313,7 @@
    ========================================================================== */
 
 /* Blog Post Card */
+
 .card-post {
   display:grid;
   grid-template-rows: subgrid;
@@ -328,6 +329,7 @@
 .card-post .card-meta { grid-area: meta; }
 .card-post .card-actions { grid-area: actions; margin-block-start: 0; }
 */
+
 /* Feature Card */
 .card-feature {
   text-align: center;
