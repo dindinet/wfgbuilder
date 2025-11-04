@@ -34,7 +34,7 @@ html {
 body {
   /* Use system font stack by default */
   font-family: var(--font-family-sans);
-  font-size: var(--font-size-base);
+  font-size: var(--fluid-font-size ); /* --font-size-base */
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
   

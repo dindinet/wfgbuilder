@@ -1,6 +1,6 @@
 {{ $blog_feed_section := .blog_feed_section }}
 {{ $post := .post_page }}
-<article class="cell">
+
   <div class="card-post">
     {{ if $post.Params.image }}
     <a class="card-image" href="{{ $post.RelPermalink }}">
@@ -20,23 +20,24 @@
      
     </a>
     {{ end }}
-    <div class="card-body">
-      <header class="xcard-header">
-        {{ if $post.Params.categories }}
-          {{ $include_dict := dict "categories" $post.Params.categories "container_class" "card-meta" }}
-          {{ partial "blog_post_categories.html" $include_dict }}
-        {{ end }}
+    
+
+
         {{ if $blog_feed_section.title }}
           <h3 class="h4 card-title"><a class="menu-item" href="{{ $post.RelPermalink }}">{{ $post.Params.title }}</a></h3>
         {{ else }}
           <h2 class="h4 card-title"><a class="menu-item" href="{{ $post.RelPermalink }}">{{ $post.Params.title }}</a></h2>
         {{ end }}
-      </header>
+
       {{ if $post.Params.excerpt }}
         <div class="card-content">
           <p>{{ $post.Params.excerpt }}</p>
         </div>
       {{ end }}
+              {{ if $post.Params.categories }}
+          {{ $include_dict := dict "categories" $post.Params.categories "container_class" "card-meta" }}
+          {{ partial "blog_post_categories.html" $include_dict }}
+        {{ end }}
       <footer class="card-footer">
         <span><time datetime="{{ $post.Date | dateFormat "2006-01-02 15:04" }}">{{ $post.Date | dateFormat "Jan 02, 2006" }}</time></span>
         {{ if $post.Params.author }}
@@ -50,6 +51,6 @@
           {{ end }}
         {{ end }}
       </footer>
-    </div>
+
   </div>
-</article>
+

@@ -6,7 +6,7 @@ author: dave-longley
 categories:
   - news
   - tutorials
-image: https://res.cloudinary.com/dklongley/image/upload/borrego.jpg
+image: https://res.cloudinary.com/dklongley/image/upload/c_pad,w_373,h_213/borrego.jpg
 image_alt: Pomme
 excerpt: Quadripedalis est ovium, quæ ruminant mammalibus, penitus ignoramus
   quia jumentis infinita substantia. Velut omnes ruminant, et ovium

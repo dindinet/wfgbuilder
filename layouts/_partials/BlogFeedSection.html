@@ -8,7 +8,7 @@
   {{ end }}
   {{ $defaultWidth := "wide" }}
   <div class="container container--{{ $section.width | default $defaultWidth }}">
-    <div class="grid grid-min-280 grid-gap-xl">
+    <div class="grid grid-min-280-posts grid-gap-xl">
       {{ $section_author := false }}
       {{ if $section.author }}
         {{ $author_id_kebab := replace (replace $section.author "data/team/" "") ".json" "" }}

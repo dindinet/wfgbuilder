@@ -314,23 +314,20 @@
 
 /* Blog Post Card */
 .card-post {
-  display: grid;
-  grid-template-areas: 
-    "image"
-    "header"
-    "content"
-    "meta"
-    "actions";
+  display:grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
   gap: var(--space-4);
   font-size: var(--font-size-xs);
 }
 
+/*
 .card-post .card-image { grid-area: image; }
 .card-post .card-header { grid-area: header; margin-block-end: 0; }
 .card-post .card-body { grid-area: content; }
 .card-post .card-meta { grid-area: meta; }
 .card-post .card-actions { grid-area: actions; margin-block-start: 0; }
-
+*/
 /* Feature Card */
 .card-feature {
   text-align: center;
