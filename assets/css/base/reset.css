@@ -135,14 +135,14 @@ select {
   color: inherit;
 }
 
-/* Remove default button styles */
+/* Remove default button styles 
 button {
   background: none;
   border: none;
   cursor: pointer;
 }
-
-/* Remove default field styles */
+*/
+/* Remove default field styles 
 input,
 textarea,
 select {
