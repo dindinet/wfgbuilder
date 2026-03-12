@@ -1,0 +1,6 @@
+We need to know where the styles are: Github Repo URL or Folder
+
+What is the minimum width of the element or sub element(eg cards) 
+
+
+

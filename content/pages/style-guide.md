@@ -1,6 +1,6 @@
 ---
 title: Say It. Own It.
-subtitle: Read it. Believe it.
+subtitle: Read it. Believe it. Own It.
 ---
 
 <div class="grid grid-min-320 grid-gap-lg">
