@@ -22,11 +22,11 @@
 
 /* Auto-fit grids with minimum column widths */
 .grid-cols-auto-fit {
-  repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .grid-cols-auto-fit-xs {
-  repeat(auto-fit, minmax(var(--grid-min-xs), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-xs), 1fr));
   /* 200px */
 }
 
