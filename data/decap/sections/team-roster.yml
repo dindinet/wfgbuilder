@@ -1,0 +1,14 @@
+label: "Team Roster Section"
+name: "TeamRosterSection"
+widget: "object"
+fields:
+  - { label: "Heading", name: "heading", widget: "string", default: "Meet Our Team" }
+  - { label: "Intro Text", name: "intro_text", widget: "text", required: false }
+  - label: "Team Members"
+    name: "team_members"
+    widget: "list"
+    fields:
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text" }

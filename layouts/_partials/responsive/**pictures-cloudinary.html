@@ -1,0 +1,140 @@
+{{/* 
+  Cloudinary Responsive Picture Partial (with optional Cloudflare caching)
+  
+  Usage:
+  {{ partial "cloudinary-picture.html" (dict 
+    "src" "https://res.cloudinary.com/dklongley/image/upload/jetty_gluhvj.jpg"
+    "alt" "Hero image"
+    "class" "responsive-img"
+    "containerWidth" 100
+    "loading" "lazy"
+  ) }}
+  
+  Enable Cloudflare image caching by setting in config:
+  [params]
+    imgcache = true
+  
+  Or with specific breakpoint widths:
+  {{ partial "cloudinary-picture.html" (dict 
+    "src" "https://res.cloudinary.com/dklongley/image/upload/card_image.jpg"
+    "alt" "Card image"
+    "containerWidth" (dict 
+      "xlarge" 25
+      "large" 33
+      "desktop" 50
+      "tablet" 50
+      "mobile" 100
+    )
+  ) }}
+  
+  Breakpoints:
+  - XLarge (1920px+): Base sizes 1920w, 1440w, 1200w
+  - Large Desktop (1440px-1919px): Base sizes 1440w, 1200w, 900w
+  - Desktop (1200px-1439px): Base sizes 1200w, 900w, 600w
+  - Tablet (768px-1199px): Base sizes 900w, 600w, 400w  
+  - Mobile (up to 767px): Base sizes 600w, 400w, 300w
+*/}}
+
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $containerWidth := .containerWidth | default 100 -}}
+{{- $loading := .loading | default "" -}}
+{{- $useCloudflare := $.Site.Params.imgcache | default false -}}
+
+{{/* Check if image is from Cloudinary */}}
+{{- $isCloudinary := or (in $src "res.cloudinary.com") (in $src "cloudinary.com") -}}
+
+{{/* Check if image is SVG */}}
+{{- $isSVG := or (in $src ".svg") (hasSuffix $src "svg") -}}
+
+{{/* Function to calculate container width for breakpoint */}}
+{{- $getContainerWidth := "" -}}
+{{- if reflect.IsMap $containerWidth -}}
+  {{- $getContainerWidth = $containerWidth -}}
+{{- else -}}
+  {{- $getContainerWidth = dict "xlarge" $containerWidth "large" $containerWidth "desktop" $containerWidth "tablet" $containerWidth "mobile" $containerWidth -}}
+{{- end -}}
+
+{{/* Get container widths with defaults */}}
+{{- $xlargeWidth := index $getContainerWidth "xlarge" | default 100 -}}
+{{- $largeWidth := index $getContainerWidth "large" | default 100 -}}
+{{- $desktopWidth := index $getContainerWidth "desktop" | default 100 -}}
+{{- $tabletWidth := index $getContainerWidth "tablet" | default 100 -}}
+{{- $mobileWidth := index $getContainerWidth "mobile" | default 100 -}}
+
+{{/* Calculate actual image sizes needed */}}
+{{- $xlargeSizes := slice (div (mul 1920 $xlargeWidth) 100) (div (mul 1440 $xlargeWidth) 100) (div (mul 1200 $xlargeWidth) 100) -}}
+{{- $largeSizes := slice (div (mul 1440 $largeWidth) 100) (div (mul 1200 $largeWidth) 100) (div (mul 900 $largeWidth) 100) -}}
+{{- $desktopSizes := slice (div (mul 1200 $desktopWidth) 100) (div (mul 900 $desktopWidth) 100) (div (mul 600 $desktopWidth) 100) -}}
+{{- $tabletSizes := slice (div (mul 900 $tabletWidth) 100) (div (mul 600 $tabletWidth) 100) (div (mul 400 $tabletWidth) 100) -}}
+{{- $mobileSizes := slice (div (mul 600 $mobileWidth) 100) (div (mul 400 $mobileWidth) 100) (div (mul 300 $mobileWidth) 100) -}}
+
+
+  
+
+
+{{/* Handle SVG case - output simple img tag */}}
+{{- if $isSVG -}}
+  <img src="{{ $src }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $loading }} loading="{{ . }}"{{ end }}>
+{{- else if $isCloudinary -}}
+  {{/* Fetch image to get dimensions without resizing */}}
+  {{- $image := "" -}}
+  {{- $imgWidth := 0 -}}
+  {{- $imgHeight := 0 -}}
+  {{- $tryResult := try (resources.GetRemote $src) -}}
+  {{- if $tryResult -}}
+    {{- $image = $tryResult.Value -}}
+    {{- if $image -}}
+      {{- $imgWidth = $image.Width -}}
+      {{- $imgHeight = $image.Height -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{/* Calculate dimensions for fallback img using largest mobile size */}}
+  {{- $fallbackWidth := index $mobileSizes 0 -}}
+  {{- $fallbackHeight := 0 -}}
+  {{- if and (gt $imgWidth 0) (gt $imgHeight 0) -}}
+    {{- $aspectRatio := div (float $imgHeight) (float $imgWidth) -}}
+    {{- $fallbackHeight = int (mul $fallbackWidth $aspectRatio) -}}
+  {{- end -}}
+  
+  {{/* Generate Cloudinary picture element */}}
+  <picture{{ with $class }} class="{{ . }}"{{ end }}>
+    {{/* XLarge (1920px+) */}}
+    {{- $xlarge1920 := partial "cloudinaryTransform" (dict "url" $src "width" (index $xlargeSizes 0) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $xlarge1440 := partial "cloudinaryTransform" (dict "url" $src "width" (index $xlargeSizes 1) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $xlarge1200 := partial "cloudinaryTransform" (dict "url" $src "width" (index $xlargeSizes 2) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    <source media="(min-width: 1920px)" srcset="{{ $xlarge1920 | safeURL }} {{ index $xlargeSizes 0 }}w, {{ $xlarge1440 | safeURL }} {{ index $xlargeSizes 1 }}w, {{ $xlarge1200 | safeURL }} {{ index $xlargeSizes 2 }}w">
+    
+    {{/* Large Desktop (1440px-1919px) */}}
+    {{- $large1440 := partial "cloudinaryTransform" (dict "url" $src "width" (index $largeSizes 0) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $large1200 := partial "cloudinaryTransform" (dict "url" $src "width" (index $largeSizes 1) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $large900 := partial "cloudinaryTransform" (dict "url" $src "width" (index $largeSizes 2) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    <source media="(min-width: 1440px)" srcset="{{ $large1440 | safeURL }} {{ index $largeSizes 0 }}w, {{ $large1200 | safeURL }} {{ index $largeSizes 1 }}w, {{ $large900 | safeURL }} {{ index $largeSizes 2 }}w">
+    
+    {{/* Desktop (1200px-1439px) */}}
+    {{- $desktop1200 := partial "cloudinaryTransform" (dict "url" $src "width" (index $desktopSizes 0) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $desktop900 := partial "cloudinaryTransform" (dict "url" $src "width" (index $desktopSizes 1) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $desktop600 := partial "cloudinaryTransform" (dict "url" $src "width" (index $desktopSizes 2) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    <source media="(min-width: 1200px)" srcset="{{ $desktop1200 | safeURL }} {{ index $desktopSizes 0 }}w, {{ $desktop900 | safeURL }} {{ index $desktopSizes 1 }}w, {{ $desktop600 | safeURL }} {{ index $desktopSizes 2 }}w">
+    
+    {{/* Tablet (768px-1199px) */}}
+    {{- $tablet900 := partial "cloudinaryTransform" (dict "url" $src "width" (index $tabletSizes 0) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $tablet600 := partial "cloudinaryTransform" (dict "url" $src "width" (index $tabletSizes 1) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $tablet400 := partial "cloudinaryTransform" (dict "url" $src "width" (index $tabletSizes 2) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    <source media="(min-width: 768px)" srcset="{{ $tablet900 | safeURL }} {{ index $tabletSizes 0 }}w, {{ $tablet600 | safeURL }} {{ index $tabletSizes 1 }}w, {{ $tablet400 | safeURL }} {{ index $tabletSizes 2 }}w">
+    
+    {{/* Mobile (up to 767px) */}}
+    {{- $mobile600 := partial "cloudinaryTransform" (dict "url" $src "width" (index $mobileSizes 0) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $mobile400 := partial "cloudinaryTransform" (dict "url" $src "width" (index $mobileSizes 1) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    {{- $mobile300 := partial "cloudinaryTransform" (dict "url" $src "width" (index $mobileSizes 2) "useCloudflare" $useCloudflare "siteUrl" $.Site.BaseURL) -}}
+    <source srcset="{{ $mobile600 | safeURL }} {{ index $mobileSizes 0 }}w, {{ $mobile400 | safeURL }} {{ index $mobileSizes 1 }}w, {{ $mobile300 | safeURL }} {{ index $mobileSizes 2 }}w">
+    
+    {{/* Fallback img - use tablet size with calculated dimensions */}}
+    <img src="{{ $mobile600 | safeURL }}" alt="{{ $alt }}"{{ if gt $fallbackWidth 0 }} width="{{ $fallbackWidth }}"{{ end }}{{ if gt $fallbackHeight 0 }} height="{{ $fallbackHeight }}"{{ end }}{{ with $loading }} loading="{{ . }}" {{if eq . "eager" }} fetchpriority="high"{{ end }}{{ end }}>
+  </picture>
+{{- else -}}
+  {{/* Not Cloudinary, output simple img tag */}}
+  <img src="{{ $src }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $loading }} loading="{{ . }}"{{ end }}>
+{{- end -}}

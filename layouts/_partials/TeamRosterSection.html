@@ -1,0 +1,29 @@
+{{ $section := .section }}
+<section class="section-team-roster container container--wide py-12">
+  <div class="team-roster-header">
+    <h2 class="text-4xl font-bold">{{ $section.heading }}</h2>
+    <div class="text-md color-neutral">{{ $section.intro_text | markdownify }}</div>
+  </div>
+  
+  <div class="team-roster-list">
+    {{ range $section.team_members }}
+    <div class="team-member-card py-6">
+      <div class="team-member-image">
+        {{ partial "responsive/pictures-cloudinary.html" (dict "src" .image "alt" .name "class" "rounded-lg" "containerWidth" (dict "xlarge" 10 "large" 10 "desktop" 20 "tablet" 100 "mobile" 100)) }}
+      </div>
+      <div class="team-member-details">
+        <h3 class="text-xl font-semibold mb-2">
+          <span class="bullet">•</span>{{ .name }}, {{ .title }}
+        </h3>
+        <div class="text-sm color-neutral">{{ .bio | markdownify }}</div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{/* Add custom styles to universal-css-collector */}}
+{{ $css := resources.Get "css/sections/team-roster.css" }}
+{{ if $css }}
+  {{ .Page.Scratch.SetInMap "custom_css" "team-roster" $css.Content }}
+{{ end }}

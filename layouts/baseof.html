@@ -33,11 +33,11 @@
               {{ if $.Page.IsHome }}
                 <style>{{ .Content | safeCSS }}</style>
               {{ else }}
-                <link rel="stylesheet" href="{{ .RelPermalink }}?eggs" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+                <link rel="stylesheet" href="{{ .RelPermalink }}?gigs" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
               {{ end }}
             {{ end }}
           {{ else }}
-            <link rel="stylesheet" href="{{ .RelPermalink }}?eggs">
+            <link rel="stylesheet" href="{{ .RelPermalink }}?gigs">
           {{ end }}
         {{ end }}
 
