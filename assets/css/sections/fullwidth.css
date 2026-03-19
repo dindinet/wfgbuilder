@@ -1,5 +1,5 @@
 :root {
-  --clr-primary: hsl(0, 0%, 100%); /*hsl(229 33% 21%);*/
+  --clr-primary: hsl(229 33% 21%); /*hsl(0, 0%, 100%);*/
   --clr-secondary: purple; /*#302047;*/
   --clr-accent: hsl(261, 59%, 81%); /*hsl(21deg 85% 60%);*/
   --clr-highlight: hsl(46, 97%, 86%);
@@ -18,7 +18,7 @@ body {
   font-size: 1.5125rem;
   line-height: 1.4;
   color: rgb(0, 0, 0);
-  background-color: var(--clr-primary);
+  background-color: var(--clr-bg-primary);
   xbackground-image: linear-gradient(to bottom right, blue, purple, red);
   background-blend-mode: multiply;
 }

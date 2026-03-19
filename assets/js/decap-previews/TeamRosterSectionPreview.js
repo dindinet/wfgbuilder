@@ -3,7 +3,7 @@ const TeamRosterSectionPreview = (props) => {
   // Assuming this is used directly representing the section scope or block scope
 
   return h('section', { className: 'section-team-roster container-wide py-12' },
-    h('div', { className: 'team-roster-header' },
+    h('div', { className: 'team-roster-header  items-center' },
       h('h2', { className: 'text-4xl font-bold' }, heading),
       h('div', { className: 'text-md color-neutral' }, intro_text) // markdown would need a markdown-to-jsx parser or similar in real CMS, simple render for now
     ),
