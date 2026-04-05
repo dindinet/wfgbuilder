@@ -29,5 +29,6 @@
 		}
 	},
 
-	"postCreateCommand": "git submodule update --init && npm install -g decap-cms-proxy-server"
+	"postCreateCommand": "git submodule update --init && npm install -g @decap/server",
+	"postAttachCommand": "npx decap-server --port 8081"
 }

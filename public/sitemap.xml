@@ -38,6 +38,8 @@
   </url><url>
     <loc>//localhost:1313/blog/</loc>
   </url><url>
+    <loc>//localhost:1313/style-guide/</loc>
+  </url><url>
     <loc>//localhost:1313/contact/</loc>
   </url><url>
     <loc>//localhost:1313/news/author/dave-longley/</loc>
@@ -63,8 +65,6 @@
     <loc>//localhost:1313/pdfs/</loc>
   </url><url>
     <loc>//localhost:1313/terms/</loc>
-  </url><url>
-    <loc>//localhost:1313/style-guide/</loc>
   </url><url>
     <loc>//localhost:1313/</loc>
   </url><url>
