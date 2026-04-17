@@ -148,6 +148,43 @@ sections:
       background_image_repeat: ""
     image: ""
     team: []
+  - type: FeaturesSection
+    title: Super New Section
+    announcement: ""
+    announcementbtntxt: ""
+    subtitle: ""
+    bgimage: ""
+    bgimage_alt: ""
+    actions:
+      - label: ""
+        url: ""
+        style: ""
+    features:
+      - title: ""
+        content: ""
+        image: ""
+        image_alt: ""
+        image_position: ""
+        align: ""
+        actions:
+          - label: ""
+            url: ""
+            style: ""
+    width: ""
+    recent_count: 0
+    background_image: ""
+    background_color: ""
+    image_alt: ""
+    align: ""
+    image_position: ""
+    background:
+      background_image: ""
+      background_color: ""
+      background_image_opacity: 0
+      background_image_size: ""
+      background_image_repeat: ""
+    image: ""
+    team: []
 seo:
   title: Stackbit Starter Theme
   description: The preview of the Starter theme
