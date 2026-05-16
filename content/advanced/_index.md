@@ -1,20 +1,11 @@
 ---
 title: The Big Home
+layout: advanced
 sections:
-  - type: GridHeroSection
-    title: Connect to build your business
-    announcement: Meet your new customers where their minds are at.
-    announcementbtntxt: Get Started
-    subtitle: Reach the people who need you right when they need you most.
-    bgimage: https://res.cloudinary.com/dklongley/image/upload/w_2560,h_861/photo-1644088379091-d574269d422f_fvoy1v.jpg
-    bgimage_alt: The gangs all here
-    actions:
-      - label: Open Your Account
-        url: /features
-        style: primary
-      - label: Contact Us
-        url: /contact
-        style: primary
+  - type: FullWidthImageSection
+    description: NIce
+    image: https://res.cloudinary.com/dklongley/image/upload/v1761500260/450_y9swre.jpg
+    image_alt: NIceness
   - type: FeaturesSection
     title: Features
     features:
@@ -111,89 +102,9 @@ sections:
     team:
       - dianne-ameter
       - david-longley
-  - type: CtaSection
-    title: ""
-    announcement: ""
-    announcementbtntxt: ""
-    subtitle: ""
-    bgimage: ""
-    bgimage_alt: ""
-    actions:
-      - label: ""
-        url: ""
-        style: ""
-    features:
-      - title: ""
-        content: ""
-        image: ""
-        image_alt: ""
-        image_position: ""
-        align: ""
-        actions:
-          - label: ""
-            url: ""
-            style: ""
-    width: ""
-    recent_count: 0
-    background_image: ""
-    background_color: ""
-    image_alt: ""
-    align: ""
-    image_position: ""
-    background:
-      background_image: ""
-      background_color: ""
-      background_image_opacity: 0
-      background_image_size: ""
-      background_image_repeat: ""
-    image: ""
-    team: []
-  - type: FeaturesSection
-    title: Super New Section
-    announcement: ""
-    announcementbtntxt: ""
-    subtitle: ""
-    bgimage: ""
-    bgimage_alt: ""
-    actions:
-      - label: ""
-        url: ""
-        style: ""
-    features:
-      - title: ""
-        content: ""
-        image: ""
-        image_alt: ""
-        image_position: ""
-        align: ""
-        actions:
-          - label: ""
-            url: ""
-            style: ""
-    width: ""
-    recent_count: 0
-    background_image: ""
-    background_color: ""
-    image_alt: ""
-    align: ""
-    image_position: ""
-    background:
-      background_image: ""
-      background_color: ""
-      background_image_opacity: 0
-      background_image_size: ""
-      background_image_repeat: ""
-    image: ""
-    team: []
 seo:
   title: Stackbit Starter Theme
   description: The preview of the Starter theme
-  sections:
-    - type: FullWidthHeadingSection
-      title: The Start of the Dream
-      subtitle: Try not to confuse readers
-      subtitlecolour: "#8f2121"
-      subtitleposition: above
   extra:
     - name: og:type
       value: website
@@ -217,8 +128,7 @@ seo:
     - name: twitter:image
       value: images/starter-preview.png
       relativeUrl: true
-layout: advanced
 url: /
-draft: false
+draft: true
 ---
 temp
