@@ -188,6 +188,12 @@ sections:
 seo:
   title: Stackbit Starter Theme
   description: The preview of the Starter theme
+  sections:
+    - type: FullWidthHeadingSection
+      title: The Start of the Dream
+      subtitle: Try not to confuse readers
+      subtitlecolour: "#8f2121"
+      subtitleposition: above
   extra:
     - name: og:type
       value: website
@@ -213,6 +219,6 @@ seo:
       relativeUrl: true
 layout: advanced
 url: /
-draft: true
+draft: false
 ---
 temp
