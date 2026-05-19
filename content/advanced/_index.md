@@ -2,6 +2,20 @@
 title: The Big Home
 layout: advanced
 sections:
+  - type: GridHeroSection
+    title: Connect to build your business
+    announcement: Meet your new customers where their minds are at.
+    announcementbtntxt: Get Started
+    subtitle: Reach the people who need you right when they need you most.
+    bgimage: https://res.cloudinary.com/dklongley/image/upload/w_2560,h_861/photo-1644088379091-d574269d422f_fvoy1v.jpg
+    bgimage_alt: The gangs all here
+    actions:
+      - label: Open Your Account
+        url: /features
+        style: primary
+      - label: Contact Us
+        url: /contact
+        style: primary
   - type: FullWidthImageSection
     description: NIce
     image: https://res.cloudinary.com/dklongley/image/upload/v1761500260/450_y9swre.jpg
