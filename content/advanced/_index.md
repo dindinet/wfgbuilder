@@ -6,7 +6,7 @@ sections:
     title: Connect to build your business
     announcement: Meet your new customers where their minds are at.
     announcementbtntxt: Get Started
-    subtitle: Reach the people who need you right when they need you most.
+    subtitle: Reach the people who need you right when they need you most of all.
     bgimage: https://res.cloudinary.com/dklongley/image/upload/w_2560,h_861/photo-1644088379091-d574269d422f_fvoy1v.jpg
     bgimage_alt: The gangs all here
     actions:
@@ -16,10 +16,6 @@ sections:
       - label: Contact Us
         url: /contact
         style: primary
-  - type: FullWidthImageSection
-    description: NIce
-    image: https://res.cloudinary.com/dklongley/image/upload/v1761500260/450_y9swre.jpg
-    image_alt: NIceness
   - type: FeaturesSection
     title: Features
     features:
