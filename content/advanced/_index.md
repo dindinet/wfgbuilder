@@ -16,10 +16,6 @@ sections:
       - label: Contact Us
         url: /contact
         style: primary
-  - type: FullWidthImageSection
-    description: NIce
-    image: https://res.cloudinary.com/dklongley/image/upload/v1761500260/450_y9swre.jpg
-    image_alt: NIceness
   - type: FeaturesSection
     title: Features
     features:
