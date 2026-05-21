@@ -2,20 +2,29 @@
 title: The Big Home
 layout: advanced
 sections:
-  - type: GridHeroSection
-    title: Connect to build your business
-    announcement: Meet your new customers where their minds are at.
-    announcementbtntxt: Get Started
-    subtitle: Reach the people who need you right when they need you most of all.
-    bgimage: https://res.cloudinary.com/dklongley/image/upload/w_2560,h_861/photo-1644088379091-d574269d422f_fvoy1v.jpg
-    bgimage_alt: The gangs all here
+  - image_alt: The Multi Excellent Papo
+    align: center
+    titlecolor: "#fff"
+    subtitlecolor: "#fff"
+    image_position: right
+    background:
+      background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
+      background_color: blue
+      background_image_opacity: 60
+      background_image_size: cover
+      background_image_repeat: no-repeat
+    has_background: true
+    subtitle: We wouldn't need heroes if we calmed down and used our minds a bit more
+    title: This Is A Nero Headline
+    type: HeroSection
+    image: https://res.cloudinary.com/dklongley/image/upload/w_558/gallerymultipapo.jpg
     actions:
-      - label: Open Your Account
+      - label: Open Your account
         url: /features
         style: primary
       - label: Contact Us
         url: /contact
-        style: primary
+        style: secondary
   - type: FeaturesSection
     title: Features
     features:
@@ -81,29 +90,20 @@ sections:
           - label: Turbo Now
             url: /turbo
             style: primary
-  - image_alt: The Multi Excellent Papo
-    align: center
-    titlecolor: "#fff"
-    subtitlecolor: "#fff"
-    image_position: right
-    background:
-      background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
-      background_color: blue
-      background_image_opacity: 60
-      background_image_size: cover
-      background_image_repeat: no-repeat
-    has_background: true
-    subtitle: We wouldn't need heroes if we calmed down and used our minds a bit more
-    title: This Is A Nero Headline
-    type: HeroSection
-    image: https://res.cloudinary.com/dklongley/image/upload/w_558/gallerymultipapo.jpg
+  - type: GridHeroSection
+    title: Connect to build your business
+    announcement: Meet your new customers where their minds are at.
+    announcementbtntxt: Get Started
+    subtitle: Reach the people who need you right when they need you most of all.
+    bgimage: https://res.cloudinary.com/dklongley/image/upload/w_2560,h_861/photo-1644088379091-d574269d422f_fvoy1v.jpg
+    bgimage_alt: The gangs all here
     actions:
-      - label: Open Your account
+      - label: Open Your Account
         url: /features
         style: primary
       - label: Contact Us
         url: /contact
-        style: secondary
+        style: primary
   - type: TeamSection
     title: All the Young Dudes
     width: flush
