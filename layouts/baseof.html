@@ -29,7 +29,7 @@
 
         {{ $seed := "cachebust" }}
         {{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
-        {{ $random }}
+        
 
         {{ with $qcss | resources.Concat "css/wfg.css" }}
           {{ if hugo.IsProduction }}
