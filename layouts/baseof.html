@@ -39,7 +39,6 @@
                 <style>{{ .Content | safeCSS }}</style>
               {{ else }}
                 <link rel="stylesheet" href="{{ replace .RelPermalink "css" $random }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-                {{ replace $s "Robin" "Catwoman" }}
               {{ end }}
             {{ end }}
           {{ else }}
