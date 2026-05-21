@@ -27,17 +27,21 @@
  
         {{ $qcss := resources.Match "css/**.css" }}
 
+        {{ $seed := "cachebust" }}
+        {{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
+        {{ $random }}
+
         {{ with $qcss | resources.Concat "css/wfg.css" }}
           {{ if hugo.IsProduction }}
             {{ with . | postCSS | minify | resources.PostProcess }}
               {{ if $.Page.IsHome }}
                 <style>{{ .Content | safeCSS }}</style>
               {{ else }}
-                <link rel="stylesheet" href="{{ .RelPermalink }}?savs" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+                <link rel="stylesheet" href="{{ .RelPermalink }}?{{ $random }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
               {{ end }}
             {{ end }}
           {{ else }}
-            <link rel="stylesheet" href="{{ .RelPermalink }}?savs">
+            <link rel="stylesheet" href="{{ .RelPermalink }}?{{ $random }}">
           {{ end }}
         {{ end }}
 
