@@ -1,0 +1,24 @@
+.section-heropanel { background-color: #ffffff; padding: var(--spacing-xl, 5rem) var(--spacing-lg, 2rem); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.section-heropanel .heropanel-content { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: var(--spacing-xl, 4rem); max-width: 1200px; margin: 0 auto; }
+.section-heropanel .heropanel-text { display: flex; flex-direction: column; gap: var(--spacing-md, 1.5rem); }
+.section-heropanel .heropanel-heading { font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 700; line-height: 1.1; color: #0f1117; margin: 0; letter-spacing: -0.02em; }
+.section-heropanel .heropanel-description { font-size: clamp(0.95rem, 1.5vw, 1.0625rem); line-height: 1.65; color: #3a3d45; margin: 0; max-width: 520px; }
+.section-heropanel .heropanel-actions { display: flex; flex-wrap: wrap; gap: var(--spacing-sm, 0.75rem); margin-top: var(--spacing-sm, 0.5rem); }
+.section-heropanel .heropanel-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.6rem; border-radius: 0.625rem; font-size: 1rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: opacity 0.2s ease; white-space: nowrap; }
+.section-heropanel .heropanel-btn--primary { background-color: #0f1117; color: #ffffff; border: 2px solid #0f1117; }
+.section-heropanel .heropanel-btn--primary:hover { opacity: 0.85; }
+.section-heropanel .heropanel-btn--secondary { background-color: #ffffff; color: #0f1117; border: 2px solid #d1d5db; }
+.section-heropanel .heropanel-btn--secondary:hover { border-color: #9ca3af; }
+.section-heropanel .heropanel-palette { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: var(--spacing-sm, 0.875rem); }
+.section-heropanel .heropanel-color-card { border-radius: 1rem; min-height: 220px; display: flex; align-items: flex-end; padding: var(--spacing-sm, 1rem); position: relative; overflow: hidden; }
+.section-heropanel .heropanel-color-card--coral { background-color: #b83214; }
+.section-heropanel .heropanel-color-card--peach { background-color: #f4a97a; }
+.section-heropanel .heropanel-color-card--cream { background-color: #f0e8d5; }
+.section-heropanel .heropanel-color-card--dark { background-color: #12161e; }
+.section-heropanel .heropanel-color-label { font-size: 0.9rem; font-weight: 600; color: #0f1117; }
+.section-heropanel .heropanel-color-label--light { color: #ffffff; }
+@media (max-width: 768px) {
+  .section-heropanel .heropanel-content { grid-template-columns: 1fr; }
+  .section-heropanel .heropanel-palette { order: -1; }
+  .section-heropanel .heropanel-color-card { min-height: 140px; }
+}

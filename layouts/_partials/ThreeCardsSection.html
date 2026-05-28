@@ -1,0 +1,20 @@
+{{/* ThreeCardsSection Partial */}}
+{{ $section := .section }}
+
+<section class="section-three-cards">
+  <div class="three-cards__grid">
+    {{ range $section.cards }}
+    <article class="three-cards__card">
+      <div class="three-cards__image-wrapper">
+        {{ partial "responsive/pictures-cloudinary.html" (dict "src" .image "alt" .image_alt "class" "three-cards__image" "containerWidth" (dict "xlarge" 33 "large" 33 "desktop" 33 "tablet" 50 "mobile" 100)) }}
+      </div>
+      <div class="three-cards__body">
+        <h3 class="three-cards__title">{{ .title }}</h3>
+        <p class="three-cards__meta">{{ .meta }}</p>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ $css := resources.Get "css/sections/three-cards.css" }}
+{{ if $css }}{{ .Page.Scratch.SetInMap "custom_css" "three-cards" $css.Content }}{{ end }}

@@ -1,0 +1,23 @@
+{{/* HeroPanelSection Partial */}}
+{{ $section := .section }}
+<section class="section-heropanel">
+  <div class="heropanel-content">
+    <div class="heropanel-text">
+      <h1 class="heropanel-heading">{{ $section.heading }}</h1>
+      <p class="heropanel-description">{{ $section.description | markdownify }}</p>
+      <div class="heropanel-actions">
+        <a href="{{ $section.primary_button_url }}" class="heropanel-btn heropanel-btn--primary">{{ $section.primary_button_label }}</a>
+        <a href="{{ $section.secondary_button_url }}" class="heropanel-btn heropanel-btn--secondary">{{ $section.secondary_button_label }}</a>
+      </div>
+    </div>
+    <div class="heropanel-palette">
+      {{ range $section.color_palette }}
+      <div class="heropanel-color-card heropanel-color-card--{{ .color_modifier }}">
+        <span class="heropanel-color-label{{ if .light_label_text }} heropanel-color-label--light{{ end }}">{{ .color_label }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ $css := resources.Get "css/sections/heropanel.css" }}
+{{ if $css }}{{ .Page.Scratch.SetInMap "custom_css" "heropanel" $css.Content }}{{ end }}
