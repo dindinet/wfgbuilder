@@ -38,7 +38,7 @@ sections:
         title: Portofino
         meta: Definitely spend some time in Portofino. Your sole won't regret it but
           your wallet might.
-      - image: https://res.cloudinary.com/dklongley/image/upload/c_fill,g_auto,f_auto,w_600//lake-city_dmiswg
+      - image: https://res.cloudinary.com/dklongley/image/upload/c_fill,g_auto,f_auto,w_300,h_300/lake-city_dmiswg
         image_alt: Lake City too pretty
         title: Lake City too pretty
         meta: You might want to live in Lake City if you want a new start
