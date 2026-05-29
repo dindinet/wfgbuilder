@@ -37,7 +37,7 @@ sections:
         image_alt: Portofino does not dissapoint the visitor
         title: Portofino
         meta: Definitely spend some time in Portofino. Your sole won't regret it but
-          your wallet will
+          your wallet might.
   - type: HeropanelSection
     heading: Taffy Slurp
     description: Just the stuff we need
@@ -57,5 +57,15 @@ sections:
         light_label_text: true
       - color_modifier: dark
         color_label: Dark
-        light_label_text: true        
+        light_label_text: true
+  - type: bentoheroSection
+    bento_cards:
+      - label: Big one
+        title: The biggest card
+      - label: Medio Uno
+        title: The only one of the medium
+      - label: Pequeño Uno
+        title: The first of the small
+      - label: Pequeño Dos
+        title: The second of the small
 ---

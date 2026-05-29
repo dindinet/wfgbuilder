@@ -60,7 +60,7 @@ Excellent! Your grid system is incredibly comprehensive and perfectly sets up th
 
 <!-- Team grid -->
 <div class="grid-authors">
-  {{ range .Site.Data.team }}
+  {{ range .hugo.Data.team }}
     <div class="card card-team">
       <img class="card-avatar" src="{{ .avatar }}" alt="{{ .name }}">
       <h3 class="card-title">{{ .name }}</h3>

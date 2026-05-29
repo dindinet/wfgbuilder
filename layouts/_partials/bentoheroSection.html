@@ -1,0 +1,19 @@
+{{/* BentoheroSection Partial */}}
+{{ $section := .section }}
+<section class="section-bentohero">
+  <div class="bentohero-grid">
+    {{ range $index, $card := $section.bento_cards }}
+    {{ $sizeClasses := slice "bento-card--large" "bento-card--medium" "bento-card--small" "bento-card--small" }}
+    {{ $sizeClass := "bento-card--small" }}
+    {{ if lt $index (len $sizeClasses) }}{{ $sizeClass = index $sizeClasses $index }}{{ end }}
+    <div class="bento-card {{ $sizeClass }}">
+      <div class="bento-card__header">
+        <span class="bento-card__label">{{ $card.label }}</span>
+      </div>
+      <h2 class="bento-card__title">{{ $card.title }}</h2>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ $css := resources.Get "css/sections/bentohero.css" }}
+{{ if $css }}{{ .Page.Scratch.SetInMap "custom_css" "bentohero" $css.Content }}{{ end }}

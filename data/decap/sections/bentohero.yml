@@ -1,0 +1,10 @@
+label: "Bentohero Section"
+name: "bentoheroSection"
+widget: "object"
+fields:
+  - label: "Bento Cards"
+    name: "bento_cards"
+    widget: "list"
+    fields:
+      - { label: "Card Label", name: "label", widget: "string" }
+      - { label: "Card Title", name: "title", widget: "string" }
