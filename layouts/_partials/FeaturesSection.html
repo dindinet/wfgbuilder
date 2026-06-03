@@ -18,7 +18,8 @@
 
   {{ if $feature.image }} <!-- 2-->
     <div class="my-lg {{ if eq $feature.image_position "right" }} media-right{{ end }}">
-      {{ partial "responsive/pictures-cloudinary.html" 
+      
+      {{/* partial "responsive/pictures-cloudinary.html" 
         (dict 
          "src" $feature.image
          "alt" $feature.image_alt
@@ -29,7 +30,24 @@
              "tablet" 50
               )
         ) 
-      }}    
+      */}}  
+      
+      
+            {{ partial "responsive/pictures-cloudinary.html" (dict
+         "src"           $feature.image
+         "alt"           $feature.image_alt
+         "loading"       "lazy"
+         "class"         "responsive-img"
+         "containerType" "wide"
+         "containerWidth" (dict
+           "xlarge"  50
+           "large"   50
+           "desktop" 50
+           "tablet"  50
+           "mobile"  100
+         )
+        ) 
+      }}
     </div>     
   {{ end }} <!-- 2 END -->
 

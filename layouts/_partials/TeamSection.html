@@ -16,19 +16,38 @@
         <div class="card team-member">
           {{ if $person_data.photo }}
         {{ $alt_text := printf "Team member %s %s" $person_data.first_name $person_data.last_name }}
-        {{ partial "responsive/pictures-cloudinary.html" 
-        (dict 
-         "src" $person_data.photo
-         "alt" $alt_text 
-         "loading" "lazy"
-         "class" "responsive-img"
-             "containerWidth" (dict 
-             "desktop" 25
-             "tablet" 25
-             "mobile" 100
-              )
+        
+        {{/* partial "responsive/pictures-cloudinary.html" 
+           (dict 
+            "src" $person_data.photo
+            "alt" $alt_text 
+            "loading" "lazy"
+            "class" "responsive-img"
+                "containerWidth" (dict 
+                "desktop" 25
+                "tablet" 25
+                "mobile" 100
+                 )
+           ) 
+        */}}
+
+      {{ partial "responsive/pictures-cloudinary.html" (dict
+         "src"           $person_data.photo
+         "alt"           $alt_text
+         "loading"       "lazy"
+         "class"         "responsive-img"
+         "containerType" "wide"
+         "containerWidth" (dict
+           "xlarge"  33
+           "large"   33
+           "desktop" 33
+           "tablet"  50
+           "mobile"  100
+         )
         ) 
       }}
+
+
           {{ end }}
           <div class="card-body">
             <header class="card-header">

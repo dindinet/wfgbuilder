@@ -68,7 +68,7 @@ sections:
     recent_count: 3
   - type: CtaSection
     width: wide
-    has_background: false
+    has_background: true
     background_image: https://res.cloudinary.com/dklongley/image/upload/w_1905,h_620,c_crop/SunriseCosta-Brava-Spain-1600x2560_1.webp
     title: This Is A CTA
     subtitle: I consider this to be a temporary best CTA
@@ -111,14 +111,14 @@ sections:
       - dianne-ameter
       - david-longley
 seo:
-  title: Stackbit Starter Theme
+  title: Dindino Starter Theme
   description: The preview of the Starter theme
   extra:
     - name: og:type
       value: website
       keyName: property
     - name: og:title
-      value: Stackbit Starter Theme
+      value: Dindino Starter Theme
       keyName: property
     - name: og:description
       value: The preview of the Starter theme

@@ -4,7 +4,8 @@
   <div class="card-post">
     {{ if $post.Params.image }}
     <a class="card-image" href="{{ $post.RelPermalink }}">
-        {{ partial "responsive/pictures-cloudinary.html" 
+        
+      {{/* partial "responsive/pictures-cloudinary.html" 
         (dict 
          "src" $post.Params.image
          "alt" $post.Params.image_alt 
@@ -15,6 +16,22 @@
              "tablet" 25
              "mobile" 100
               )
+        ) 
+      */}}
+
+      {{ partial "responsive/pictures-cloudinary.html" (dict
+         "src"           $post.Params.image
+         "alt"           $post.Params.image_alt
+         "loading"       "lazy"
+         "class"         "responsive-img"
+         "containerType" "wide"
+         "containerWidth" (dict
+           "xlarge"  25
+           "large"   25
+           "desktop" 25
+           "tablet"  50
+           "mobile"  100
+         )
         ) 
       }}
      

@@ -3,12 +3,12 @@
     "src" $section.background_image
     "class" "section section--cta"
     "containerWidth" 100
-     "NObgColor" "#ffffff"
+     "xxbgColor" "cornsilk"
   ) }}
 
-  <div class="container container--{{ $section.width }} ctabgimage">
+  <div class="container container--{{ $section.width }} ctabgimage {{ if and $section.has_background (eq $section.background_color "red") }} inverse bg-gray{{ end }}{{ if and $section.has_background (eq $section.background_color "gray") }} bg-gray{{ end }}">
 
-    <div class="banner-lg xbanner-bg-secondary banner-content-center{{ if and $section.has_background (eq $section.background_color "blue") }} inverse bg-blue{{ end }}{{ if and $section.has_background (eq $section.background_color "gray") }} bg-gray{{ end }}">
+    <div class="banner-lg xbanner-bg-secondary banner-content-center">
       <div class="container container--md">
         {{ if $section.title }}
         <h2 class="section_-title">{{ $section.title }}</h2>

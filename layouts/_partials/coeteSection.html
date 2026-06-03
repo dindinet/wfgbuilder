@@ -1,0 +1,31 @@
+{{/* CoeteSection Partial */}}
+{{ $section := .section }}
+<section class="section-coete">
+  {{ with $section }}
+  <div class="section-coete__inner">
+    <div class="section-coete__content">
+      <h1 class="section-coete__heading">{{ .heading }}</h1>
+      <div class="section-coete__actions">
+        <a href="{{ .primary_button_url }}" class="section-coete__btn section-coete__btn--primary">{{ .primary_button_label }}</a>
+        <a href="{{ .ghost_button_url }}" class="section-coete__btn section-coete__btn--ghost">{{ .ghost_button_label }}</a>
+      </div>
+    </div>
+    <div class="section-coete__visual">
+      {{ partial "responsive/pictures-cloudinary.html" (dict "src" .spacecraft_image "alt" .spacecraft_image_alt "class" "section-coete__spacecraft" "containerWidth" (dict "xlarge" 50 "large" 50 "desktop" 50 "tablet" 100 "mobile" 100)) }}
+      <div class="section-coete__pixel-flame">
+        <span class="section-coete__pixel section-coete__pixel--1"></span>
+        <span class="section-coete__pixel section-coete__pixel--2"></span>
+        <span class="section-coete__pixel section-coete__pixel--3"></span>
+        <span class="section-coete__pixel section-coete__pixel--4"></span>
+        <span class="section-coete__pixel section-coete__pixel--5"></span>
+        <span class="section-coete__pixel section-coete__pixel--6"></span>
+        <span class="section-coete__pixel section-coete__pixel--7"></span>
+        <span class="section-coete__pixel section-coete__pixel--8"></span>
+        <span class="section-coete__pixel section-coete__pixel--9"></span>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</section>
+{{ $css := resources.Get "css/sections/coete.css" }}
+{{ if $css }}{{ .Page.Scratch.SetInMap "custom_css" "coete" $css.Content }}{{ end }}
