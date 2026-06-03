@@ -72,4 +72,12 @@ sections:
         title: The first of the small
       - label: Pequeño Dos
         title: The second of the small
+  - type: coeteSection
+    heading: I Want to Kick Your Behind
+    primary_button_label: Get Kicked
+    primary_button_url: https://antigravity.google.com
+    ghost_button_label: Take a Pass
+    ghost_button_url: https://youtube.com
+    spacecraft_image: https://res.cloudinary.com/dklongley/image/upload/v1780497781/coete_ocgztu.png
+    spacecraft_image_alt: Fly Away on a Rocketship.
 ---
