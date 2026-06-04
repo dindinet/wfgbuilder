@@ -98,4 +98,26 @@ sections:
         card_background_color: "#fbf8c6"
         image_alt: A young lady in her country cottage kitchen. She is kneading bread
           dough on the large kitchen table.
+    service_details:
+      - body: The secret to successfully plucking a chicken lies in a flawless scald
+          followed by a swift pull. Scalding the bird in hot water loosens the
+          feather follicles so they slip right out. Without this step, the
+          feathers are incredibly difficult and painful to remove.
+        title: The perfect Pluck
+        image: https://res.cloudinary.com/dklongley/image/upload/v1780570737/plucking_efolwc.jpg
+        image_alt: A young lady doing the plucking.
+        layout: TEXT-LEFT
+        has_background: false
+        background_color: "#f9d949"
+      - title: A dough to win the show
+        body: Mastering bread dough comes down to a few core techniques that transform
+          simple ingredients into an elastic, gluten-rich structure. Key methods
+          include the autolyse rest to naturally build gluten, the
+          stretch-and-fold method for handling wet doughs, and the windowpane
+          test to know exactly when the dough is ready.
+        layout: image-left
+        has_background: true
+        image: https://res.cloudinary.com/dklongley/image/upload/v1780570737/kneading_ckwvnu.jpg
+        image_alt: A young lady kneading bread dough on her kitchen table.
+        background_color: "#f9d949"
 ---
