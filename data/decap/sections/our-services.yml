@@ -1,0 +1,25 @@
+label: "Our Services Section"
+name: "ourservicesSection"
+widget: "object"
+fields:
+  - { label: "Section Title", name: "section_title", widget: "string" }
+  - label: "Service Cards"
+    name: "service_cards"
+    widget: "list"
+    fields:
+      - { label: "Card Title", name: "title", widget: "string" }
+      - { label: "Card Description", name: "description", widget: "text" }
+      - { label: "Card Image", name: "image", widget: "image" }
+      - { label: "Card Image Alt Text", name: "image_alt", widget: "string" }
+      - { label: "Card Background Colour", name: "card_background_color", widget: "color" }
+  - label: "Service Detail Blocks"
+    name: "service_details"
+    widget: "list"
+    fields:
+      - { label: "Detail Title", name: "title", widget: "string" }
+      - { label: "Detail Body", name: "body", widget: "markdown" }
+      - { label: "Detail Image", name: "image", widget: "image" }
+      - { label: "Detail Image Alt Text", name: "image_alt", widget: "string" }
+      - { label: "Layout (text-left or image-left)", name: "layout", widget: "string" }
+      - { label: "Has Background Colour", name: "has_background", widget: "boolean" }
+      - { label: "Background Colour", name: "background_color", widget: "color" }

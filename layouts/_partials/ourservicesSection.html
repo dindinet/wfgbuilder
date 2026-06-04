@@ -1,0 +1,48 @@
+{{/* OurServicesSection Partial */}}
+{{ $section := .section }}
+<section class="section-our-services">
+  <div class="our-services-inner">
+
+    <h2 class="our-services-title">{{ $section.section_title }}</h2>
+
+    <div class="our-services-cards">
+      {{ range $section.service_cards }}
+      <article class="service-card">
+        <div class="service-card__image-wrap" style="--card-bg: {{ .card_background_color }}">
+          {{ partial "responsive/pictures-cloudinary.html" (dict "src" .image "alt" .image_alt "class" "service-card__img" "containerWidth" (dict "xlarge" 50 "large" 50 "desktop" 50 "tablet" 50 "mobile" 100)) }}
+        </div>
+        <h3 class="service-card__title">{{ .title }}</h3>
+        <p class="service-card__desc">{{ .description }}</p>
+      </article>
+      {{ end }}
+    </div>
+
+    {{ range $section.service_details }}
+    {{ $isImageLeft := eq .layout "image-left" }}
+    {{ $hasBg := .has_background }}
+    <div class="service-detail{{ if $isImageLeft }} service-detail--image-left{{ else }} service-detail--text-left{{ end }}{{ if $hasBg }} service-detail--has-bg{{ end }}"
+      {{ if $hasBg }}style="--detail-bg: {{ .background_color }}"{{ end }}>
+      {{ if $isImageLeft }}
+      <div class="service-detail__media">
+        {{ partial "responsive/pictures-cloudinary.html" (dict "src" .image "alt" .image_alt "class" "service-detail__img" "containerWidth" (dict "xlarge" 50 "large" 50 "desktop" 50 "tablet" 100 "mobile" 100)) }}
+      </div>
+      <div class="service-detail__content">
+        <h2 class="service-detail__title">{{ .title }}</h2>
+        <div class="service-detail__body">{{ .body | markdownify }}</div>
+      </div>
+      {{ else }}
+      <div class="service-detail__content">
+        <h2 class="service-detail__title">{{ .title }}</h2>
+        <div class="service-detail__body">{{ .body | markdownify }}</div>
+      </div>
+      <div class="service-detail__media">
+        {{ partial "responsive/pictures-cloudinary.html" (dict "src" .image "alt" .image_alt "class" "service-detail__img" "containerWidth" (dict "xlarge" 50 "large" 50 "desktop" 50 "tablet" 100 "mobile" 100)) }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ $css := resources.Get "css/sections/our-services.css" }}
+{{ if $css }}{{ .Page.Scratch.SetInMap "custom_css" "our-services" $css.Content }}{{ end }}
