@@ -80,4 +80,22 @@ sections:
     ghost_button_url: https://youtube.com
     spacecraft_image: https://res.cloudinary.com/dklongley/image/upload/v1780497781/coete_ocgztu.png
     spacecraft_image_alt: Fly Away on a Rocketship.
+  - type: ourservicesSection
+    section_title: We do the things you no longer know how to do
+    service_cards:
+      - title: Chicken Plucking
+        description: When people left the land and migrated to the cities they left
+          behind their country ways. We didn't forget. We can do things for you.
+        image: https://res.cloudinary.com/dklongley/image/upload/v1780570737/plucking_efolwc.jpg
+        image_alt: A young lady sat outside the door of her cottage. She is plucking a
+          chicken.
+        card_background_color: "#fbf8c6"
+      - title: Bread Making
+        description: Everyone loves the smell and the taste of freshly baked bread. But
+          not everyone has the time or the skills to make it. Let us do it for
+          you.
+        image: https://res.cloudinary.com/dklongley/image/upload/v1780570737/kneading_ckwvnu.jpg
+        card_background_color: "#fbf8c6"
+        image_alt: A young lady in her country cottage kitchen. She is kneading bread
+          dough on the large kitchen table.
 ---
