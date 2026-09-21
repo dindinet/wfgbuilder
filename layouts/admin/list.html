@@ -15,6 +15,8 @@
   {{ $js := partial "decap-preview-template.js" . }}
   {{ $processedJs := $js | resources.FromString "js/decap-preview-generated.js" }}
   <script src="{{ $processedJs.RelPermalink }}"></script>
-  <script src="https://sharadcodes.github.io/hugo-shortcodes-netlify-cms/dist/hugo_shortcodes_netlify_cms.js"></script>
+  {{ with resources.Get "js/decap-hugo-shortcodes.js" }}
+       <script src="{{ .RelPermalink }}"></script>
+  {{ end }}
 </body>
 </html>
