@@ -22,3 +22,5 @@ Lakeside city, a beautiful place to live. Especially good is an early morning la
 It wasn't always like this. My memories of childhood are of the struggle to scrape somewhere to live out of the rubble and devastation we found ourselves in after the Climate Wars.
 
 {{< figure src="https://img.freepik.com/free-photo/leisure-bridge-donau-graffiti-famous_1127-2345.jpg" title="A Whole Lot Of Lake Surrounded By Acres of Land" >}}
+
+{{< youtube 8_1OBOeuBsA >}}
