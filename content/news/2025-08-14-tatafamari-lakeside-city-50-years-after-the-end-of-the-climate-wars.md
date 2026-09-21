@@ -1,7 +1,7 @@
 ---
 title: Lakeside City
 layout: post
-date: 2025-08-14T09:18:00.000+01:00
+date: 2026-09-21T16:15:00.000+01:00
 author: DKL
 categories:
   - news
@@ -21,6 +21,4 @@ Lakeside city, a beautiful place to live. Especially good is an early morning la
 
 It wasn't always like this. My memories of childhood are of the struggle to scrape somewhere to live out of the rubble and devastation we found ourselves in after the Climate Wars.
 
-![In real life](https://img.freepik.com/free-photo/leisure-bridge-donau-graffiti-famous_1127-2345.jpg "In reality")
-
-{{< youtube UQ8-gBJ7yV0 >}}
+{{< figure src="https://img.freepik.com/free-photo/leisure-bridge-donau-graffiti-famous_1127-2345.jpg" title="A Whole Lot Of Lake Surrounded By Acres of Land" >}}
