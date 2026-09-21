@@ -13,7 +13,6 @@
   
   {{ $processedJs := $js | resources.FromString "js/decap-preview-generated.js" | js.Build | fingerprint }}
   <script src="{{ $processedJs.RelPermalink }}"></script>
-  
   <script src="https://sharadcodes.github.io/hugo-shortcodes-netlify-cms/dist/hugo_shortcodes_netlify_cms.js"></script>
 </body>
 </html>
