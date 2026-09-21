@@ -25,6 +25,4 @@ It wasn't always like this. My memories of childhood are of the struggle to scra
 
 ![Folks watching folks](https://websitesforgrowth.com/cdn-cgi/image/format=auto/https://res.cloudinary.com/dklongley/image/upload/c_fill%2cg_auto%2cq_auto%2cdpr_auto%2cf_auto%2cw_1280/w_558/gallerymultipapo "Chinese students taking in a super gallery of art")
 
-
-
 {{< youtube 8_1OBOeuBsA >}}
