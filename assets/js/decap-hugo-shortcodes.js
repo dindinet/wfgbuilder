@@ -28,27 +28,6 @@ CMS.registerEditorComponent({
 });
 
 CMS.registerEditorComponent({
-    id: "vimeo",
-    label: "Vimeo",
-    fields: [{
-        name: "shortcode",
-        label: "Vimeo shortcode",
-        widget: "string"
-    }],
-    pattern: /{{< vimeo ([a-zA-Z0-9]+) >}}/,
-    fromBlock: function(match) {
-        return {
-            shortcode: match[1]
-        };
-    },
-    toBlock: function(obj) {
-        return `{{< vimeo ${obj.shortcode} >}}`;
-    },
-    toPreview: function(obj) {
-        return `{{< vimeo ${obj.shortcode} >}}`;
-    },
-});
-CMS.registerEditorComponent({
     id: "youtube",
     label: "Youtube",
     fields: [{
@@ -56,7 +35,7 @@ CMS.registerEditorComponent({
         label: "Youtube Video ID",
         widget: "string"
     }],
-    pattern: /{{< youtube\s+(?<id>[A-Za-z0-9\-]+)\s+>}}/,
+    pattern: /^\{%\s*youtube\s+"([^"]+)"\s*%\}\$/, // /{{< youtube\s+(?<id>[A-Za-z0-9\-]+)\s+>}}/,
     fromBlock: function(match) {
         return {
             id: match[1],
@@ -69,3 +48,4 @@ CMS.registerEditorComponent({
         return `<img src="https://i3.ytimg.com/vi/${obj.id}/hqdefault.jpg" alt="Youtube Video"/>`;
     },
 });
+
