@@ -1,7 +1,7 @@
 ---
 title: Lakeside City
 layout: post
-date: 2025-08-14T09:18:00.000+01:00
+date: 2026-09-21T16:15:00.000+01:00
 author: DKL
 categories:
   - news
