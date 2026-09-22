@@ -38,7 +38,7 @@ CMS.registerEditorComponent({
     pattern: /^\{%\s*youtube\s+"([^"]+)"\s*%\}\$/, // /{{< youtube\s+(?<id>[A-Za-z0-9\-]+)\s+>}}/,
     fromBlock: function(match) {
         return {
-            id: match[1],
+            id: match[0],
         };
     },
     toBlock: function(obj) {
