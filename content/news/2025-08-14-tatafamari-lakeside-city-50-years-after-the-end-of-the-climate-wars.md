@@ -23,4 +23,6 @@ It wasn't always like this. My memories of childhood are of the struggle to scra
 
 {{< figure src="https://img.freepik.com/free-photo/leisure-bridge-donau-graffiti-famous_1127-2345.jpg" title="A Whole Lot Of Lake Surrounded By Acres of Land" >}}
 
+![Folks watching folks](https://websitesforgrowth.com/cdn-cgi/image/format=auto/https://res.cloudinary.com/dklongley/image/upload/c_fill%2cg_auto%2cq_auto%2cdpr_auto%2cf_auto%2cw_1280/w_558/gallerymultipapo "Chinese students taking in a super gallery of art")
+
 {{< youtube 8_1OBOeuBsA >}}
