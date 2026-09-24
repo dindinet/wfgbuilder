@@ -8,9 +8,8 @@
 </head>
 <body>
   
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script src="https://unpkg.com/decap-cms-media-library-cloudinary@latest/dist/decap-cms-media-library-cloudinary.js"></script>
-
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+ 
   {{/* Generate the JS file from template, then build it  */}}
   {{ $js := partial "decap-preview-template.js" . }}
   {{ $processedJs := $js | resources.FromString "js/decap-preview-generated.js" }}
