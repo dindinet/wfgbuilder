@@ -94,6 +94,7 @@ collections:
     preview_path: "news/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Author", name: "author", widget: "relation", collection: "authors", search_fields: ["first_name", "last_name"], display_fields: ["first_name", "last_name"], value_field: "id"}
