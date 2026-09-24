@@ -1,5 +1,6 @@
 ---
 title: Lakeside City
+subtitle: 50 years on from the Climate Wars
 layout: post
 date: 2026-09-21T16:15:00.000+01:00
 author: DKL
@@ -11,7 +12,6 @@ excerpt: A beautiful place to live. Especially good is an early morning lakeside
   walk. My favourite time to walk is on a crispy blue skied autumn morning with
   the sun casting longer shadows through the blazing glory of the seasonal
   foliage.
-subtitle: 50 years after the end of the Climate Wars
 seo:
   extra: []
   title: Lakeside City 50 years after the end of the Climate Wars
