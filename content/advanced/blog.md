@@ -20,14 +20,15 @@ sections:
     arrowhovercolor: gold
     arrowposition: sides
     scrollerimages:
-      - scrollerimage: https://res.cloudinary.com/machi/image/upload/w_1200,h_674,f_auto/Picture_005_758x600?blokes
-        scrollerimagealt: Bleadin Blokes
+      - scrollerimage: https://res.cloudinary.com/machi/image/upload/w_1200,h_674,c_auto,g_center,f_auto/as_is
+        scrollerimagealt: Ahoy There Maties
       - scrollerimage: https://res.cloudinary.com/dklongley/image/upload/v1761500260/450_y9swre.jpg
         scrollerimagealt: Second Slider Image
       - scrollerimage: https://res.cloudinary.com/dklongley/image/upload/v1761500230/450_plp9u8.jpg
         scrollerimagealt: Third slider Image
       - scrollerimage: https://res.cloudinary.com/dklongley/image/upload/v1761500221/450_tbszol.jpg
         scrollerimagealt: Fourth Slider Image
+      - scrollerimage: https://res.cloudinary.com/machi/image/upload/w_1200,h_674,f_auto/Picture_005_758x600?blokes
     arrowsposition: sides
     visibleslides: 1
     subtitle: ""
