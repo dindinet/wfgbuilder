@@ -6,6 +6,8 @@ sections:
     subtitleposition: above
     subtitle: A good read for all
     title: Insightful Articles
+    titlecolour: "#b62121"
+    subtitlecolour: "#8828c7"
   - type: BlogFeedSection
     show_recent: true
     width: wide
@@ -18,8 +20,8 @@ sections:
     arrowhovercolor: gold
     arrowposition: sides
     scrollerimages:
-      - scrollerimage: https://res.cloudinary.com/dklongley/image/upload/v1761500280/450_mp9en3.jpg
-        scrollerimagealt: First slider Image
+      - scrollerimage: https://res.cloudinary.com/machi/image/upload/w_1200,h_674,f_auto/Picture_005_758x600?blokes
+        scrollerimagealt: Bleadin Blokes
       - scrollerimage: https://res.cloudinary.com/dklongley/image/upload/v1761500260/450_y9swre.jpg
         scrollerimagealt: Second Slider Image
       - scrollerimage: https://res.cloudinary.com/dklongley/image/upload/v1761500230/450_plp9u8.jpg
@@ -28,7 +30,9 @@ sections:
         scrollerimagealt: Fourth Slider Image
     arrowsposition: sides
     visibleslides: 1
-    arrowcolor: whitesmoke
+    subtitle: ""
+    title: ""
+    arrowcolor: "#ffffff"
     type: SliderSection
     arrowsinout: out
     nextvisible: 10
